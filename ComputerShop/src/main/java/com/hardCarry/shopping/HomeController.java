@@ -18,6 +18,7 @@ public class HomeController {
 	@RequestMapping(value = "index", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody String home(@RequestBody String id) {
 		return id;
+		
 	}
 	
 	@RequestMapping("logcategory.do") 
@@ -30,6 +31,12 @@ public class HomeController {
 	public String index(Model model) {
 		System.out.println("index");
 		return "index";
+	}
+	
+	@RequestMapping("addproduct.do") // 메인
+	public String addproduct(Model model) {
+		System.out.println("addproduct");
+		return "addproduct";
 	}
 	
 }
