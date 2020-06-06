@@ -3,17 +3,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%@include file="./commons/header/metaHeader.jsp"%>
-<%@include file="./freqView/metaHeader.jsp"%>
+<meta charset="utf-8" />
+<title>Bootstrap FAQ Template | PrepBootstrap</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<style>
+.faqHeader {
+	font-size: 27px;
+	margin: 20px;
+}
+.panel-heading [data-toggle="collapse"]:after {
+	font-family: 'Glyphicons Halflings';
+	content: "e072"; 
+	float: right;
+	color: #F58723;
+	font-size: 18px;
+	line-height: 22px;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+.panel-heading [data-toggle="collapse"].collapsed:after {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	color: #454444;
+}
+</style>
 </head>
 <body>
-	<%-- <%@include file="./commons/loader.jsp"%>
-	<%@include file="./commons/header/header.jsp"%> --%>
 	<div class="container">
 		<br /> <br /> <br />
 		<div id="accordion">
-			<div class="faqHeader">General questions</div>
 			<div class="card ">
 				<div class="card-header">
 					<h4 class="card-header">

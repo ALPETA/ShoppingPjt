@@ -1,5 +1,5 @@
-
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
@@ -230,7 +230,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<p>
-								© 2019 All Rights Reserved. Design by<a
+								Â© 2019 All Rights Reserved. Design by<a
 									href="https://html.design/"> Free Html Templates</a>
 							</p>
 						</div>

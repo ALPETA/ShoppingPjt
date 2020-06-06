@@ -17,14 +17,14 @@ public class CategoryController { // 카테고리 컨트롤러
 		return "freqwrite";
 	}
 	
-	@RequestMapping("Notice.do") // 공지사항 페이지
-	public String Notice(Model model) {
-		return "Notice";
+	@RequestMapping("notice.do") // 공지사항 페이지
+	public String notice(Model model) {
+		return "notice";
 	}
 	
-	@RequestMapping("Noticewrite.do") // 공지사항 상세 페이지
-	public String Noticewrite(Model model) {
-		return "Noticewrite";
+	@RequestMapping("noticewrite.do") // 공지사항 상세 페이지
+	public String noticewrite(Model model) {
+		return "noticewrite";
 	}
 	
 	@RequestMapping("qa.do") // Q & A 페이지
