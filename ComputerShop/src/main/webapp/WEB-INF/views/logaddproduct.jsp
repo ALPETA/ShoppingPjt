@@ -54,7 +54,7 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="logproductlookup.do">
           <i class="fas fa-fw fa-cog"></i>
           <span>주문 조회</span>
         </a>
@@ -62,7 +62,7 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="logproductlookup.do">
           <i class="fas fa-fw fa-wrench"></i>
           <span>상품 조회</span>
         </a>
@@ -70,7 +70,7 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="addproduct.do">
+        <a class="nav-link collapsed" href="logaddproduct.do">
           <i class="fas fa-fw fa-folder"></i>
           <span>상품 등록</span>
         </a>
@@ -78,14 +78,14 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>매출 조회</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-table"></i>
           <span>공지사항 작성</span></a>
       </li>

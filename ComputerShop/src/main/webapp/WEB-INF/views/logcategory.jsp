@@ -51,7 +51,7 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="logorderlookup.do">
           <i class="fas fa-fw fa-cog"></i>
           <span>주문 조회</span>
         </a>
@@ -59,7 +59,7 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="logproductlookup.do">
           <i class="fas fa-fw fa-wrench"></i>
           <span>상품 조회</span>
         </a>

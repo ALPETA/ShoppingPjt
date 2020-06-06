@@ -75,6 +75,18 @@ public class HomeController {
 		return "logmemberlookup";
 	}
 	
+	@RequestMapping("logorderlookup.do") // logaddproduct에서 상품등록 버튼 클릭 
+	public String logorderlookup(Model model) {
+		System.out.println("logorderlookup");
+		return "logorderlookup";
+	}
+	
+	@RequestMapping("logproductlookup.do") // logaddproduct에서 상품등록 버튼 클릭 
+	public String logproductlookup(Model model) {
+		System.out.println("logproductlookup");
+		return "logproductlookup";
+	}
+	
 	
 	
 }
