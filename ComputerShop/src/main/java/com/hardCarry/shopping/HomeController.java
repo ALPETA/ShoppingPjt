@@ -17,4 +17,9 @@ public class HomeController {
 		logger.info("index");
 		return "index";
 	}
+	@RequestMapping(value = "signUp.do", method = RequestMethod.GET)
+	public String signUp(Model model) {
+		logger.info("signUp");
+		return "signUp";
+	}
 }

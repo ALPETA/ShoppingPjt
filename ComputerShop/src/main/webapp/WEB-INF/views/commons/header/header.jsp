@@ -10,8 +10,7 @@
 					<div class="full">
 						<div class="center-desk">
 							<div class="logo">
-								<a href="index.do"><img src="images/logo.png"
-									alt="index.do" /></a>
+								<a href="index.do"><img src="images/logo.png" alt="index.do" /></a>
 							</div>
 						</div>
 					</div>
@@ -27,8 +26,6 @@
 						<div class="collapse navbar-collapse" id="navbarsExample04">
 							<ul class="navbar-nav mr-auto">
 								<li class="nav-item"><a class="nav-link" href="index.do">메인페이지</a></li>
-
-								<li class="nav-item"><a class="nav-link" href="#">About</a></li>
 
 								<li class="nav-item"><div class="dropdown">
 										<button type="button"
@@ -78,9 +75,18 @@
 												class="dropdown-item" href="#">스피커</a>
 										</div>
 									</div></li>
-
-								<li class="nav-item"><a class="nav-link"
-									href="#">고객센터</a></li>
+									
+								<li class="nav-item"><div class="dropdown">
+										<button type="button"
+											class="btn btn-link dropdown-toggle nav-link"
+											data-toggle="dropdown">게시판</button>
+										<div class="dropdown-menu">
+											<a class="dropdown-item" href="#">자유게시판</a> <a
+												class="dropdown-item" href="#">Q&A게시판</a> <a
+												class="dropdown-item" href="#">공지사항</a>
+										</div>
+									</div></li>
+								<li class="nav-item"><a class="nav-link" href="#">고객센터</a></li>
 
 								<li class="nav-item d_none"><a class="nav-link"
 									data-toggle="modal" data-target="#search"> <i
@@ -121,11 +127,11 @@
 			<div class="modal-content">
 
 				<div class="modal-body">
-				<button type="button" class="close" data-dismiss="modal"
+					<button type="button" class="close" data-dismiss="modal"
 						aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
-				<ul class="nav nav-tabs">
+					<ul class="nav nav-tabs">
 						<li class="nav-item"><a class="nav-link active"
 							data-toggle="tab" href="#logIn">로그인</a></li>
 						<li class="nav-item"><a class="nav-link" data-toggle="tab"
@@ -134,44 +140,44 @@
 							href="#findPw">비밀번호 찾기</a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
-					<br>
+						<br>
 						<div class="tab-pane fade active show" id="logIn">
-								<div class="form-group">
-									<label for="userId">아이디:</label> <input type="text"
-										class="form-control" id="userId" name="userId">
-								</div>
-								<div class="form-group">
-									<label for="userPw">비밀번호:</label> <input type="password"
-										class="form-control" id="userPw" name="userPw">
-								</div>
-								<button type="submit" class="btn btn-secondar">로그인</button>
-								<a href="signUp.do" class="btn btn-primary">회원가입</a>
+							<div class="form-group">
+								<label for="userId">아이디:</label> <input type="text"
+									class="form-control" id="userId" name="userId">
+							</div>
+							<div class="form-group">
+								<label for="userPw">비밀번호:</label> <input type="password"
+									class="form-control" id="userPw" name="userPw">
+							</div>
+							<button type="submit" class="btn btn-secondar">로그인</button>
+							<a href="signUp.do" class="btn btn-primary">회원가입</a>
 						</div>
 						<div class="tab-pane fade" id="findId">
 							<div class="form-group">
-									<label for="userName">이름:</label> <input type="text"
-										class="form-control" id="userName" name="userName">
-								</div>
-								<div class="form-group">
-									<label for="userEmail">이메일:</label> <input type="text"
-										class="form-control" id="userEmail" name="userEmail">
-								</div>
-								<button type="submit" class="btn btn-primary">찾기</button>
+								<label for="userName">이름:</label> <input type="text"
+									class="form-control" id="userName" name="userName">
+							</div>
+							<div class="form-group">
+								<label for="userEmail">이메일:</label> <input type="text"
+									class="form-control" id="userEmail" name="userEmail">
+							</div>
+							<button type="submit" class="btn btn-primary">찾기</button>
 						</div>
 						<div class="tab-pane fade" id="findPw">
 							<div class="form-group">
-									<label for="userId">아이디:</label> <input type="text"
-										class="form-control" id="userId" name=userId>
-								</div>
-								<div class="form-group">
-									<label for="userEmail">이메일:</label> <input type="text"
-										class="form-control" id="userEmail" name="userEmail">
-								</div>
-								<button type="submit" class="btn btn-primary">새 비밀번호 받기</button>
+								<label for="userId">아이디:</label> <input type="text"
+									class="form-control" id="userId" name=userId>
+							</div>
+							<div class="form-group">
+								<label for="userEmail">이메일:</label> <input type="text"
+									class="form-control" id="userEmail" name="userEmail">
+							</div>
+							<button type="submit" class="btn btn-primary">새 비밀번호 받기</button>
 						</div>
-					</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 </header>
