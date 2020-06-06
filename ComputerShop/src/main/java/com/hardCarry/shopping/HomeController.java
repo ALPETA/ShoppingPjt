@@ -69,5 +69,12 @@ public class HomeController {
 		return "logadddevice";
 	}
 	
+	@RequestMapping("logmemberlookup.do") // logaddproduct에서 상품등록 버튼 클릭 
+	public String logmemberlookup(Model model) {
+		System.out.println("logmemberlookup");
+		return "logmemberlookup";
+	}
+	
+	
 	
 }

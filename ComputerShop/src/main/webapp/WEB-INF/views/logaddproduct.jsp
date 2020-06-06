@@ -45,7 +45,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="logmemberlookup.do">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>회원 조회</span></a>
       </li>
@@ -163,6 +163,95 @@
                       <td>2012/04/09</td>
                       <td>$138,575</td>
                     </tr>
+                    <tr>
+                      <td>힘</td>
+                      <td>Data Coordinator</td>
+                      <td>Singapore</td>
+                      <td>64</td>
+                      <td>2012/04/09</td>
+                      <td>$138,575</td>
+                    </tr>
+                    <tr>
+                      <td>힘</td>
+                      <td>Data Coordinator</td>
+                      <td>Singapore</td>
+                      <td>64</td>
+                      <td>2012/04/09</td>
+                      <td>$138,575</td>
+                    </tr>
+                    <tr>
+                      <td>힘</td>
+                      <td>Data Coordinator</td>
+                      <td>Singapore</td>
+                      <td>64</td>
+                      <td>2012/04/09</td>
+                      <td>$138,575</td>
+                    </tr>
+                    <tr>
+                      <td>힘</td>
+                      <td>Data Coordinator</td>
+                      <td>Singapore</td>
+                      <td>64</td>
+                      <td>2012/04/09</td>
+                      <td>$138,575</td>
+                    </tr>
+                    <tr>
+                      <td>힘</td>
+                      <td>Data Coordinator</td>
+                      <td>Singapore</td>
+                      <td>64</td>
+                      <td>2012/04/09</td>
+                      <td>$138,575</td>
+                    </tr>
+                    <tr>
+                      <td>힘</td>
+                      <td>Data Coordinator</td>
+                      <td>Singapore</td>
+                      <td>64</td>
+                      <td>2012/04/09</td>
+                      <td>$138,575</td>
+                    </tr>
+                    <tr>
+                      <td>힘</td>
+                      <td>Data Coordinator</td>
+                      <td>Singapore</td>
+                      <td>64</td>
+                      <td>2012/04/09</td>
+                      <td>$138,575</td>
+                    </tr>
+                    <tr>
+                      <td>힘</td>
+                      <td>Data Coordinator</td>
+                      <td>Singapore</td>
+                      <td>64</td>
+                      <td>2012/04/09</td>
+                      <td>$138,575</td>
+                    </tr>
+                    <tr>
+                      <td>힘</td>
+                      <td>Data Coordinator</td>
+                      <td>Singapore</td>
+                      <td>64</td>
+                      <td>2012/04/09</td>
+                      <td>$138,575</td>
+                    </tr>
+                    <tr>
+                      <td>힘</td>
+                      <td>Data Coordinator</td>
+                      <td>Singapore</td>
+                      <td>64</td>
+                      <td>2012/04/09</td>
+                      <td>$138,575</td>
+                    </tr>
+                    <tr>
+                      <td>힘</td>
+                      <td>Data Coordinator</td>
+                      <td>Singapore</td>
+                      <td>64</td>
+                      <td>2012/04/09</td>
+                      <td>$138,575</td>
+                    </tr>
+                    
                     <tr>
                       <td>들</td>
                       <td>Software Engineer</td>
