@@ -28,7 +28,7 @@
 	<div class="container">
 		<table class="table table-bordered">
 			<thead>
-			<caption>F&Q 글쓰기</caption>
+			<caption>Q&A 글쓰기</caption>
 			</thead>
 			<tbody>
 				<form action="freqwrite_ok.jsp" method="post"

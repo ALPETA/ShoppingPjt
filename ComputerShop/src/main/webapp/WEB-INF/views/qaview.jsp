@@ -23,20 +23,31 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
+<style>
+.btn-space-left {
+	margin-left: 1010px;
+}
+</style>
 </head>
 <body>
 	<div class="container">
 		<table class="table table-bordered">
 			<thead>
-			<caption>F&Q 글쓰기</caption>
+				<div>
+					<h4>Q&A 글 보기</h4>
+					<label class="btn-space-left">조회수 : <a>1</a></label>
+				</div>
 			</thead>
 			<tbody>
 				<form action="freqwrite_ok.jsp" method="post"
 					encType="multiplart/form-data">
 					<tr>
 						<th>제목:</th>
-						<td><input type="text" placeholder="제목을 입력하세요. "
-							name="subject" class="form-control" /></td>
+						<td><a>하드캐리</a></td>
+					</tr>
+					<tr>
+						<th>작성자:</th>
+						<td>홍길동</td>
 					</tr>
 					<tr>
 						<th>내용:</th>
@@ -45,16 +56,17 @@
 					</tr>
 					<tr>
 						<th for="exampleInputFile">이미지 업로드:</th>
-						<td><input type="file" class="form-control-file form-control" id="exampleInputFile"
-								aria-describedby="fileHelp" /></td>
+						<td><input type="file" class="form-control-file form-control"
+							id="exampleInputFile" aria-describedby="fileHelp" /></td>
 					</tr>
-				<tr>
-					<td colspan="2"><input type="button" value="등록"
-						onclick="sendData()" class="pull-right" /> <input type="button"
-						value="reset" class="pull-left" /> <input type="button"
-						value="글 목록으로... " class="pull-right"
-						onclick="javascript:location.href='list.jsp'" /></td>
-				</tr>
+					<tr>
+						<td colspan="2">
+							<input type="button" value="등록" onclick="sendData()" class="pull-right" /> 
+							<input type="button" value="수정" class="pull-left" />
+							<input type="button" value="삭제" class="pull-left" /> 
+							<input type="button" value="글 목록으로... " class="pull-right" onclick="javascript:location.href='list.jsp'" />
+						</td>
+					</tr>
 				</form>
 			</tbody>
 		</table>

@@ -47,4 +47,18 @@ public class CategoryController { // 카테고리 컨트롤러
 		return "qawrite";
 	}
 	
+	@RequestMapping("free.do") // 자유게시판 페이지
+	public String free(Model model) {
+		return "free";
+	}
+	
+	@RequestMapping("freeview.do") // 자유게시판 상세 페이지
+	public String freeview(Model model) {
+		return "freeview";
+	}
+	
+	@RequestMapping("freewrite.do") // 자유게시판 글 작성 페이지
+	public String freewrite(Model model) {
+		return "freewrite";
+	}
 }
