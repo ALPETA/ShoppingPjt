@@ -42,7 +42,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>회원 조회</span></a>
       </li>
@@ -67,7 +67,7 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="addproduct.do">
+        <a class="nav-link collapsed" href="logaddproduct.do">
           <i class="fas fa-fw fa-folder"></i>
           <span>상품 등록</span>
         </a>

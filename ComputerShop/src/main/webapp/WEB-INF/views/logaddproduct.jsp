@@ -40,12 +40,12 @@
         <div class="sidebar-brand-text mx-3">관리자 창 <sup>뿌뿌</sup></div>
       </a>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider my-0">
+      
+      
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>회원 조회</span></a>
       </li>
@@ -98,15 +98,16 @@
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">제품 등록</h6> 
+              <h6 class="m-0 font-weight-bold text-secondary">제품 등록</h6> 
             </div>
             <br>
             
 			<!-- button -->
 			<div class="container">
-			 	<button type="button" class="btn btn-secondary">제품 등록</button>
- 				<button type="button" class="btn btn-secondary">제품 수정</button>
- 				<button type="button" class="btn btn-secondary">제품 삭제</button>
+			 	
+        		<a class="btn btn-lg1  btn btn-secondary" href="logadddesktop.do">제품 등록</a>
+ 				<a class="btn btn-lg1  btn btn-secondary" href="#">제품 수정</a>
+ 				<a class="btn btn-lg1  btn btn-secondary" href="#">제품 삭제</a>
  				
               	
 				<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">

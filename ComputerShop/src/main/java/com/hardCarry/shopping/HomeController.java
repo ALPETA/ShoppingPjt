@@ -21,7 +21,7 @@ public class HomeController {
 		
 	}
 	
-	@RequestMapping("logcategory.do") 
+	@RequestMapping("logcategory.do") //관리자창 메인
 	public String logcategory(Model model) {
 		System.out.println("logcategory");
 		return "logcategory";
@@ -33,10 +33,41 @@ public class HomeController {
 		return "index";
 	}
 	
-	@RequestMapping("addproduct.do") // 메인
-	public String addproduct(Model model) {
-		System.out.println("addproduct");
-		return "addproduct";
+	@RequestMapping("logaddproduct.do") // 관리자창 상품 등록 페이지
+	public String logaddproduct(Model model) {
+		System.out.println("logaddproduct");
+		return "logaddproduct";
 	}
+	
+	@RequestMapping("logadddesktop.do") // logaddproduct에서 상품등록 버튼 클릭 
+	public String logadddesktop(Model model) {
+		System.out.println("logadddesktop");
+		return "logadddesktop";
+	}
+	
+	@RequestMapping("logclassification.do") // logaddproduct에서 상품등록 버튼 클릭 
+	public String logclassification(Model model) {
+		System.out.println("logclassification");
+		return "logclassification";
+	}
+	
+	@RequestMapping("logaddnotebook.do") // logaddproduct에서 상품등록 버튼 클릭 
+	public String logaddnotebook(Model model) {
+		System.out.println("logaddnotebook");
+		return "logaddnotebook";
+	}
+	
+	@RequestMapping("logaddparts.do") // logaddproduct에서 상품등록 버튼 클릭 
+	public String logaddparts(Model model) {
+		System.out.println("logaddparts");
+		return "logaddparts";
+	}
+	
+	@RequestMapping("logadddevice.do") // logaddproduct에서 상품등록 버튼 클릭 
+	public String logadddevice(Model model) {
+		System.out.println("logadddevice");
+		return "logadddevice";
+	}
+	
 	
 }
