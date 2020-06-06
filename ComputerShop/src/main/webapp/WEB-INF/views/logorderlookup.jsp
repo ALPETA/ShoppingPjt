@@ -55,19 +55,23 @@
 
 
 			<!-- Nav Item - Dashboard -->
-			<li class="nav-item active"><a class="nav-link" href="logmemberlookup.do"> <i
-					class="fas fa-fw fa-tachometer-alt"></i> <span>회원 조회</span></a></li>
+			<li class="nav-item">
+			<a class="nav-link" href="logmemberlookup.do"> 
+			<i class="fas fa-fw fa-tachometer-alt"></i> <span>회원 조회</span></a></li>
 
 			<!-- Divider -->
 
 			<!-- Nav Item - Pages Collapse Menu -->
-			<li class="nav-item"><a class="nav-link collapsed" href="logorderlookup.do">
-					<i class="fas fa-fw fa-cog"></i> <span>주문 조회</span>
+			<li class="nav-item active">
+			<a class="nav-link collapsed" href="logorderlookup.do"> 
+			<i class="fas fa-fw fa-cog"></i> 
+				<span>주문 조회</span>
 			</a></li>
 
 			<!-- Nav Item - Utilities Collapse Menu -->
-			<li class="nav-item"><a class="nav-link collapsed" href="logproductlookup.do">
-					<i class="fas fa-fw fa-wrench"></i> <span>상품 조회</span>
+			<li class="nav-item"><a class="nav-link collapsed"
+				href="logproductlookup.do"> <i class="fas fa-fw fa-wrench"></i>
+					<span>상품 조회</span>
 			</a></li>
 
 			<!-- Nav Item - Pages Collapse Menu -->

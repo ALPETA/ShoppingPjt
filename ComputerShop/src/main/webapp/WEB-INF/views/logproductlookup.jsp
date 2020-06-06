@@ -55,7 +55,7 @@
 
 
 			<!-- Nav Item - Dashboard -->
-			<li class="nav-item active"><a class="nav-link" href="logmemberlookup.do"> <i
+			<li class="nav-item"><a class="nav-link" href="logmemberlookup.do"> <i
 					class="fas fa-fw fa-tachometer-alt"></i> <span>회원 조회</span></a></li>
 
 			<!-- Divider -->
@@ -66,7 +66,7 @@
 			</a></li>
 
 			<!-- Nav Item - Utilities Collapse Menu -->
-			<li class="nav-item"><a class="nav-link collapsed" href="logproductlookup.do">
+			<li class="nav-item active"><a class="nav-link collapsed" href="logproductlookup.do">
 					<i class="fas fa-fw fa-wrench"></i> <span>상품 조회</span>
 			</a></li>
 

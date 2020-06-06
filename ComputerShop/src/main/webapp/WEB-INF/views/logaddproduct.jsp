@@ -44,7 +44,7 @@
       
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="logmemberlookup.do">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>회원 조회</span></a>
@@ -69,7 +69,7 @@
       </li>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link collapsed" href="logaddproduct.do">
           <i class="fas fa-fw fa-folder"></i>
           <span>상품 등록</span>
@@ -98,16 +98,16 @@
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-secondary">제품 등록</h6> 
+              <h6 class="m-0 font-weight-bold text-secondary">상품 등록</h6> 
             </div>
             <br>
             
 			<!-- button -->
 			<div class="container">
 			 	
-        		<a class="btn btn-lg1  btn btn-secondary" href="logadddesktop.do">제품 등록</a>
- 				<a class="btn btn-lg1  btn btn-secondary" href="#">제품 수정</a>
- 				<a class="btn btn-lg1  btn btn-secondary" href="#">제품 삭제</a>
+        		<a class="btn btn-lg1  btn btn-secondary" href="logadddesktop.do">상품 등록</a>
+ 				<a class="btn btn-lg1  btn btn-secondary" href="#">상품 수정</a>
+ 				<a class="btn btn-lg1  btn btn-secondary" href="#">상품 삭제</a>
  				
               	
 				<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">

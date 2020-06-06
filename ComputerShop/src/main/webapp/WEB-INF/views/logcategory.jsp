@@ -41,11 +41,11 @@
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Dashboard -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="logmemberlookup.do">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>회원 조회</span></a>
-      </li>
+          <span>회원 조회</span></a></li>
+      
 
       <!-- Divider -->
 

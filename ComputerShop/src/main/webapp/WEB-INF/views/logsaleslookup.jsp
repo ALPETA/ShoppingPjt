@@ -55,7 +55,7 @@
 
 
 			<!-- Nav Item - Dashboard -->
-			<li class="nav-item active"><a class="nav-link" href="logmemberlookup.do"> <i
+			<li class="nav-item"><a class="nav-link" href="logmemberlookup.do"> <i
 					class="fas fa-fw fa-tachometer-alt"></i> <span>회원 조회</span></a></li>
 
 			<!-- Divider -->
@@ -77,7 +77,7 @@
 			</a></li>
 
 			<!-- Nav Item - Charts -->
-			<li class="nav-item"><a class="nav-link" href="#">
+			<li class="nav-item active"><a class="nav-link" href="logsaleslookup.do">
 					<i class="fas fa-fw fa-chart-area"></i> <span>매출 조회</span>
 			</a></li>
 
@@ -94,7 +94,7 @@
 		<!-- DataTales Example -->
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
-				<h6 class="m-0 font-weight-bold text-secondary">상품 조회</h6>
+				<h6 class="m-0 font-weight-bold text-secondary">매출 조회</h6>
 			</div>
 			<br>
 
