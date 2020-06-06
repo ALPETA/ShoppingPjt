@@ -22,7 +22,12 @@ public class CategoryController { // 카테고리 컨트롤러
 		return "notice";
 	}
 	
-	@RequestMapping("noticewrite.do") // 공지사항 상세 페이지
+	@RequestMapping("noticeview.do") // 공지사항 뷰 페이지
+	public String noticeview(Model model) {
+		return "noticeview";
+	}
+	
+	@RequestMapping("noticewrite.do") // 공지사항 글 작성 페이지
 	public String noticewrite(Model model) {
 		return "noticewrite";
 	}
@@ -35,6 +40,11 @@ public class CategoryController { // 카테고리 컨트롤러
 	@RequestMapping("qaview.do") // Q & A 상세 페이지
 	public String qaview(Model model) {
 		return "qaview";
+	}
+	
+	@RequestMapping("qawrite.do") // Q & A 글 작성 페이지
+	public String qawrite(Model model) {
+		return "qawrite";
 	}
 	
 }
