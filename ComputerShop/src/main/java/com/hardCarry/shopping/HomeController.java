@@ -87,6 +87,12 @@ public class HomeController {
 		return "logproductlookup";
 	}
 	
+	@RequestMapping("logsaleslookup.do") // logaddproduct에서 상품등록 버튼 클릭 
+	public String logsaleslookup(Model model) {
+		System.out.println("logsaleslookup");
+		return "logsaleslookup";
+	}
+	
 	
 	
 }

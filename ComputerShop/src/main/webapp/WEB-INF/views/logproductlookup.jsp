@@ -77,7 +77,7 @@
 			</a></li>
 
 			<!-- Nav Item - Charts -->
-			<li class="nav-item"><a class="nav-link" href="#">
+			<li class="nav-item"><a class="nav-link" href="logsaleslookup.do">
 					<i class="fas fa-fw fa-chart-area"></i> <span>매출 조회</span>
 			</a></li>
 

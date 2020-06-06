@@ -77,7 +77,7 @@
 			</a></li>
 
 			<!-- Nav Item - Charts -->
-			<li class="nav-item"><a class="nav-link" href="logsaleslookup.do">
+			<li class="nav-item"><a class="nav-link" href="#">
 					<i class="fas fa-fw fa-chart-area"></i> <span>매출 조회</span>
 			</a></li>
 
@@ -94,7 +94,7 @@
 		<!-- DataTales Example -->
 		<div class="card shadow mb-4">
 			<div class="card-header py-3">
-				<h6 class="m-0 font-weight-bold text-secondary">주문 조회</h6>
+				<h6 class="m-0 font-weight-bold text-secondary">상품 조회</h6>
 			</div>
 			<br>
 
@@ -104,11 +104,9 @@
 				<select style="width: 80px; font-size: 15px;" class="form-control"
 					id="exampleSelect1">
 					<option>선택</option>
-					<option>전체</option>
-					<option>데스크탑</option>
-					<option>노트북</option>
-					<option>부품</option>
-					<option>주변기기</option>
+					<option>연별 선택</option>
+					<option>월별 선택</option>
+					<option>ID별 선택</option>
 				</select>
 
 				<form
@@ -130,47 +128,21 @@
 						cellspacing="0">
 						<thead>
 							<tr>
-								<th>ID</th>
-								<th>주문 번호</th>
-								<th>상품 코드</th>
-								<th>상품명</th>
-								<th>개수</th>
-								<th>가격</th>
-								<th>날짜</th>
-
+								<th>연/월별 매출액 출력 부분</th>
 							</tr>
 						</thead>
-						<tfoot>
 							<tr>
-								<th>hak</th>
-								<th>123</th>
-								<th>#D45G3D</th>
-								<th>그래픽 카드(GTX2080)</th>
-								<th>1</th>
-								<th>530,000</th>
-								<th>2020-06-06</th>
-							</tr>
-						</tfoot>
-						<tbody>
-							<tr>
-								<th>hak</th>
-								<th>123</th>
-								<th>#D45G3D</th>
-								<th>그래픽 카드(GTX2080)</th>
-								<th>1</th>
-								<th>530,000</th>
-								<th>2020-06-06</th>
+								<th>100,000</th>
 							</tr>
 							<tr>
-								<th>hak</th>
-								<th>123</th>
-								<th>#D45G3D</th>
-								<th>그래픽 카드(GTX2080)</th>
-								<th>1</th>
-								<th>530,000</th>
-								<th>2020-06-06</th>
+								<th>200,000</th>
 							</tr>
-						</tbody>
+							<tr>
+								<th>300,000</th>
+							</tr>
+							<tr>
+								<th> 총 금액 : 600,000 </th>
+							</tr>
 					</table>
 				</div>
 			</div>

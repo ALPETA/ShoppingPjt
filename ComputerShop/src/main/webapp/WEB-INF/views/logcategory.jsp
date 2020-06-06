@@ -75,14 +75,14 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="logsaleslookup.do">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>매출 조회</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-table"></i>
           <span>공지사항 작성</span></a>
       </li>
