@@ -148,7 +148,6 @@
 								<th>이메일</th>
 							</tr>
 						</thead>
-						<tfoot>
 							<tr>
 								<th>ad3fsdf</th>
 								<th>김철수</th>
@@ -156,8 +155,7 @@
 								<th>서울 특별시 ~~구 ~~</th>
 								<th>asdf@naver.com</th>
 							</tr>
-						</tfoot>
-						<tbody>
+
 							<tr>
 								<td>모</td>
 								<td>System Architect</td>
@@ -166,196 +164,31 @@
 								<td>2011/04/25</td>
 
 							</tr>
-
-							<tr>
-								<td>힘</td>
-								<td>Data Coordinator</td>
-								<td>Singapore</td>
-								<td>64</td>
-								<td>2012/04/09</td>
-
-							</tr>
-							<tr>
-								<td>들</td>
-								<td>Software Engineer</td>
-								<td>New York</td>
-								<td>63</td>
-								<td>2010/01/04</td>
-
-							</tr>
-							<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
-														<tr>
-								<td>당</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>56</td>
-								<td>2012/06/01</td>
-
-							</tr>
 							
 
-						</tbody>
 					</table>
 				</div>
+
+				<div>
+					<ul class="pagination pagination-lg">
+						<li class="page-item disabled"><a class="page-link" href="#">&laquo;</a>
+						</li>
+						<li class="page-item active"><a class="page-link" href="#">1</a>
+						</li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item"><a class="page-link" href="#">4</a></li>
+						<li class="page-item"><a class="page-link" href="#">5</a></li>
+						<li class="page-item"><a class="page-link" href="#">6</a></li>
+						<li class="page-item"><a class="page-link" href="#">7</a></li>
+						<li class="page-item"><a class="page-link" href="#">8</a></li>
+						<li class="page-item"><a class="page-link" href="#">9</a></li>
+						<li class="page-item"><a class="page-link" href="#">10</a></li>
+						<li class="page-item"><a class="page-link" href="#">&raquo;</a>
+						</li>
+					</ul>
+				</div>
+
 			</div>
 		</div>
 

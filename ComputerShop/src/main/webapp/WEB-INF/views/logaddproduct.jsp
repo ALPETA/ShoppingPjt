@@ -148,13 +148,35 @@
                     </tr>
 				</table>
 				</div>
-              
+
+
+				<div>
+					<ul class="pagination pagination-lg">
+						<li class="page-item disabled"><a class="page-link" href="#">&laquo;</a>
+						</li>
+						<li class="page-item active"><a class="page-link" href="#">1</a>
+						</li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item"><a class="page-link" href="#">4</a></li>
+						<li class="page-item"><a class="page-link" href="#">5</a></li>
+						<li class="page-item"><a class="page-link" href="#">6</a></li>
+						<li class="page-item"><a class="page-link" href="#">7</a></li>
+						<li class="page-item"><a class="page-link" href="#">8</a></li>
+						<li class="page-item"><a class="page-link" href="#">9</a></li>
+						<li class="page-item"><a class="page-link" href="#">10</a></li>
+						<li class="page-item"><a class="page-link" href="#">&raquo;</a>
+						</li>
+					</ul>
+				</div>
+				
 				<div align="right">
-                 <a class="btn btn-lg1  btn btn-secondary" href="logadddesktop.do">상품 등록</a>
- 				<a class="btn btn-lg1  btn btn-secondary" href="#">상품 수정</a>
- 				<a class="btn btn-lg1  btn btn-secondary" href="#">상품 삭제</a>
+					<a class="btn btn-lg1  btn btn-secondary" href="logadddesktop.do">상품 등록</a>
+					<a class="btn btn-lg1  btn btn-secondary" href="#">상품 수정</a>
+					<a class="btn btn-lg1  btn btn-secondary" href="#">상품 삭제</a>
  				</div>
-            </div>
+				
+			</div>
           </div>
         </div>
         </body>
