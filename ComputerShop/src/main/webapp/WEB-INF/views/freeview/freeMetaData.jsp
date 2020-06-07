@@ -6,17 +6,17 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-td{
-	text-align:center;
+td {
+	text-align: center;
 }
-.align-center{
-	text-align:center;
+
+.align-center {
+	text-align: center;
 }
 </style>
 </head>
 <body>
-	<table class="table table-bordered" id="dataTable" width="100%"
-		cellspacing="0">
+	<table class="table table-bordered" id="dataTable" cellspacing="0">
 		<thead>
 			<tr>
 				<th width="15%" class="align-center">게시물 번호</th>
