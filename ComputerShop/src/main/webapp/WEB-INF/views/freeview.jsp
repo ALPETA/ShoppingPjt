@@ -27,6 +27,9 @@
 .space-left {
 	margin-left: 970px;
 }
+.space-left2 {
+	margin-left: 1050px;
+}
 </style>
 </head>
 <body>
@@ -66,6 +69,7 @@
 				</form>
 			</tbody>
 		</table>
+		<div class="space-left2">작성일 :<a>06-07</a></div>
 	</div>
 </body>
 </html>

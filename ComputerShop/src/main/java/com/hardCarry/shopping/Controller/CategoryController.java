@@ -71,4 +71,9 @@ public class CategoryController { // 카테고리 컨트롤러
 	public String freewrite(Model model) {
 		return "freewrite";
 	}
+	
+	@RequestMapping("freeupdate.do") // 자유게시판 글 수정 페이지
+	public String freeupdate(Model model) {
+		return "freeupdate";
+	}
 }

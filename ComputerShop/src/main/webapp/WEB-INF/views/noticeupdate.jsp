@@ -29,7 +29,7 @@
 }
 
 .space-left2 {
-	margin-left: 1020px;
+	margin-left: 1050px;
 }
 </style>
 </head>

@@ -25,7 +25,7 @@
 	crossorigin="anonymous"></script>
 <style>
 .space-left {
-	margin-left: 1020px;
+	margin-left: 1050px;
 }
 </style>
 </head>
