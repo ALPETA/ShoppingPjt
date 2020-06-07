@@ -48,13 +48,5 @@ public class HomeController {
 	public String laptop(Model model) {
 		return "laptop";
 		}
-	
-	
-	@RequestMapping("productq.do")
-	public String productq(Model model) {
-		return "productq";
-		}
-	
-	
-	
+
 }

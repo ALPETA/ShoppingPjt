@@ -32,21 +32,13 @@
 	</servlet>
 
 	<servlet-mapping> <!-- 정적 파일  -->
-		<servlet-name>appServlet</servlet-name>
-<<<<<<< HEAD
-=======
-		<url-pattern>*.do</url-pattern>
-	</servlet-mapping>
+        <servlet-name>appServlet</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
 
-	<servlet-mapping>
-		<servlet-name>appServlet</servlet-name>
->>>>>>> branch 'master' of https://github.com/ALPETA/ShoppingPjt.git
-		<url-pattern>/</url-pattern>
-	</servlet-mapping>
-	
-	<servlet-mapping> <!-- 컨트롤러 파일  -->
-		<servlet-name>appServlet</servlet-name>
-		<url-pattern>*.do</url-pattern>
-	</servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>appServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 	
 </web-app>
