@@ -391,6 +391,7 @@ ul.btn li:last-child {
      align-items: center;
      position: relative;
 }
+
 .banner_main::before {
      position: absolute;
      content: "";
