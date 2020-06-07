@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java"
+	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE>
 <html>
 <head>
@@ -24,49 +24,40 @@
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
 </head>
-<style>
-.space-left{
-	margin-left: 1020px;
-}
-</style>
 <body>
 	<div class="container">
 		<table class="table table-bordered">
 			<thead>
-				<div>
-					<h4>Q&A 글 보기</h4>
-					<div>
-						<a>게시물 번호 : 1</a>
-					</div>
-				</div>
+			<caption>자유게시판 글쓰기</caption>
 			</thead>
 			<tbody>
 				<form action="freqwrite_ok.jsp" method="post"
 					encType="multiplart/form-data">
 					<tr>
 						<th>제목:</th>
-						<td><a>하드캐리</a></td>
-					</tr>
-					<tr>
-						<th>작성자:</th>
-						<td><a>홍길동</a></td>
+						<td><input type="text" placeholder="제목을 입력하세요. "
+							name="subject" class="form-control" /></td>
 					</tr>
 					<tr>
 						<th>내용:</th>
-						<td><textarea cols="10" rows="20" name="content"
-								class="form-control" readonly>123</textarea></td>
+						<td><textarea cols="10" rows="20" placeholder="내용을 입력하세요. "
+								name="content" class="form-control"></textarea></td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="button" value="수정"
-							class="pull-left" /> <input type="button" value="삭제"
-							class="pull-left" /> <input type="button" value="글 목록으로... "
-							class="pull-right" onclick="javascript:location.href='list.jsp'" />
-						</td>
+						<th for="exampleInputFile">이미지 업로드:</th>
+						<td><input type="file" class="form-control-file form-control"
+							id="exampleInputFile" aria-describedby="fileHelp" /></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="button" value="등록"
+							onclick="sendData()" class="pull-right" /> <input type="button"
+							value="reset" class="pull-left" /> <input type="button"
+							value="글 목록으로... " class="pull-right"
+							onclick="javascript:location.href='list.jsp'" /></td>
 					</tr>
 				</form>
 			</tbody>
 		</table>
-		<div class="space-left">작성일 :<a>06-07</a></div>
 	</div>
 </body>
 </html>

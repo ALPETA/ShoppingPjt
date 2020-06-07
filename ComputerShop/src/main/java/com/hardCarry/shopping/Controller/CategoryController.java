@@ -32,6 +32,11 @@ public class CategoryController { // 카테고리 컨트롤러
 		return "noticewrite";
 	}
 	
+	@RequestMapping("noticeupdate.do") // Q & A 글 수정 페이지
+	public String noticeupdate(Model model) {
+		return "noticeupdate";
+	}
+	
 	@RequestMapping("qa.do") // Q & A 페이지
 	public String qa(Model model) {
 		return "qa";
@@ -45,6 +50,11 @@ public class CategoryController { // 카테고리 컨트롤러
 	@RequestMapping("qawrite.do") // Q & A 글 작성 페이지
 	public String qawrite(Model model) {
 		return "qawrite";
+	}
+	
+	@RequestMapping("qaupdate.do") // Q & A 글 수정 페이지
+	public String qaupdate(Model model) {
+		return "qaupdate";
 	}
 	
 	@RequestMapping("free.do") // 자유게시판 페이지

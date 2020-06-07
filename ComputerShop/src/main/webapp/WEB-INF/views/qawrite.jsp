@@ -45,16 +45,16 @@
 					</tr>
 					<tr>
 						<th for="exampleInputFile">이미지 업로드:</th>
-						<td><input type="file" class="form-control-file form-control" id="exampleInputFile"
-								aria-describedby="fileHelp" /></td>
+						<td><input type="file" class="form-control-file form-control"
+							id="exampleInputFile" aria-describedby="fileHelp" /></td>
 					</tr>
-				<tr>
-					<td colspan="2"><input type="button" value="등록"
-						onclick="sendData()" class="pull-right" /> <input type="button"
-						value="reset" class="pull-left" /> <input type="button"
-						value="글 목록으로... " class="pull-right"
-						onclick="javascript:location.href='list.jsp'" /></td>
-				</tr>
+					<tr>
+						<td colspan="2"><input type="button" value="등록"
+							onclick="sendData()" class="pull-right" /> <input type="button"
+							value="reset" class="pull-left" /> <input type="button"
+							value="글 목록으로... " class="pull-right"
+							onclick="javascript:location.href='list.jsp'" /></td>
+					</tr>
 				</form>
 			</tbody>
 		</table>

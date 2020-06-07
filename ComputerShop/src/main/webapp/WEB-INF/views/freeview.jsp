@@ -23,20 +23,20 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
-</head>
 <style>
-.space-left{
-	margin-left: 1020px;
+.space-left {
+	margin-left: 970px;
 }
 </style>
+</head>
 <body>
 	<div class="container">
 		<table class="table table-bordered">
 			<thead>
 				<div>
-					<h4>Q&A 글 보기</h4>
+					<h4>자유게시판 글 보기</h4>
 					<div>
-						<a>게시물 번호 : 1</a>
+						<a>게시물 번호 : 1</a><a class="space-left">조회수 : 1</a>
 					</div>
 				</div>
 			</thead>
@@ -66,7 +66,6 @@
 				</form>
 			</tbody>
 		</table>
-		<div class="space-left">작성일 :<a>06-07</a></div>
 	</div>
 </body>
 </html>
