@@ -69,7 +69,7 @@
       </li>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link collapsed" href="logaddproduct.do">
           <i class="fas fa-fw fa-folder"></i>
           <span>상품 등록</span>
@@ -84,7 +84,7 @@
       </li>
 
       <!-- Nav Item - Tables -->
-      <li class="nav-item">
+      <li class="nav-item  active">
         <a class="nav-link" href="lognotice.do">
           <i class="fas fa-fw fa-table"></i>
           <span>공지사항 작성</span></a>
@@ -98,64 +98,86 @@
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-secondary">상품 등록</h6> 
+              <h6 class="m-0 font-weight-bold text-secondary">공지사항 관리</h6> 
             </div>
             <br>
-            
-			<!-- button -->
- 				
-              	
-				<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="제품 검색" aria-label="Search" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                  <button type="button" class="btn btn-secondary">검색</button>
-              </div>
-            </div>
-          </form>
-				
 
-			         
-            
-            <div class="card-body">
+
+
+
+			<form
+				class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+				<div class="input-group">
+					<input type="text" class="form-control bg-light border-0 small"
+						placeholder="제목 검색" aria-label="Search"
+						aria-describedby="basic-addon2">
+					<div class="input-group-append">
+						<div class="container">
+							<a class="btn btn-space1 btn btn-secondary"  href="#">검색</a>
+						</div>
+					</div>
+				</div>
+			</form>
+
+
+
+
+			<div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>제품 코드</th>
-                      <th>제품 명</th>
-                      <th>제품 주문 횟수</th>
-                      <th>제품 재고</th>
-                      <th>제품 제조사</th>
-                      <th>제품 이미지 </th>
+                      <th>번호</th>
+                      <th>제목</th>
+                      <th>작성자</th>
+                      <th>날짜</th>
+                      <th>조회수</th>
                     </tr>
                   </thead>
                     <tr>
-                      <th>#1df3f</th>
-                      <th>CPU</th>
-                      <th>5</th>
-                      <th>150</th>
-                      <th>HarrdCarry</th>
-                      <th>이미지</th>
+                      <td>1</td>
+                      <td> <a href="#"> I9 9900 </a> </td>
+                      <td>admin</td>
+                      <td>2020-05-31</td>
+                      <td>235,524</td>
+                    </tr>
+                   
+                    <tr>
+                      <td>1</td>
+                      <td> <a href="#"> I9 9900 </a> </td>
+                      <td>admin</td>
+                      <td>2020-05-31</td>
+                      <td>235,524</td>
                     </tr>
                     <tr>
-                      <th>#1df3f</th>
-                      <th>CPU</th>
-                      <th>5</th>
-                      <th>150</th>
-                      <th>HarrdCarry</th>
-                      <th>이미지</th>
+                      <td>1</td>
+                      <td> <a href="#"> I9 9900 </a> </td>
+                      <td>admin</td>
+                      <td>2020-05-31</td>
+                      <td>235,5241111111111111111111111111111111</td>
                     </tr>
-				</table>
-				</div>
-              
+                    <tr>
+                      <td>1</td>
+                      <td> <a href="#"> I9 9900 </a> </td>
+                      <td>admin</td>
+                      <td>2020-05-31</td>
+                      <td>235,524</td>
+                    </tr>
+                </table>
+              </div>
+            
 				<div align="right">
-                 <a class="btn btn-lg1  btn btn-secondary" href="logadddesktop.do">상품 등록</a>
- 				<a class="btn btn-lg1  btn btn-secondary" href="#">상품 수정</a>
- 				<a class="btn btn-lg1  btn btn-secondary" href="#">상품 삭제</a>
- 				</div>
+					<a class="btn btn-space1 btn btn-secondary"  href="#">글 쓰기</a>
+				</div>
+            
             </div>
+            
+    
           </div>
+
+			
+			
         </div>
+        
         </body>
         </html>

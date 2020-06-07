@@ -93,6 +93,12 @@ public class HomeController {
 		return "logsaleslookup";
 	}
 	
+	@RequestMapping("lognotice.do") // logaddproduct에서 상품등록 버튼 클릭 
+	public String lognotice(Model model) {
+		System.out.println("lognotice");
+		return "lognotice";
+	}
+	
 	
 	
 }

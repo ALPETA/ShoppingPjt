@@ -82,7 +82,7 @@
 			</a></li>
 
 			<!-- Nav Item - Tables -->
-			<li class="nav-item"><a class="nav-link" href="#">
+			<li class="nav-item"><a class="nav-link" href="lognotice.do">
 					<i class="fas fa-fw fa-table"></i> <span>공지사항 작성</span>
 			</a></li>
 		</ul>
@@ -137,7 +137,7 @@
 						</thead>
 						<tfoot>
 							<tr>
-								<th>#hak</th>
+								<th>#eds23</th>
 								<th>CPU (i9 4550)</th>
 								<th>150</th>
 								<th>30</th>
@@ -146,14 +146,14 @@
 						</tfoot>
 						<tbody>
 							<tr>
-								<th>#hak</th>
+								<th>#sfd23f</th>
 								<th>CPU (i9 4550)</th>
 								<th>150</th>
 								<th>30</th>
 								<th>HardCarry</th>
 							</tr>
 							<tr>
-								<th>#hak</th>
+								<th>#ff3fd</th>
 								<th>CPU (i9 4550)</th>
 								<th>150</th>
 								<th>30</th>

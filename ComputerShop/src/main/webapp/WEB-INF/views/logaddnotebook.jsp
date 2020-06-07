@@ -140,10 +140,10 @@
 		<textarea class="form-control" id="exampleTextarea" rows="5"></textarea>
 		</div>
 
-		<div class="container">
-		<a class="btn btn-lg10  btn btn-secondary" href="#">등록</a>
- 		<a class="btn btn-lg10  btn btn-secondary" href="#">취소</a>
- 		<a class="btn btn-lg10  btn btn-secondary" href="#">값 초기화</a>
+		<div align="right">
+			<a class="btn btn-lg10  btn btn-secondary" href="#">등록</a>
+ 			<a class="btn btn-lg10  btn btn-secondary" href="#">취소</a>
+ 			<a class="btn btn-lg10  btn btn-secondary" href="#">값 초기화</a>
  		</div>
     </fieldset>
     </div>

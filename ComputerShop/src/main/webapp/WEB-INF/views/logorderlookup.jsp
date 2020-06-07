@@ -86,7 +86,7 @@
 			</a></li>
 
 			<!-- Nav Item - Tables -->
-			<li class="nav-item"><a class="nav-link" href="#">
+			<li class="nav-item"><a class="nav-link" href="lognotice.do">
 					<i class="fas fa-fw fa-table"></i> <span>공지사항 작성</span>
 			</a></li>
 		</ul>
@@ -146,7 +146,7 @@
 						</thead>
 						<tfoot>
 							<tr>
-								<th>hak</th>
+								<th>dfedr</th>
 								<th>123</th>
 								<th>#D45G3D</th>
 								<th>그래픽 카드(GTX2080)</th>
@@ -157,7 +157,7 @@
 						</tfoot>
 						<tbody>
 							<tr>
-								<th>hak</th>
+								<th>fdfa</th>
 								<th>123</th>
 								<th>#D45G3D</th>
 								<th>그래픽 카드(GTX2080)</th>
@@ -166,7 +166,7 @@
 								<th>2020-06-06</th>
 							</tr>
 							<tr>
-								<th>hak</th>
+								<th>vdff3fe</th>
 								<th>123</th>
 								<th>#D45G3D</th>
 								<th>그래픽 카드(GTX2080)</th>
