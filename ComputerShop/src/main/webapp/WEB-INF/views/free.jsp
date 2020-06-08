@@ -5,25 +5,14 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>SB Admin 2 - Tables</title>
-<!-- <link href="css/sb-admin-2.min.css" rel="stylesheet">
-<link href="vendor/datatables/dataTables.bootstrap4.min.css"
-	rel="stylesheet">
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-<script src="js/sb-admin-2.min.js"></script> -->
-<%@include file="./commons/header/metaHeader.jsp"%>
+<%-- <%@include file="./commons/header/metaHeader.jsp"%> --%>
 </head>
 <bodyclass="main-layout">
-	<%@include file="./commons/loader.jsp"%>
+<%@include file="./freeview/freeMetaData.jsp"%>
+	<%-- <%@include file="./commons/loader.jsp"%>
 	<%@include file="./commons/header/header.jsp"%>
 	<div class="align-center" >
 		<section class="banner_main2">
-			<!-- <div class="carousel-inner">
-				<br> <br> <br> <br> <br> <br>
-				<div class="container"></div>
-			</div> -->
 		</section>
 	</div>
 	<div class="container-fluid">
@@ -33,7 +22,7 @@
 				<div class="table-responsive">
 
 					<!-- 메타데이터 -->
-					<%@include file="./freeview/freeMetaData.jsp"%>
+					
 
 					<!-- 검색 창&버튼 -->
 					<form
@@ -58,6 +47,6 @@
 	<!-- Javascript files-->
 	<%@include file="./commons/js/javascript.jsp"%>
 	<!-- sidebar -->
-	<%@include file="./commons/js/sidebar.jsp"%>
+	<%@include file="./commons/js/sidebar.jsp"%> --%>
 </body>
 </html>
