@@ -22,4 +22,29 @@ public class HomeController {
 		logger.info("signUp");
 		return "signUp";
 	}
+	@RequestMapping(value = "laptop.do", method = RequestMethod.GET)
+	public String laptop(Model model) {
+		logger.info("laptop");
+		return "laptop";
+	}
+	@RequestMapping(value = "contact.do", method = RequestMethod.GET)
+	public String contact(Model model) {
+		logger.info("contact");
+		return "contact";
+	}
+	@RequestMapping(value = "product.do", method = RequestMethod.GET)
+	public String product(Model model) {
+		logger.info("product");
+		return "product";
+	}
+	@RequestMapping(value = "computer.do", method = RequestMethod.GET)
+	public String computer(Model model) {
+		logger.info("computer");
+		return "computer";
+	}
+	@RequestMapping(value = "about.do", method = RequestMethod.GET)
+	public String about(Model model) {
+		logger.info("about");
+		return "about";
+	}
 }

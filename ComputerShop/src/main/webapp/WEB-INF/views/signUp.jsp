@@ -66,23 +66,27 @@
 						<h1>이용약관</h1>
 						<form>
 							<h4 class="scheme-g">●이용약관1</h4>
-							<textarea class="form-control" style="font-size: 1em;">내용입니다.
-            </textarea>
-							<p>
-								<input type="checkbox" id="check_1" name="" /> 위의 약관에 동의 합니다.<br />
+							<textarea class="form-control" style="font-size: 1em;">
+							the lend is clocked in deepest blue
+							the shadow of egles across the moon
+							indure the pain it's easy now
+							what words can I say it? </textarea>
+							<p style="color: white;">
+								<input type="checkbox" id="check_1" name="" />위의 약관에 동의 합니다.
 							</p>
+							<br />
 							<h4 class="scheme-g">●이용약관2</h4>
-							<textarea class="form-control" style="font-size: 1em;">내용입니다.
-            </textarea>
-							<p>
-								<input type="checkbox" id="check_2" name="" /> 위의 약관에 동의 합니다.<br />
+							<textarea class="form-control" style="font-size: 1em;">내용입니다. </textarea>
+							<p style="color: white;">
+								<input type="checkbox" id="check_2" name="" />위의 약관에 동의 합니다.
 							</p>
+							<br />
 							<h4 class="scheme-g">●개인정보취급방침</h4>
-							<textarea class="form-control" style="font-size: 1em;">내용입니다. 
-            </textarea>
-							<p>
-								<input type="checkbox" id="check_3" name="" /> 위의 약관에 동의 합니다.<br />
+							<textarea class="form-control" style="font-size: 1em;">내용입니다. </textarea>
+							<p style="color: white;">
+								<input type="checkbox" id="check_3" name="" />위의 약관에 동의 합니다.
 							</p>
+							<br />
 						</form>
 					</div>
 
