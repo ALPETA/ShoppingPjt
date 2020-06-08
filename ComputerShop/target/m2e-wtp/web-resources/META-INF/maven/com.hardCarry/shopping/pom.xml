@@ -16,6 +16,12 @@
 	</properties>
 	<dependencies>
 
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.0.0.GA</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -23,7 +29,6 @@
 			<version>1.18.12</version>
 			<scope>provided</scope>
 		</dependency>
-
 
 		<!-- MyBatis -->
 		<dependency>
