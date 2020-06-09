@@ -34,7 +34,7 @@ public class ProductService {
 
 	public void save(ProductDTO productDTO, SpecDTO specDTO, MultipartFile files, HttpServletRequest request)
 			throws Exception {
-		final String REAL_PATH = "D:\\hardcarry-workspace\\ShoppingPjt\\ComputerShop\\src\\main\\webapp\\resources\\imgs\\";
+		final String REAL_PATH = "C:\\Users\\kobel\\git\\ShoppingPjt\\ComputerShop\\src\\main\\webapp\\resources\\imgs\\";
 		ProductEntity productEntity = mapper.map(productDTO, ProductEntity.class);
 		productEntity.setP_sumnailImgPath(REAL_PATH + "/mainImg/" + files.getOriginalFilename());
 		SpecEntity specEntity = mapper.map(specDTO, SpecEntity.class);
