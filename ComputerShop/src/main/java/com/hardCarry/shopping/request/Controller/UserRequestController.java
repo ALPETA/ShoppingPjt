@@ -32,6 +32,6 @@ public class UserRequestController {
 			return "./";
 		}
 		UsersEntity saveUser = userService.save(user);
-		return "redirect:";
+		return "redirect:saveUser";
 	}
 }

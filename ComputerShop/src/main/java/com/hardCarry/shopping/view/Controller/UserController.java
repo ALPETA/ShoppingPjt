@@ -4,8 +4,23 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 @Controller
 public class UserController { // 사용자 컨트롤러
+	@RequestMapping("index.do")
+	public String index(Model model) {
+		return "index";
+	}
+	
+	@RequestMapping("signUp.do")
+	public String signUp(Model model) {
+		return "signUp";
+	}
+
+	@RequestMapping("shoppingCart.do")
+	public String shoppingCart(Model model) {
+		return "shoppingCart";
+	}
 	
 	@RequestMapping("login.do") // 로그인 페이지
 	public String login(Model model) {
