@@ -1,29 +1,9 @@
-<<<<<<< HEAD
 package com.hardCarry.shopping.entity;
 
 import java.util.Date;
-
-public class ProductEntity {
-	long seq;
-	String code;
-	String name;
-	long price;
-	String manufacture;
-	String etc;
-	String sumnailImgPath;
-	long stock;
-	boolean state;
-	Date createDate;
-	
-	//////////////////////////////////////////////////
-	long categorySeq;
-}
-=======
-package com.hardCarry.shopping.entity;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -72,4 +52,3 @@ public class ProductEntity {
 		return MD5.substring(0, 8) + seq;
 	}
 }
->>>>>>> refs/remotes/origin/song1

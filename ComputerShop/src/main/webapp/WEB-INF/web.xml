@@ -41,11 +41,6 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
-
-	<servlet-mapping> <!-- 내가 쓸컨트롤러 -->
-		<servlet-name>appServlet</servlet-name>
-		<url-pattern>*.do</url-pattern>
-	</servlet-mapping>
 	
 	<filter>
 		<filter-name>encodingFilter</filter-name>
