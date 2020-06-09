@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0/EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
@@ -5,3 +6,13 @@
 		<typeAlias type="com.hardCarry.shopping.entity.UsersEntity" alias="User" />
 	</typeAliases>
 </configuration>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0/EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.hardCarry.shopping.entity.SpecEntity" alias="SpecEntity" />
+		<typeAlias type="com.hardCarry.shopping.entity.ProductEntity" alias="ProductEntity" />
+	</typeAliases>
+</configuration>     
+>>>>>>> refs/remotes/origin/song1
