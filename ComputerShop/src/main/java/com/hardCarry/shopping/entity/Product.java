@@ -7,10 +7,10 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Data
-@AllArgsConstructor //파라미터 있는 생성자 생성
-@NoArgsConstructor // 파라미터 없는 생성자 생성
 @Getter
 @Setter
+@AllArgsConstructor //파라미터 있는 생성자 생성
+@NoArgsConstructor // 파라미터 없는 생성자 생성
 public class Product {
 	String u_seq;
 	String u_name;

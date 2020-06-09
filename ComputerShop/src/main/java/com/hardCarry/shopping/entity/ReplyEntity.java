@@ -1,12 +1,13 @@
-package com.hardCarry.shopping.dto;
+package com.hardCarry.shopping.entity;
 
 import java.util.Date;
 
-public class ShoppingCartEntity {
-	int stock;
+public class ReplyEntity {
+	long seq;
+	String content;
 	Date createDate;
 	
 	//////////////////////////////////////////////////
 	long userSeq;
-	long productSeq;
+	long boardSeq;
 }

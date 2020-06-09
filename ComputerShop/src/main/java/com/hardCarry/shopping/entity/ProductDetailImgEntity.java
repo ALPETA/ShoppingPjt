@@ -1,4 +1,4 @@
-package com.hardCarry.shopping.dto;
+package com.hardCarry.shopping.entity;
 
 public class ProductDetailImgEntity {
 	long seq;
