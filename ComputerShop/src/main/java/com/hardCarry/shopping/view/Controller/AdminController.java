@@ -23,23 +23,28 @@ public class AdminController { // 관리자 컨트롤러
 		return "./log/logproductlookup";
 	}
 	
-	@RequestMapping("logmemberlookup.do") // 관리자 상품 조회 페이지
-	public String logmemberlookup(Model model) {
-		return "./log/logmemberlookup";
+	@RequestMapping("logorderlookup.do") // 관리자 상품 조회 페이지
+	public String logorderlookup(Model model) {
+		return "./log/logorderlookup";
 	}
 	
 	@RequestMapping("Productregistration.do") // 관리자 상품 등록 페이지
 	public String Productregistration(Model model) {
-		return "Productregistration";
+		return "./log/Productregistration";
 	}
 	
-	@RequestMapping("Salescheck.do") // 관리자 매출 조회 페이지
-	public String Salescheck(Model model) {
-		return "Salescheck";
+	@RequestMapping("logsaleslookup.do") // 관리자 매출 조회 페이지
+	public String logsaleslookup(Model model) {
+		return "./log/logsaleslookup";
 	}
 		
-	@RequestMapping("imagePage.do") // 관리자 광고 이미지 페이지
-	public String imagePage(Model model) {
-		return "imagePage";
+	@RequestMapping("lognotice.do") // 관리자 광고 이미지 페이지
+	public String lognotice(Model model) {
+		return "./log/lognotice";
+	}
+	
+	@RequestMapping("logmemberlookup.do") // 관리자 광고 이미지 페이지
+	public String logmemberlookup(Model model) {
+		return "./log/logmemberlookup";
 	}
 }
