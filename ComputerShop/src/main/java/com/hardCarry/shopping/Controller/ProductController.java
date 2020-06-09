@@ -16,6 +16,4 @@ public class ProductController { // 제품 컨트롤러
 	public String productView(Model model){
 		return "productView";
 	}
-	
-	
 }
