@@ -8,7 +8,7 @@ $(document)
 .ready(
     function() {
         var imgByte;
-        $("#exampleSelect1").change(function() {
+        $("#case").change(function() {
             if ($(this).val() === '게임 분류') {
                 $("#gameDisplaySection").fadeIn(300);
                 return;
@@ -77,16 +77,17 @@ $(document)
             }
         }
     });
+
 </script>
 <form>
 	<div style="margin-top: 30px" class="container">
 		<div class="row">
 			<div class="form-group col-lg-10">
 				<label for="exampleSelect1">상품 세부 분류</label> <select
-					class="form-control" id="exampleSelect1">
+					class="form-control" id="case">
 					<option>분류 선택</option>
-					<option>사무 분류</option>
-					<option>게임 분류</option>
+					<option id="1">사무 분류</option>
+					<option id="2">게임 분류</option>
 				</select>
 			</div>
 			<div class="form-group col-lg-10" style="display: none"
@@ -180,7 +181,7 @@ manufacturer" type="email"
 				<textarea class="form-control" name="Explanation" id="exampleTextarea" rows="5">제품 상세 설명</textarea>
 			</div>
 			<div class="form-group col-lg-10">
-				<button type="button" class="btn btn-primary btn-block">등 록</button>
+				<button type="button" class="btn btn-primary btn-block" onclick="test.jsp">등 록</button>
 				<button type="button" class="btn btn-secondary btn-block">초기화</button>
 			</div>
 		</div>

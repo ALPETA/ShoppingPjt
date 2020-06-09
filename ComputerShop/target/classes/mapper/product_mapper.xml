@@ -24,9 +24,22 @@
 		AND m_pw = #{m_pw}
 		]]>
 	</select>
-	
+
 	<insert id="insertMember" parameterType="Product">
-		INSERT INTO `MEMBER` values (#{m_id},#{m_pw},222,'ewew','ewqewe',22,3);
+		INSERT INTO `MEMBER`
+		values (#{m_id},#{m_pw},222,'ewew','ewqewe',22,3);
 	</insert>
+
+
+	<select id="selectAll1" resultType="com.hardCarry.shopping.entity.Product">
+		SELECT *
+		FROM user
+	</select>
+
+
+	<insert id="insertProduct" parameterType="Product">
+		INSERT INTO category(c_name) VALUES(#{id});
+	</insert>
+	
 	
 </mapper>

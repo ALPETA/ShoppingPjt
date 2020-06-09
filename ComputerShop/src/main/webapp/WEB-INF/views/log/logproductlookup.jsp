@@ -74,6 +74,7 @@
 					width="100%" cellspacing="0">
 					<thead>
 						<tr>
+							<th></th>
 							<th>상품 코드</th>
 							<th>상품 명</th>
 							<th>주문 횟수</th>
@@ -83,29 +84,13 @@
 					</thead>
 					<tr style="cursor: pointer;">
 						<th><input type="checkbox" value="1" name="seq" /></th>
-						<th><input type="checkbox" value="2" name="seq" /></th>
-						<th><input type="checkbox" value="3" name="seq" /></th>
-						<th><input type="checkbox" value="4" name="seq" /></th>
 						<th onclick="alert('asjahsa')">#eds23</th>
 						<th>CPU (i9 4550)</th>
 						<th>150</th>
 						<th>30</th>
 						<th>HardCarry</th>
 					</tr>
-					<tr>
-						<th>#sfd23f</th>
-						<th>CPU (i9 4550)</th>
-						<th>150</th>
-						<th>30</th>
-						<th>HardCarry</th>
-					</tr>
-					<tr>
-						<th>#ff3fd</th>
-						<th>CPU (i9 4550)</th>
-						<th>150</th>
-						<th>30</th>
-						<th>HardCarry</th>
-					</tr>
+					
 				</table>
 			</div>
 
