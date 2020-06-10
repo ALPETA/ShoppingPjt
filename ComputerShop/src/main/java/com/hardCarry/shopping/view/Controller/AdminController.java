@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AdminController { // 관리자 컨트롤러
 	
-	@RequestMapping("logcategory.do") // 관리자 메인 페이지
+	@RequestMapping("logcategory.do") // 관리자 메인 페이지1
 	public String logcategory(Model model) {
 		return "./log/logcategory";
 	}
