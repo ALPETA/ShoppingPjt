@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
 <head>
 <meta charset="utf-8" />
@@ -18,9 +18,10 @@
 	font-size: 27px;
 	margin: 20px;
 }
+
 .panel-heading [data-toggle="collapse"]:after {
 	font-family: 'Glyphicons Halflings';
-	content: "e072"; 
+	content: "e072";
 	float: right;
 	color: #F58723;
 	font-size: 18px;
@@ -31,6 +32,7 @@
 	-o-transform: rotate(-90deg);
 	transform: rotate(-90deg);
 }
+
 .panel-heading [data-toggle="collapse"].collapsed:after {
 	-webkit-transform: rotate(90deg);
 	-moz-transform: rotate(90deg);

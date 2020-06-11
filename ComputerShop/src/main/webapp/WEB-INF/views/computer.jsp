@@ -152,11 +152,8 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-<<<<<<< HEAD
-                        <p>Â© 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</a></p>
-=======
-                        <p>© 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</a></p>
->>>>>>> refs/remotes/origin/KEJ_ìž‘ì—…
+                        <p>© 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</p>
+—…
                      </div>
                   </div>
                </div>

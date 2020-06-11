@@ -1,15 +1,11 @@
 package com.hardCarry.shopping.dao;
 
-import java.util.List;
-
-import com.hardCarry.shopping.entity.Product;
+import com.hardCarry.shopping.entity.ProductEntity;
 
 public interface ProductDAO {
-	List<Product> selectAll();
+	void save(ProductEntity productEntity);
 
-	List<Product> selectById(String id);
+	void update(ProductEntity productEntity);
 
-	List<Product> selectByPwId(Product product);
-
-	void insertMember(Product product);
+	long finalSeq();
 }
