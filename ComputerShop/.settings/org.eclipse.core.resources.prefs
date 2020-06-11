@@ -1,7 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 eclipse.preferences.version=1
 encoding//src/main/webapp/WEB-INF/views/product.jsp=UTF-8
 =======
 eclipse.preferences.version=1
 encoding//src/main/webapp/WEB-INF/views/notice.jsp=UTF-8
 >>>>>>> refs/remotes/origin/LHJ
+=======
+eclipse.preferences.version=1
+encoding//src/main/webapp/WEB-INF/views/commons/footer/footer.jsp=UTF-8
+>>>>>>> refs/remotes/origin/KEJ_작업

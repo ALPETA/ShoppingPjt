@@ -68,7 +68,7 @@ h6 {
      padding: 0 0 10px 0;
      font-weight: normal;
      line-height: normal;
-     color: #111111;
+     color: #FFFFFF;
      margin: 0
 }
 
@@ -391,6 +391,7 @@ ul.btn li:last-child {
      align-items: center;
      position: relative;
 }
+
 .banner_main::before {
      position: absolute;
      content: "";
@@ -411,6 +412,7 @@ ul.btn li:last-child {
      bottom: -38px;
      left: 38px;
 }
+<<<<<<< HEAD
 .banner_main2 {
      background: url(../images/banner.jpg);
      background-repeat: no-repeat;
@@ -422,6 +424,21 @@ ul.btn li:last-child {
      align-items: center;
      position: relative;
 }
+=======
+
+.banner_main2 {
+     background: url(../images/banner.jpg);
+     background-repeat: no-repeat;
+     min-height: 150px;
+     background-size: 100% 100%;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     align-items: center;
+     position: relative;
+}
+
+>>>>>>> refs/remotes/origin/KEJ_작업
 .text-bg {
      text-align: left;
 }

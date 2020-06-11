@@ -30,7 +30,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
    </head>
    <!-- body -->
-   <body class="main-layout inner_posituong contact_page">
+   <body class="main-layout inner_posituong computer_page">
       <!-- loader  -->
       <div class="loader_bg">
          <div class="loader"><img src="images/loading.gif" alt="#" /></div>
@@ -61,7 +61,7 @@
                               <li class="nav-item ">
                                  <a class="nav-link" href="index.html">Home</a>
                               </li>
-                              <li class="nav-item">
+                              <li class="nav-item active">
                                  <a class="nav-link" href="about.html">About</a>
                               </li>
                               <li class="nav-item">
@@ -73,7 +73,7 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="product.html">Products</a>
                               </li>
-                              <li class="nav-item active">
+                              <li class="nav-item">
                                  <a class="nav-link" href="contact.html">Contact Us</a>
                               </li>
                               <li class="nav-item d_none">
@@ -92,42 +92,27 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
-      <!--  contact -->
-      <div class="contact">
+      <!-- about section -->
+      <div class="about">
          <div class="container">
-            <div class="row">
-               <div class="col-md-12">
+            <div class="row d_flex">
+               <div class="col-md-5">
                   <div class="titlepage">
-                     <h2>Contact Now</h2>
+                     <h2>About Us</h2>
+                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                     <a class="read_more" href="#">Read More</a>
                   </div>
                </div>
-            </div>
-            <div class="row">
-               <div class="col-md-10 offset-md-1">
-                  <form id="request" class="main_form">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Name" type="type" name="Name"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
-                        </div>
-                        <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="type" Message="Name">Message </textarea>
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn">Send</button>
-                        </div>
-                     </div>
-                  </form>
+               <div class="col-md-7">
+                  <div class="about_img">
+                     <figure><img src="images/about.jpg" alt="#"/></figure>
+                  </div>
                </div>
             </div>
          </div>
       </div>
-      <!-- end contact -->
+      </div>
+      <!-- end about section -->
       <!--  footer -->
       <footer>
          <div class="footer">
@@ -167,11 +152,7 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-<<<<<<< HEAD
-                        <p>© 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</a></p>
-=======
                         <p>� 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</a></p>
->>>>>>> refs/remotes/origin/KEJ_작업
                      </div>
                   </div>
                </div>

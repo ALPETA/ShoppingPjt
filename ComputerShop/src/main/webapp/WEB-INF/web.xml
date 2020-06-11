@@ -7,12 +7,12 @@
 		and Filters -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/spring/root-context.xml
+		<param-value>
+			/WEB-INF/spring/root-context.xml
 			/WEB-INF/spring/dataBase-context.xml
 		</param-value>
 	</context-param>
 
-	<!-- Creates the Spring Container shared by all Servlets and Filters -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener
 		</listener-class>
@@ -28,16 +28,47 @@
 			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml
 			</param-value>
 		</init-param>
-		<load-on-startup>1</load-on-startup>
+		<load-on-startup>0</load-on-startup>
 	</servlet>
+
 
 	<servlet-mapping> <!-- 정적 파일  -->
         <servlet-name>appServlet</servlet-name>
         <url-pattern>*.do</url-pattern>
+
+	<servlet-mapping> <!-- 정적 파일 -->
+		<servlet-name>appServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+
 	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>appServlet</servlet-name>
+		<url-pattern>*.do</url-pattern>
+
+	</servlet-mapping>
+
     <servlet-mapping>
         <servlet-name>appServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
+	
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 	
 </web-app>

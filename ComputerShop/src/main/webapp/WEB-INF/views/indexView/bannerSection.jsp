@@ -21,7 +21,7 @@
 									<p>There are many variations of passages of Lorem Ipsum
 										available, but the majority have suffered alteration in some
 										form, by injected humour, or</p>
-									<a href="#">Buy Now </a> <a href="contact.html">Contact </a>
+									<a href="#">지금 구매 </a> <a href="contact.html">Contact </a>
 								</div>
 							</div>
 							<div class="col-md-6">

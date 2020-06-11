@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hardCarry.shopping.dao.UserDAO">
+	<insert id="save" parameterType="User">
+		INSERT INTO USER(u_name, u_id, u_pw, u_phone, u_email, u_address)
+		VALUES(#{name},#{id},#{pw},#{phone},#{email},#{address})
+	</insert>
+</mapper>

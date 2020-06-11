@@ -6,32 +6,23 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="box_text">
-					<i><img src="images/thr.png" alt="#" /></i>
-					<h3>Computer</h3>
-					<p>There are many variations of passages of Lorem Ipsum
-						available, but the majority have suffered alteration in some form,
-						by injected humour, or randomised words which don't look even
-						slightly believable.</p>
+					<i><img src="images/quality.png" alt="#"/></i>
+					<h3>품질</h3>
+					<p>아주 좋소.</p>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="box_text">
-					<i><img src="images/thr1.png" alt="#" /></i>
-					<h3>Laptop</h3>
-					<p>There are many variations of passages of Lorem Ipsum
-						available, but the majority have suffered alteration in some form,
-						by injected humour, or randomised words which don't look even
-						slightly believable.</p>
+					<i><img src="images/delivery.png" alt="#"/></i>
+					<h3>빠른 배송</h3>
+					<p>빨리 배송해드림.</p>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="box_text">
-					<i><img src="images/thr2.png" alt="#" /></i>
-					<h3>Tablet</h3>
-					<p>There are many variations of passages of Lorem Ipsum
-						available, but the majority have suffered alteration in some form,
-						by injected humour, or randomised words which don't look even
-						slightly believable.</p>
+					<i><img src="images/trust.png" alt="#"/></i>
+					<h3>신뢰</h3>
+					<p>우릴 믿어요.</p>
 				</div>
 			</div>
 		</div>

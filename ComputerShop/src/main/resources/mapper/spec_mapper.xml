@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hardCarry.shopping.dao.SpecDAO">
+	<insert id="save" parameterType="SpecEntity">
+		INSERT INTO `product_spec` VALUES (NULL,#{ps_pSeq},#{ps_cpu},#{ps_ram},#{ps_mainboard},#{ps_hdd},#{ps_ssd},#{ps_graphic},#{ps_case})
+	</insert>
+</mapper>

@@ -2,6 +2,8 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0/EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<typeAlias type="com.hardCarry.shopping.entity.Product" alias="Product" />
+		<typeAlias type="com.hardCarry.shopping.entity.UsersEntity" alias="User" />
+				<typeAlias type="com.hardCarry.shopping.entity.SpecEntity" alias="SpecEntity" />
+		<typeAlias type="com.hardCarry.shopping.entity.ProductEntity" alias="ProductEntity" />
 	</typeAliases>
-</configuration>     
+</configuration>
