@@ -15,10 +15,7 @@ public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-	@RequestMapping(value = "index", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody String home(@RequestBody String id) {
-		return id;
-	}
+	
 
 	@RequestMapping("about.do")
 	public String about(Model model) {
@@ -35,10 +32,7 @@ public class HomeController {
 		return "contact";
 	}
 
-	@RequestMapping("index.do")
-	public String index(Model model) {
-		return "index";
-	}
+	
 
 	@RequestMapping("laptop.do")
 	public String laptop(Model model) {

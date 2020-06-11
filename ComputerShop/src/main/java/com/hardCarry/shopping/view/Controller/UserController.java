@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
+
 public class UserController { // 사용자 컨트롤러
 	@RequestMapping("index.do")
 	public String index(Model model) {
