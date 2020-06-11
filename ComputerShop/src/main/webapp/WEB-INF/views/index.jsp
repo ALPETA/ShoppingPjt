@@ -1,9 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-<<<<<<< HEAD
-	pageEncoding="UTF-8"%>
-=======
-    pageEncoding="UTF-8"%>
->>>>>>> refs/remotes/origin/KEJ_작업
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="UTF-8">
 <head>
@@ -46,7 +42,7 @@
 
 	
 	<!--  footer -->
-<<<<<<< HEAD
+
 	<footer>
 		<div class="footer">
 			<div class="container">
@@ -96,7 +92,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<p>
-								Â© 2019 All Rights Reserved. Design by<a
+								© 2019 All Rights Reserved. Design by<a
 									href="https://html.design/"> Free Html Templates</a>
 							</p>
 						</div>
@@ -105,9 +101,9 @@
 			</div>
 		</div>
 	</footer>
-=======
+
 	<%@include file="./commons/footer/footer.jsp"%>
->>>>>>> refs/remotes/origin/KEJ_작업
+
 	<!-- end footer -->
 	<!-- Javascript files-->
 	<%@include file="./commons/js/javascript.jsp"%>
