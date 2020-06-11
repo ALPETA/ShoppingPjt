@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-eclipse.preferences.version=1
-encoding//src/main/webapp/WEB-INF/views/product.jsp=UTF-8
-=======
-eclipse.preferences.version=1
-encoding//src/main/webapp/WEB-INF/views/notice.jsp=UTF-8
->>>>>>> refs/remotes/origin/LHJ
-=======
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=refs/remotes/origin/KEJ_\u00EC\u009E\u0091\u00EC\u0097\u0085
 eclipse.preferences.version=1
 encoding//src/main/webapp/WEB-INF/views/commons/footer/footer.jsp=UTF-8
->>>>>>> refs/remotes/origin/KEJ_작업
+encoding//src/main/webapp/WEB-INF/views/product.jsp=UTF-8

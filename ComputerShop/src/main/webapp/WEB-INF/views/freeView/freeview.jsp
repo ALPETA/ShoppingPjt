@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE>
@@ -29,16 +28,21 @@
 	margin-left: 970px;
 }
 .space-left2 {
-	margin-left: 1050px;
+	margin-left: 1000px;
 }
 </style>
+<%@include file="../commons/header/metaHeader.jsp"%>
 </head>
 <body>
+<%@include file="../commons/header/header.jsp"%>
+	<div>
+		<section class="banner_main2" />
+	</div>
 	<div class="container">
 		<table class="table table-bordered">
 			<thead>
 				<div>
-					<h4>공지사항 글 보기</h4>
+					<h4>자유게시판 글 보기</h4>
 					<div>
 						<a>게시물 번호 : 1</a><a class="space-left">조회수 : 1</a>
 					</div>
@@ -60,17 +64,18 @@
 						<td><textarea cols="10" rows="20" name="content"
 								class="form-control" readonly>123</textarea></td>
 					</tr>
-				<tr>
-					<td colspan="2"><input type="button" value="수정"
-						class="pull-left" /> <input type="button" value="삭제"
-						class="pull-left" /> <input type="button" value="글 목록으로... "
-						class="pull-right" onclick="javascript:location.href='list.jsp'" />
-					</td>
-				</tr>
+					<tr>
+						<td colspan="2"><input type="button" value="수정"
+							class="pull-left" /> <input type="button" value="삭제"
+							class="pull-left" /> <input type="button" value="글 목록으로... "
+							class="pull-right" onclick="javascript:location.href='list.jsp'" />
+						</td>
+					</tr>
 				</form>
 			</tbody>
 		</table>
 		<div class="space-left2">작성일 :<a>06-07</a></div>
 	</div>
+	<%@include file="../commons/footer/footer.jsp"%>
 </body>
 </html>

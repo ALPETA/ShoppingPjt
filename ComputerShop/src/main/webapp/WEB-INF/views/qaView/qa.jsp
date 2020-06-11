@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<%@include file="./commons/header/metaHeader.jsp"%>
+<%@include file="../commons/header/metaHeader.jsp"%>
 </head>
 <bodyclass="main-layout">
 
-	<%@include file="./commons/loader.jsp"%>
-	<%@include file="./commons/header/header.jsp"%>
+	<%@include file="../commons/loader.jsp"%>
+	<%@include file="../commons/header/header.jsp"%>
 	<div class="align-center" >
 		<section class="banner_main2">
 		</section>
@@ -22,7 +22,7 @@
 				<div class="table-responsive">
 
 					<!-- 메타데이터 -->
-					<%@include file="./qaView/qaMetaData.jsp"%>
+					<%@include file="qaMetaData.jsp"%>
 
 					<!-- 검색 창&버튼 -->
 					<form
@@ -42,11 +42,11 @@
 			</div>
 		</div>
 	</div>
-	<%@include file="./commons/footer/footer.jsp"%>
+	<%@include file="../commons/footer/footer.jsp"%>
 	<!-- end footer -->
 	<!-- Javascript files-->
-	<%@include file="./commons/js/javascript.jsp"%>
+	<%@include file="../commons/js/javascript.jsp"%>
 	<!-- sidebar -->
-	<%@include file="./commons/js/sidebar.jsp"%>
+	<%@include file="../commons/js/sidebar.jsp"%>
 </body>
 </html>

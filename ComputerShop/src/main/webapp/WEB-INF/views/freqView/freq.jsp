@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8" />
@@ -18,7 +18,6 @@
 	font-size: 27px;
 	margin: 20px;
 }
-
 .panel-heading [data-toggle="collapse"]:after {
 	font-family: 'Glyphicons Halflings';
 	content: "e072";
@@ -32,7 +31,6 @@
 	-o-transform: rotate(-90deg);
 	transform: rotate(-90deg);
 }
-
 .panel-heading [data-toggle="collapse"].collapsed:after {
 	-webkit-transform: rotate(90deg);
 	-moz-transform: rotate(90deg);
@@ -42,8 +40,13 @@
 	color: #454444;
 }
 </style>
+<%@include file="../commons/header/metaHeader.jsp"%>
 </head>
 <body>
+	<%@include file="../commons/header/header.jsp"%>
+	<div>
+		<section class="banner_main2" />
+	</div>
 	<div class="container">
 		<br /> <br /> <br />
 		<div id="accordion">
@@ -81,5 +84,7 @@
 			</div>
 		</div>
 	</div>
+	<br><br><br><br><br>
+	<%@include file="../commons/footer/footer.jsp"%>
 </body>
 </html>

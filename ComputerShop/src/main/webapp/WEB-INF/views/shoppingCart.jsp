@@ -11,6 +11,9 @@
 	<!-- loader  -->
 	<%@include file="./commons/loader.jsp"%>
 	<%@include file="./commons/header/header.jsp"%>
+	<div>
+		<section class="banner_main2"/>		
+	</div>
 	<!-- end header inner -->
 	<section class="banner_main2"></section>
 	<div class="container">

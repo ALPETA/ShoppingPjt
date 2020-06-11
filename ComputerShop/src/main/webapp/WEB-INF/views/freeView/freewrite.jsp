@@ -1,7 +1,7 @@
-<%@ page language="java"
-	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE>
-<html> 
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,8 +23,14 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
+
+<%@include file="../commons/header/metaHeader.jsp"%>
 </head>
 <body>
+	<%@include file="../commons/header/header.jsp"%>
+	<div>
+		<section class="banner_main2" />
+	</div>
 	<div class="container">
 		<table class="table table-bordered">
 			<thead>
@@ -59,5 +65,6 @@
 			</tbody>
 		</table>
 	</div>
+	<%@include file="../commons/footer/footer.jsp"%>
 </body>
 </html>

@@ -9,6 +9,19 @@
 		FROM `product`
 	</select>
 
+	<select id="findAll" parameterType="hashMap" resultType="AdminProductViewEntity">
+		SELECT *
+		FROM `product` p, `product_spec` s
+		WHERE p.p_seq = s.ps_pSeq AND p.p_name like CONCAT('%',#{search},'%')
+		LIMIT #{page},#{size}
+	</select>
+
+	<select id="countAll" resultType="long" parameterType="string">
+		SELECT count(*)
+		FROM `product` p, `product_spec` s
+		WHERE p.p_seq = s.ps_pSeq AND p.p_name like CONCAT('%',#{search},'%')
+	</select>
+
 	<insert id="save" parameterType="ProductEntity">
 		INSERT INTO `product` VALUES (NULL,'',#{p_name},#{p_price},#{p_manufacture},#{p_etc},#{p_sumnailImgPath},#{p_stock},#{p_state},#{p_Date})
 	</insert>

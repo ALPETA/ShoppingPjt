@@ -28,15 +28,20 @@
 	margin-left: 1050px;
 }
 </style>
+<%@include file="../commons/header/metaHeader.jsp"%>
 </head>
 <body>
+	<%@include file="../commons/header/header.jsp"%>
+	<div class="align-center">
+		<section class="banner_main2"></section>
+	</div>
 	<div class="container">
 		<table class="table table-bordered">
 			<thead>
-			<h4>Q&A 글 수정</h4>
-			<div>
-				<a>게시물 번호 : 1</a>
-			</div>
+				<h4>Q&A 글 수정</h4>
+				<div>
+					<a>게시물 번호 : 1</a>
+				</div>
 			</thead>
 			<tbody>
 				<form action="freqwrite_ok.jsp" method="post"
@@ -73,5 +78,6 @@
 			작성일 :<a>06-07</a>
 		</div>
 	</div>
+	<%@include file="../commons/footer/footer.jsp"%>
 </body>
 </html>
