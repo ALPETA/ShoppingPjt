@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.hardCarry.shopping.entity.join.AdminProductViewEntity;
+import com.hardCarry.shopping.entity.join.AdminUserViewEntity;
 import com.hardCarry.shopping.service.ProductService;
+import com.hardCarry.shopping.service.UserService;
 
 @Controller
 public class AdminController { // 관리자 컨트롤러
@@ -22,13 +24,29 @@ public class AdminController { // 관리자 컨트롤러
 	@Autowired
 	ProductService productService;
 
-	@RequestMapping(value = "adminProduct", method = RequestMethod.GET)
+	@RequestMapping(value = "adminProduct", method = RequestMethod.GET) /* 상품 등록한 리스트 보기 (log)*/
 	public @ResponseBody HashMap<?, ?> getList(@RequestParam(defaultValue = "0") int start,
 			@RequestParam(defaultValue = "10") int length,HttpServletRequest request) throws Exception {
 		HashMap<String, Object> result = new HashMap<String, Object>();
 		String search = request.getParameter("search[value]");
 		List<AdminProductViewEntity> list = productService.findAll(start, length, search);
 		long totalCount = productService.countAll(search);
+		result.put("data", list);
+		result.put("recordsTotal", totalCount);
+		result.put("recordsFiltered", totalCount);
+		return result;
+	}
+	
+	
+	@Autowired
+	UserService userservice;
+	@RequestMapping(value = "adminUser", method = RequestMethod.GET) /* 회원 정보 리스트 보기(log) */
+	public @ResponseBody HashMap<?, ?> getList1(@RequestParam(defaultValue = "0") int start,
+			@RequestParam(defaultValue = "10") int length,HttpServletRequest request) throws Exception {
+		HashMap<String, Object> result = new HashMap<String, Object>();
+		String search = request.getParameter("search[value]");
+		List<AdminUserViewEntity> list = userservice.logmemberlookup(start, length, search);
+		long totalCount = userservice.countAll(search);
 		result.put("data", list);
 		result.put("recordsTotal", totalCount);
 		result.put("recordsFiltered", totalCount);

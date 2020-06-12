@@ -31,4 +31,7 @@
 		SET p_code = #{p_code}
 		WHERE p_seq = #{p_seq}
 	</update>
+	
+	
+	
 </mapper>

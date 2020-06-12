@@ -15,19 +15,19 @@ import lombok.Setter;
 @Builder
 public class UsersDTO {
 	@NotNull(message = "이름을 입력해라")
-	String name;
+	String u_name;
 	@NotNull(message = "아이디를 입력해라")
-	String id;
+	String u_id;
 	@NotNull(message = "패스워드를 입력해라")
-	String pw;
+	String u_pw;
 	@NotNull(message = "폰 번호를 입력해라")
-	String phone;
+	String u_phone;
 	@NotNull(message = "이메일을 입력해라")
-	String email;
+	String u_email;
 	@NotNull(message = "주소를 입력해라")
-	String address;
-	@Override public String toString() { return "UserDTO [u_name=" + name + ", u_id=" + id + 
-			", u_pw=" + pw + ", u_phone=" + phone + ", u_email=" + email +
-			", u_address=" + address + "]"; }
+	String u_address;
+	@Override public String toString() { return "UserDTO [u_name=" + u_name + ", u_id=" + u_id + 
+			", u_pw=" + u_pw + ", u_phone=" + u_phone + ", u_email=" + u_email +
+			", u_address=" + u_address + "]"; }
 
 }
