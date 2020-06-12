@@ -8,4 +8,15 @@
 		INSERT INTO USER(u_name, u_id, u_pw, u_phone, u_email, u_address)
 		VALUES(#{name},#{id},#{pw},#{phone},#{email},#{address})
 	</insert>
+	
+	<select id="idCheck" resultType="int">
+		SELECT u_id FROM user
+		WHERE u_id = #{id}
+	</select>
+	
+	<select id="dupId" parameterType="string" resultType="boolean">
+		SELECT IF(COUNT(u_id)>0,FALSE,TRUE)
+		FROM `user`
+		WHERE u_id = #{id}
+	</select>
 </mapper>

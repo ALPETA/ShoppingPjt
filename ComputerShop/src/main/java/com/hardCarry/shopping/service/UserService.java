@@ -19,4 +19,9 @@ public class UserService {
 		userDAO.save(saveUser);
 		return saveUser;
 	}
+	
+
+	public boolean dupId(String id) {
+		return userDAO.dupId(id);
+	}
 }
