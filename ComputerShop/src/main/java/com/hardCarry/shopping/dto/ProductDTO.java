@@ -1,7 +1,5 @@
 package com.hardCarry.shopping.dto;
 
-import org.springframework.web.multipart.MultipartFile;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -81,13 +81,12 @@
 											class="btn btn-link dropdown-toggle nav-link"
 											data-toggle="dropdown">게시판</button>
 										<div class="dropdown-menu">
-											<a class="dropdown-item" href="#">자유게시판</a> <a
-												class="dropdown-item" href="#">Q&A게시판</a> <a
-												class="dropdown-item" href="#">공지사항</a>
+											<a class="dropdown-item" href="free.do">자유게시판</a> 
+											<a class="dropdown-item" href="qa.do">Q&A게시판</a> 
+											<a class="dropdown-item" href="notice.do">공지사항</a>
 										</div>
 									</div></li>
-								<li class="nav-item"><a class="nav-link" href="#">고객센터</a></li>
-
+								<li class="nav-item"><a class="nav-link" href="freq.do">고객센터</a></li>
 								<li class="nav-item d_none"><a class="nav-link"
 									data-toggle="modal" data-target="#search"> <i
 										class="fa fa-search" aria-hidden="true"></i></a></li>

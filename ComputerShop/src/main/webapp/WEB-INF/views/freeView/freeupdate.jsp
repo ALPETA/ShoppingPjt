@@ -26,11 +26,10 @@
 <%@include file="../commons/header/metaHeader.jsp"%>
 <style>
 .space-left {
-	margin-left: 950px;
+	margin-left: 960px;
 }
-
 .space-left2 {
-	margin-left: 1020px;
+	margin-left: 1010px;
 }
 </style>
 </head>
@@ -69,10 +68,10 @@
 							id="exampleInputFile" aria-describedby="fileHelp" /></td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="button" value="수정"
-							onclick="sendData()" class="pull-right" /> <input type="button"
-							value="글 목록으로... " class="pull-right"
-							onclick="javascript:location.href='list.jsp'" /></td>
+						<td colspan="2">
+							<input type="button" value="취소" class="pull-right" onclick="javascript:location.href='free.do'" />
+							<input type="button" value="등록" class="pull-right" onclick="javascript:location.href='free.do'"/>
+						</td>
 					</tr>
 				</form>
 			</tbody>

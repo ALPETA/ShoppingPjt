@@ -114,10 +114,9 @@
 			</div>
 
 			<div align="right">
-				<a class="btn btn-lg1  btn btn-secondary" href="logadddesktop.do">상품
-					등록</a> <a class="btn btn-lg1  btn btn-secondary" href="#">상품 수정</a> <a
-					class="btn btn-lg1  btn btn-secondary"
-					href="javascript:deleteAll()">상품 삭제</a>
+				<a class="btn btn-lg1  btn btn-secondary" href="logadddesktop.do">상품 등록</a> 
+				<a class="btn btn-lg1  btn btn-secondary" href="#">상품 수정</a> 
+				<a class="btn btn-lg1  btn btn-secondary" href="javascript:deleteAll()">상품 삭제</a>
 			</div>
 		</div>
 	</div>

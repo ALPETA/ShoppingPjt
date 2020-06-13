@@ -19,9 +19,7 @@
 	crossorigin="anonymous">
 
 <!-- Latest compiled and minified JavaScript -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
 
 <%@include file="../commons/header/metaHeader.jsp"%>
@@ -29,16 +27,13 @@
 <body>
 	<%@include file="../commons/header/header.jsp"%>
 	<div>
-		<section class="banner_main2" />
+		<section class="banner_main2" ></section>
 	</div>
 	<div class="container">
+		<caption>자유게시판 글쓰기</caption>	
 		<table class="table table-bordered">
-			<thead>
-			<caption>자유게시판 글쓰기</caption>
-			</thead>
 			<tbody>
-				<form action="freqwrite_ok.jsp" method="post"
-					encType="multiplart/form-data">
+				<form method="post" encType="multiplart/form-data">
 					<tr>
 						<th>제목:</th>
 						<td><input type="text" placeholder="제목을 입력하세요. "
@@ -50,16 +45,16 @@
 								name="content" class="form-control"></textarea></td>
 					</tr>
 					<tr>
-						<th for="exampleInputFile">이미지 업로드:</th>
-						<td><input type="file" class="form-control-file form-control"
-							id="exampleInputFile" aria-describedby="fileHelp" /></td>
+						<td for="exampleInputFile">이미지 업로드:</td>
+						<td>
+							<input type="file" class="form-control-file form-control" id="exampleInputFile" aria-describedby="fileHelp" />
+						</td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="button" value="등록"
-							onclick="sendData()" class="pull-right" /> <input type="button"
-							value="reset" class="pull-left" /> <input type="button"
-							value="글 목록으로... " class="pull-right"
-							onclick="javascript:location.href='list.jsp'" /></td>
+						<td colspan="2">
+							<input type="button" value="취소" class="pull-right" onclick="javascript:location.href='free.do'" />
+							<input type="button" value="등록" class="pull-right" onclick="javascript:location.href='free.do'"/>
+						</td>
 					</tr>
 				</form>
 			</tbody>

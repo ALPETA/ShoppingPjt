@@ -25,10 +25,10 @@
 	crossorigin="anonymous"></script>
 <style>
 .space-left {
-	margin-left: 970px;
+	margin-left: 960px;
 }
 .space-left2 {
-	margin-left: 1000px;
+	margin-left: 1010px;
 }
 </style>
 <%@include file="../commons/header/metaHeader.jsp"%>
@@ -65,10 +65,10 @@
 								class="form-control" readonly>123</textarea></td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="button" value="수정"
-							class="pull-left" /> <input type="button" value="삭제"
-							class="pull-left" /> <input type="button" value="글 목록으로... "
-							class="pull-right" onclick="javascript:location.href='list.jsp'" />
+						<td colspan="2">
+							<input type="button" value="수정" class="pull-left" onclick="javascript:location.href='freeupdate.do'"/> 
+							<input type="button" value="삭제" class="pull-left" /> 
+							<input type="button" value="글 목록으로... " class="pull-right" onclick="javascript:location.href='free.do'"/>
 						</td>
 					</tr>
 				</form>

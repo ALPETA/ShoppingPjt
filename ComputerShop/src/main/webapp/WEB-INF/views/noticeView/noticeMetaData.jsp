@@ -27,7 +27,7 @@
 <script src="js/jquery.slimscroll.min.js"></script>
 </head>
 <body>
-	<div class="col-11 mt-5">
+	<div class="col-12 mt-5">
 		<div class="card">
 			<div class="card-body">
 				<h4 class="header-title">공지사항</h4>
@@ -43,21 +43,21 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
+							<tr onclick="javascript:location.href='noticeview.do'">
 								<td>Airi Satou</td>
 								<td>Accountant</td>
 								<td>Tokyo</td>
 								<td>33</td>
 								<td>2008/11/28</td>
 							</tr>
-							<tr>
+							<tr onclick="javascript:location.href='noticeview.do'">
 								<td>Angelica Ramos</td>
 								<td>Chief Executive Officer (CEO)</td>
 								<td>London</td>
 								<td>47</td>
 								<td>2009/10/09</td>
 							</tr>
-							<tr>
+							<tr onclick="javascript:location.href='noticeview.do'">
 								<td>Ashton Cox</td>
 								<td>Junior Technical Author</td>
 								<td>San Francisco</td>

@@ -23,16 +23,18 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
+<%@include file="../commons/header/metaHeader.jsp"%>
 </head>
 <body>
+	<%@include file="../commons/header/header.jsp"%>
+	<div>
+		<section class="banner_main2"></section>
+	</div>
 	<div class="container">
+		<caption>공지사항 글쓰기</caption>
 		<table class="table table-bordered">
-			<thead>
-			<caption>공지사항 글쓰기</caption>
-			</thead>
 			<tbody>
-				<form action="freqwrite_ok.jsp" method="post"
-					encType="multiplart/form-data">
+				<form method="post" encType="multiplart/form-data">
 					<tr>
 						<th>제목:</th>
 						<td><input type="text" placeholder="제목을 입력하세요. "
@@ -49,15 +51,15 @@
 							id="exampleInputFile" aria-describedby="fileHelp" /></td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="button" value="등록"
-							onclick="sendData()" class="pull-right" /> <input type="button"
-							value="reset" class="pull-left" /> <input type="button"
-							value="글 목록으로... " class="pull-right"
-							onclick="javascript:location.href='list.jsp'" /></td>
+						<td colspan="2">
+							<input type="button" value="취소" class="pull-right" onclick="javascript:location.href='notice.do'" />
+							<input type="button" value="등록" class="pull-right" onclick="javascript:location.href='notice.do'"/>
+						</td>
 					</tr>
 				</form>
 			</tbody>
 		</table>
 	</div>
+	<%@include file="../commons/footer/footer.jsp"%>
 </body>
 </html>

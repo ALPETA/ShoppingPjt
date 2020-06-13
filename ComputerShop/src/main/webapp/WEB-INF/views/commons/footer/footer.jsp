@@ -34,9 +34,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<p>
-							Ⓒ Copyright Allright reserved :: hardcarry<a>>>>>>>
-								refs/remotes/origin/KEJ_작업 href="https://html.design/"> Free
-								Html Templates</a>
+							Ⓒ Copyright Allright reserved :: hardcarry
 						</p>
 					</div>
 				</div>

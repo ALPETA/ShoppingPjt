@@ -7,16 +7,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <%@include file="../commons/header/metaHeader.jsp"%>
 <style>
-.margin-left{
+.margin-left {
 	margin-left: 1700px;
 }
 </style>
 </head>
+<%@include file="../commons/loader.jsp"%>
 <body class="main-layout">
-	<%@include file="../commons/loader.jsp"%>
 	<%@include file="../commons/header/header.jsp"%>
 	<div>
-		<section class="banner_main2"/>
+		<section class="banner_main2" ></section>
 	</div>
 	<div class="container-fluid">
 		<!-- DataTales Example -->
@@ -26,7 +26,7 @@
 					<!-- 메타데이터 -->
 					<%@include file="freeMetaData.jsp"%>
 				</div>
-				<button type="button" class="btn btn-dark margin-left">글 작성</button>
+				<button type="button" class="btn btn-dark margin-left" onclick="javascript:location.href='freewrite.do'">글 작성</button>
 			</div>
 		</div>
 	</div>

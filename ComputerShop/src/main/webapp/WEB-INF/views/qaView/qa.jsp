@@ -6,6 +6,11 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <%@include file="../commons/header/metaHeader.jsp"%>
+<style>
+.margin-left {
+	margin-left: 1700px;
+}
+</style>
 </head>
 <bodyclass="main-layout">
 
@@ -20,24 +25,12 @@
 		<div class="card shadow mb-4">
 			<div class="card-body">
 				<div class="table-responsive">
-
-					<!-- 메타데이터 -->
-					<%@include file="qaMetaData.jsp"%>
-
-					<!-- 검색 창&버튼 -->
-					<form
-						class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-						<div class="input-group">
-							<input type="text" class="form-control bg-light border-0 small"
-								placeholder="제품 검색" aria-label="Search"
-								aria-describedby="basic-addon2">
-							<div class="input-group-append">
-								<button type="button" class="btn btn-secondary">검색</button>
-							</div>
-						</div>
-					</form>
-					<!-- End of 검색 창&버튼 -->
-
+					<div class="table-responsive">
+						<!-- 메타데이터 -->
+						<%@include file="qaMetaData.jsp"%>
+					</div>
+					<button type="button" class="btn btn-dark margin-left"
+						onclick="javascript:location.href='noticewrite.do'">글 작성</button>
 				</div>
 			</div>
 		</div>

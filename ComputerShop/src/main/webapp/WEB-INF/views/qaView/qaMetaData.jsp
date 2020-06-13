@@ -42,99 +42,29 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
+							<tr onclick="javascript:location.href='qaview.do'">
 								<td>Airi Satou</td>
 								<td>Accountant</td>
 								<td>Tokyo</td>
 								<td>33</td>
 							</tr>
-							<tr>
+							<tr onclick="javascript:location.href='qaview.do'">
 								<td>Angelica Ramos</td>
 								<td>Chief Executive Officer (CEO)</td>
 								<td>London</td>
 								<td>47</td>
 							</tr>
-							<tr>
+							<tr onclick="javascript:location.href='qaview.do'">
 								<td>Ashton Cox</td>
 								<td>Junior Technical Author</td>
 								<td>San Francisco</td>
 								<td>66</td>
 							</tr>
-							<tr>
+							<tr onclick="javascript:location.href='qaview.do'">
 								<td>Bradley Greer</td>
 								<td>Software Engineer</td>
 								<td>London</td>
 								<td>41</td>
-							</tr>
-							<tr>
-								<td>Brenden Wagner</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>28</td>
-							</tr>
-							<tr>
-								<td>Caesar Vance</td>
-								<td>Pre-Sales Support</td>
-								<td>New York</td>
-								<td>29</td>
-							</tr>
-							<tr>
-								<td>Bruno Nash</td>
-								<td>Software Engineer</td>
-								<td>Edinburgh</td>
-								<td>21</td>
-							</tr>
-							<tr>
-								<td>Brenden Wagner</td>
-								<td>Software Engineer</td>
-								<td>San Francisco</td>
-								<td>28</td>
-							</tr>
-							<tr>
-								<td>Caesar Vance</td>
-								<td>Pre-Sales Support</td>
-								<td>New York</td>
-								<td>29</td>
-							</tr>
-							<tr>
-								<td>Bruno Nash</td>
-								<td>Software Engineer</td>
-								<td>Edinburgh</td>
-								<td>21</td>
-							</tr>
-							<tr>
-								<td>Caesar Vance</td>
-								<td>Pre-Sales Support</td>
-								<td>New York</td>
-								<td>29</td>
-							</tr>
-							<tr>
-								<td>Bruno Nash</td>
-								<td>Software Engineer</td>
-								<td>Edinburgh</td>
-								<td>21</td>
-							</tr><tr>
-								<td>Caesar Vance</td>
-								<td>Pre-Sales Support</td>
-								<td>New York</td>
-								<td>29</td>
-							</tr>
-							<tr>
-								<td>Bruno Nash</td>
-								<td>Software Engineer</td>
-								<td>Edinburgh</td>
-								<td>21</td>
-							</tr><tr>
-								<td>Caesar Vance</td>
-								<td>Pre-Sales Support</td>
-								<td>New York</td>
-								<td>29</td>
-							</tr>
-							<tr>
-								<td>Bruno Nash</td>
-								<td>Software Engineer</td>
-								<td>Edinburgh</td>
-								<td>21</td>
 							</tr>
 						</tbody>
 					</table>

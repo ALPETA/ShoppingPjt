@@ -25,15 +25,19 @@
 	crossorigin="anonymous"></script>
 <style>
 .space-left {
-	margin-left: 970px;
+	margin-left: 960px;
 }
-
 .space-left2 {
-	margin-left: 1050px;
+	margin-left: 1010px;
 }
 </style>
+<%@include file="../commons/header/metaHeader.jsp"%>
 </head>
 <body>
+<%@include file="../commons/header/header.jsp"%>
+<div class="align-center">
+	<section class="banner_main2"></section>
+</div>
 	<div class="container">
 		<table class="table table-bordered">
 			<thead>
@@ -43,8 +47,7 @@
 				</div>
 			</thead>
 			<tbody>
-				<form action="freqwrite_ok.jsp" method="post"
-					encType="multiplart/form-data">
+				<form method="post" encType="multiplart/form-data">
 					<tr>
 						<th>제목:</th>
 						<td><input type="text" value="하드캐리 " name="subject"
@@ -65,15 +68,16 @@
 							id="exampleInputFile" aria-describedby="fileHelp" /></td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="button" value="수정"
-							onclick="sendData()" class="pull-right" /> <input type="button"
-							value="글 목록으로... " class="pull-right"
-							onclick="javascript:location.href='list.jsp'" /></td>
+						<td colspan="2">
+							<input type="button" value="취소" class="pull-right" onclick="javascript:location.href='notice.do'"/>
+							<input type="button" value="등록" class="pull-right" onclick="javascript:location.href='notice.do'"/>
+						</td>
 					</tr>
 				</form>
 			</tbody>
 		</table>
 		<div class="space-left2">작성일 :<a>06-07</a></div>
 	</div>
+	<%@include file="../commons/footer/footer.jsp"%>
 </body>
 </html>

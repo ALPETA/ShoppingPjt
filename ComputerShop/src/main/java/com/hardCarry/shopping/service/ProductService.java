@@ -14,6 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.hardCarry.shopping.dao.ProductDAO;
 import com.hardCarry.shopping.dao.SpecDAO;
+import com.hardCarry.shopping.dao.UserDAO;
 import com.hardCarry.shopping.dto.ProductDTO;
 import com.hardCarry.shopping.dto.SpecDTO;
 import com.hardCarry.shopping.entity.ProductEntity;
@@ -22,7 +23,11 @@ import com.hardCarry.shopping.entity.join.AdminProductViewEntity;
 
 @Service
 public class ProductService {
-
+	
+	/*
+	 * @Autowired AdminProductViewEntity adminProductEntity;
+	 */
+	
 	@Autowired
 	ProductDAO productDAO;
 
@@ -63,4 +68,11 @@ public class ProductService {
 	public long countAll(String search) {
 		return productDAO.countAll(search);
 	}
+	
+	/*
+	 * public List<AdminProductViewEntity> findProduct(int page, int length, String
+	 * search) { HashMap<String, Object> map = new HashMap<String, Object>();
+	 * map.put("page", page); map.put("size", length); map.put("search", search);
+	 * return productDAO.findProduct(map); }
+	 */
 }

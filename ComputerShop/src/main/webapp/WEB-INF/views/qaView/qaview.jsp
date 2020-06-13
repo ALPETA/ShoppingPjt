@@ -26,10 +26,15 @@
 </head>
 <style>
 .space-left{
-	margin-left: 1050px;
+	margin-left: 1010px;
 }
 </style>
+<%@include file="../commons/header/metaHeader.jsp"%>
 <body>
+	<%@include file="../commons/header/header.jsp"%>
+	<div class="align-center">
+		<section class="banner_main2"></section>
+	</div>
 	<div class="container">
 		<table class="table table-bordered">
 			<thead>
@@ -57,16 +62,16 @@
 								class="form-control" readonly>123</textarea></td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="button" value="수정"
-							class="pull-left" /> <input type="button" value="삭제"
-							class="pull-left" /> <input type="button" value="글 목록으로... "
-							class="pull-right" onclick="javascript:location.href='list.jsp'" />
+						<td colspan="2"><input type="button" value="수정" class="pull-left" onclick="javascript:location.href='qaupdate.do'"/> 
+						<input type="button" value="취소" class="pull-left" /> 
+						<input type="button" value="등록" class="pull-right" onclick="javascript:location.href='qa.do'" />
 						</td>
 					</tr>
 				</form>
 			</tbody>
 		</table>
-		<div class="space-left">작성일 :<a>06-07</a></div>
+		<div class="space-left">작성일 :<a> 06-07</a></div>
 	</div>
+	<%@include file="../commons/footer/footer.jsp"%>
 </body>
 </html>

@@ -26,10 +26,10 @@
 	crossorigin="anonymous"></script>
 <style>
 .space-left {
-	margin-left: 970px;
+	margin-left: 960px;
 }
 .space-left2 {
-	margin-left: 1050px;
+	margin-left: 1010px;
 }
 </style>
 <%@include file="../commons/header/metaHeader.jsp"%>
@@ -67,9 +67,9 @@
 					</tr>
 				<tr>
 					<td colspan="2"><input type="button" value="수정"
-						class="pull-left" /> <input type="button" value="삭제"
+						class="pull-left" onclick="javascript:location.href='noticeupdate.do'"/> <input type="button" value="삭제"
 						class="pull-left" /> <input type="button" value="글 목록으로... "
-						class="pull-right" onclick="javascript:location.href='list.jsp'" />
+						class="pull-right" onclick="javascript:location.href='notice.do'" />
 					</td>
 				</tr>
 				</form>
