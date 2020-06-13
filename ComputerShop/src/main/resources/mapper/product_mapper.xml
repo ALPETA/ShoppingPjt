@@ -31,4 +31,10 @@
 		SET p_code = #{p_code}
 		WHERE p_seq = #{p_seq}
 	</update>
+	
+	<select id="findProduct">
+		SELECT *
+		FROM `product` p, `product_spec` s
+		WHERE p.p_seq = s.ps_pSeq
+	</select>
 </mapper>

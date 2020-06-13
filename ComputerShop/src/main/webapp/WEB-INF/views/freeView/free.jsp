@@ -31,7 +31,6 @@
 		</div>
 	</div>
 	<%@include file="../commons/footer/footer.jsp"%>
-	<!-- end footer -->
 	<!-- Javascript files-->
 	<%@include file="../commons/js/javascript.jsp"%>
 	<!-- sidebar -->

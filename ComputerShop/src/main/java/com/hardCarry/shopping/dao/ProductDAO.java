@@ -16,4 +16,6 @@ public interface ProductDAO {
 	List<AdminProductViewEntity> findAll(HashMap<String, Object> map);
 
 	long countAll(String search);
+	
+	List<AdminProductViewEntity> findProduct(HashMap<String, Object> map);
 }
