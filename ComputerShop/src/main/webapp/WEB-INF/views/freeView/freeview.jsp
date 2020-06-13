@@ -25,16 +25,17 @@
 	crossorigin="anonymous"></script>
 <style>
 .space-left {
-	margin-left: 960px;
+	margin-left: 950px;
 }
+
 .space-left2 {
-	margin-left: 1010px;
+	margin-left: 1020px;
 }
 </style>
 <%@include file="../commons/header/metaHeader.jsp"%>
 </head>
 <body>
-<%@include file="../commons/header/header.jsp"%>
+	<%@include file="../commons/header/header.jsp"%>
 	<div>
 		<section class="banner_main2" />
 	</div>
@@ -65,17 +66,24 @@
 								class="form-control" readonly>123</textarea></td>
 					</tr>
 					<tr>
-						<td colspan="2">
-							<input type="button" value="수정" class="pull-left" onclick="javascript:location.href='freeupdate.do'"/> 
-							<input type="button" value="삭제" class="pull-left" /> 
-							<input type="button" value="글 목록으로... " class="pull-right" onclick="javascript:location.href='free.do'"/>
-						</td>
+						<td colspan="2"><input type="button" value="수정"
+							class="pull-left"
+							onclick="javascript:location.href='freeupdate.do'" /> <input
+							type="button" value="삭제" class="pull-left" /> <input
+							type="button" value="글 목록으로... " class="pull-right"
+							onclick="javascript:location.href='free.do'" /></td>
 					</tr>
 				</form>
 			</tbody>
 		</table>
-		<div class="space-left2">작성일 :<a>06-07</a></div>
+		<div class="space-left2">
+			작성일 :<a>06-07</a>
+		</div>
 	</div>
-	<%@include file="../commons/footer/footer.jsp"%>
+	<%@include file="../commons/comments/comments.jsp"%>
+	<br/><br/>
+	<%@include file="../commons/comments/reply.jsp"%>
+	<br/><br/>
+	<%@include file="../commons/footer/footer.jsp"%>	
 </body>
 </html>
