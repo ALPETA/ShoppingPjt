@@ -17,7 +17,7 @@
 						<div class="col-md-4 margin_bottom1">
 							<div class="product_box">
 								<figure>
-									<img src="images/product1.png" alt="#" />
+									<img src="images/product_desktop.png" alt="#" />
 								</figure>
 								<h3>Computer</h3>
 							</div>
@@ -25,7 +25,7 @@
 						<div class="col-md-4 margin_bottom1">
 							<div class="product_box">
 								<figure>
-									<img src="images/product2.png" alt="#" />
+									<img src="images/product_laptop.png" alt="#" />
 								</figure>
 								<h3>Laptop</h3>
 							</div>
@@ -49,9 +49,9 @@
 						<div class="col-md-4 margin_bottom1">
 							<div class="product_box">
 								<figure>
-									<img src="images/product5.png" alt="#" />
+									<img src="images/product_monitor.png" alt="#" />
 								</figure>
-								<h3>internet</h3>
+								<h3>Monitor</h3>
 							</div>
 						</div>
 						<div class="col-md-4 margin_bottom1">
@@ -67,23 +67,23 @@
 								<figure>
 									<img src="images/product7.png" alt="#" />
 								</figure>
-								<h3>Rams</h3>
+								<h3>Rams</h3> 
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="product_box">
 								<figure>
-									<img src="images/product8.png" alt="#" />
+									<img src="images/product1.png" alt="#" />
 								</figure>
-								<h3>Bettery</h3>
+								<h3>키보드</h3>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="product_box">
 								<figure>
-									<img src="images/product9.png" alt="#" />
+									<img src="images/product2.png" alt="#" />
 								</figure>
-								<h3>Drive</h3>
+								<h3>마우스</h3>
 							</div>
 						</div>
 						<div class="col-md-12">
