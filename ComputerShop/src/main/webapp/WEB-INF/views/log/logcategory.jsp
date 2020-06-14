@@ -9,7 +9,7 @@
 		id="accordionSidebar">
 
 		<!-- Sidebar - Brand -->
-		<a class="sidebar-brand d-flex align-items-center justify-content-center" href="logcategory.do">
+		<a class="sidebar-brand d-flex align-items-center justify-content-center" href="logmain.do">
 			<div class="sidebar-brand-text mx-3"> 
 				관리자 창
 			</div>

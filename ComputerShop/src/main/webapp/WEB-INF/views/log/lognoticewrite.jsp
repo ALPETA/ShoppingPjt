@@ -25,11 +25,15 @@
 	crossorigin="anonymous"></script>
 </head>
 <body>
+	
+	<%@include file="./logcategory.jsp"%>
+
 	<div>
-		<section class="banner_main2"></section>
+		<section class="banner_main"></section>
 	</div>
 	<div class="container">
-		<caption>공지사항 글쓰기</caption>
+		</br>
+		<h1>공지사항 글쓰기</h1>
 		<form method="post" encType="multiplart/form-data">
 			<table class="table table-bordered">
 				<tr>

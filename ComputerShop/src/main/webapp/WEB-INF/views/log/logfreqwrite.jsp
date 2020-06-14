@@ -25,11 +25,14 @@
 	crossorigin="anonymous"></script>
 </head>
 <body>
+	
+	<%@include file="./logcategory.jsp"%>
+
 	<div class="container">
 		<form action="freqwrite_ok.jsp" method="post"
 			encType="multiplart/form-data">
 			<table class="table table-bordered">
-				<caption>F&Q 글쓰기</caption>
+				<h1> F&Q 글쓰기 </h1>
 				<tr>
 					<th>제목:</th>
 					<td><input type="text" placeholder="제목을 입력하세요. "

@@ -43,16 +43,29 @@
 				"data" : function(e) {
 				}
 			},
-			serverSide: true,
-			searching: true,
-			columns : [
-                {data: "p_seq"},
-                {data: "p_code"},
-                {data: "p_name"},
-                {data: "p_code"},
-                {data: "p_code"},
-                {data: "p_code"},
-            ]
+			serverSide : true,
+			searching : true,
+			columns : [ {
+				data : "p_seq"
+			}, {
+				data : "p_code"
+			}, {
+				data : "p_name"
+			}, {
+				data : "p_price"
+			}, {
+				data : "p_manufacture"
+			}, {
+				data : "p_etc"
+			}, {
+				data : "p_sumnailImgPath"
+			}, {
+				data : "p_stock"
+			}, {
+				data : "p_state"
+			}, {
+				data : "p_Date"
+			} ]
 		});
 	})
 </script>
@@ -72,17 +85,30 @@
 			<h6 class="m-0 font-weight-bold text-secondary">상품 조회</h6>
 		</div>
 		<br>
+
+		<div class="form-group form-inline">
+			<!-- form-inline  -->
+
+
+
+
+		</div>
 		<div class="card-body">
 			<div class="data-tables datatable-dark">
 				<table id="productTable" class="display">
 					<thead>
 						<tr>
-							<th></th>
+
+							<th>상품 번호</th>
 							<th>상품 코드</th>
 							<th>상품 명</th>
-							<th>주문 횟수</th>
-							<th>상품 재고</th>
+							<th>상품 가격</th>
 							<th>상품 제조사</th>
+							<th>상품 코멘트</th>
+							<th>상품 이미지</th>
+							<th>상품 수량</th>
+							<th>상품 판매 상태</th>
+							<th>상품 등록 날짜</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -92,9 +118,8 @@
 
 			<div align="right">
 				<a class="btn btn-lg1  btn btn-secondary" href="logadddesktop.do">상품
-					등록</a> <a class="btn btn-lg1  btn btn-secondary" href="#">상품 수정</a> <a
-					class="btn btn-lg1  btn btn-secondary"
-					href="javascript:deleteAll()">상품 삭제123</a>
+					등록</a> <a class="btn btn-lg1  btn btn-secondary"
+					href="javascript:deleteAll()">상품 삭제</a>
 			</div>
 		</div>
 	</div>

@@ -95,21 +95,21 @@
 							<th>조회수</th>
 						</tr>
 					</thead>
-					<tr onclick="javascript:location.href='noticeview.do'">
+					<tr onclick="javascript:location.href='lognoticeview.do'">
 						<td>0</td>
 						<td>text-center</td>
 						<td>Tokyo</td>
 						<td>2008/11/28</td>
 						<td>150</td>
 					</tr>
-					<tr onclick="javascript:location.href='noticeview.do'">
+					<tr onclick="javascript:location.href='lognoticeview.do'">
 						<td>0</td>
 						<td>text-center</td>
 						<td>Tokyo</td>
 						<td>2008/11/28</td>
 						<td>150</td>
 					</tr>
-					<tr onclick="javascript:location.href='noticeview.do'">
+					<tr onclick="javascript:location.href='lognoticeview.do'">
 						<td>0</td>
 						<td>text-center</td>
 						<td>Tokyo</td>

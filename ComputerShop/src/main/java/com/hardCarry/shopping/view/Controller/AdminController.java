@@ -138,4 +138,21 @@ public class AdminController { // 관리자 컨트롤러
 	public String logfreqwrite(Model model) {
 		return "log/logfreqwrite";
 	}
+	
+	@RequestMapping("lognoticeview.do") // logaddproduct에서 상품등록 버튼 클릭
+	public String lognoticeview(Model model) {
+		return "log/lognoticeview";
+	}
+	
+	@RequestMapping("AdminProductModifyView.do") // 관리자 상품 상세 페이지 및 수정, 삭제
+	public String AdminProductModifyView(Model model) {
+		return "log/AdminProductModifyView";
+	}
+	
+	
+	@RequestMapping("logmain.do") // 관리자 상품 상세 페이지 및 수정, 삭제
+	public String logmain(Model model) {
+		return "log/logmain";
+	}
+	
 }

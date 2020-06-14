@@ -109,8 +109,9 @@
 			</div>
 			<div align="right">
 			</br>
-				<a class="btn btn-lg1  btn btn-secondary" href="lognoticewrite.do">게시물
-					작성</a> <a class="btn btn-lg1  btn btn-secondary"
+				<a class="btn btn-lg1  btn btn-secondary" href="logfreqwrite.do">게시물
+					작성</a> 
+					<a class="btn btn-lg1  btn btn-secondary"
 					href="lognoticewrite.do">게시물 삭제</a>
 			</div>
 		</div>
