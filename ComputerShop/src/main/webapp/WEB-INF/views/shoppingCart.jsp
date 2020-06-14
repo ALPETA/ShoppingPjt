@@ -79,7 +79,7 @@
                     <div class="p-2">
                       <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-2_qxjis2.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
                       <div class="ml-3 d-inline-block align-middle">
-                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block">Gray Nike running shoe</a></h5><span class="text-muted font-weight-normal font-italic">Category: Fashion</span>
+                        <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block">엄청난 물건</a></h5><span class="text-muted font-weight-normal font-italic">Category: Fashion</span>
                       </div>
                     </div>
                     <td class="align-middle"><strong>7900원</strong></td>
