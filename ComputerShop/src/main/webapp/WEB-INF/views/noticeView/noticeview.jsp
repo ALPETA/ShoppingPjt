@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE>
@@ -24,34 +23,31 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
+<%@include file="../commons/view_style.jsp"%>
+<%@include file="../commons/header/metaHeader.jsp"%>
 <style>
-.space-left {
-	margin-left: 960px;
-}
-.space-left2 {
-	margin-left: 1010px;
+.black{
+	color:black;
 }
 </style>
-<%@include file="../commons/header/metaHeader.jsp"%>
 </head>
 <body>
-<%@include file="../commons/header/header.jsp"%>
-<div class="align-center">
-	<section class="banner_main2"></section>
-</div>
+	<%@include file="../commons/header/header.jsp"%>
+	<div class="align-center">
+		<section class="banner_main2"/>
+	</div>
 	<div class="container">
 		<table class="table table-bordered">
 			<thead>
 				<div>
-					<h4>공지사항 글 보기</h4>
+					<h4 class="black">공지사항 글 보기</h4>
 					<div>
-						<a>게시물 번호 : 1</a><a class="space-left">조회수 : 1</a>
+						<a>게시물 번호 : 1</a><a class="space-left">조회수 : 1234</a>
 					</div>
 				</div>
 			</thead>
 			<tbody>
-				<form action="freqwrite_ok.jsp" method="post"
-					encType="multiplart/form-data">
+				<form method="post" encType="multiplart/form-data">
 					<tr>
 						<th>제목:</th>
 						<td><a>하드캐리</a></td>
@@ -65,13 +61,13 @@
 						<td><textarea cols="10" rows="20" name="content"
 								class="form-control" readonly>123</textarea></td>
 					</tr>
-				<tr>
-					<td colspan="2"><input type="button" value="수정"
-						class="pull-left" onclick="javascript:location.href='noticeupdate.do'"/> <input type="button" value="삭제"
-						class="pull-left" /> <input type="button" value="글 목록으로... "
-						class="pull-right" onclick="javascript:location.href='notice.do'" />
-					</td>
-				</tr>
+					<tr>
+						<td colspan="2"><input type="button" value="수정"
+							class="pull-left" onclick="javascript:location.href='noticeupdate.do'"/> <input type="button" value="삭제"
+							class="pull-left" /> <input type="button" value="글 목록으로... "
+							class="pull-right" onclick="javascript:location.href='notice.do'" />
+						</td>
+					</tr>
 				</form>
 			</tbody>
 		</table>

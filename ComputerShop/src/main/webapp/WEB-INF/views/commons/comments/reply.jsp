@@ -13,16 +13,53 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <%@include file="./reply_style.jsp"%>
 <style>
-.margin-left {
-	margin-left: 910px;
-}
-
-.margin-left2 {
-	margin-left: 970px;
-}
-
 .absolute {
 	position: absolute;
+}
+
+@media ( min-width : 1200px) {
+	.margin-left {
+		margin-left: 910px;
+	}
+	.margin-left2 {
+		margin-left: 970px;
+	}
+}
+
+@media ( min-width : 992px) and (max-width: 1199px) {
+	.margin-left {
+		margin-left: 750px;
+	}
+	.margin-left2 {
+		margin-left: 800px;
+	}
+}
+
+@media ( min-width : 768px ) and (max-width: 991px) {
+	.margin-left {
+		margin-left: 500px;
+	}
+	.margin-left2 {
+		margin-left: 550px;
+	}
+}
+
+@media ( min-width : 576px ) and (max-width: 767px) {
+	.margin-left {
+		margin-left: 330px;
+	}
+	.margin-left2 {
+		margin-left: 380px;
+	}
+}
+
+@media ( max-width : 575px) {
+	.margin-left {
+		margin-left: 310px;
+	}
+	.margin-left2 {
+		margin-left: 360px;
+	}
 }
 </style>
 </head>

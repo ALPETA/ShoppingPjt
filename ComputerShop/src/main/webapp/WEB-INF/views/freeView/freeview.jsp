@@ -23,15 +23,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
-<style>
-.space-left {
-	margin-left: 950px;
-}
-
-.space-left2 {
-	margin-left: 1020px;
-}
-</style>
+<%@include file="../commons/view_style.jsp"%>
 <%@include file="../commons/header/metaHeader.jsp"%>
 </head>
 <body>
@@ -45,13 +37,12 @@
 				<div>
 					<h4>자유게시판 글 보기</h4>
 					<div>
-						<a>게시물 번호 : 1</a><a class="space-left">조회수 : 1</a>
+						<a>게시물 번호 : 1</a><a class="space-left">조회수 : 1234</a>
 					</div>
 				</div>
 			</thead>
 			<tbody>
-				<form action="freqwrite_ok.jsp" method="post"
-					encType="multiplart/form-data">
+				<form method="post" encType="multiplart/form-data">
 					<tr>
 						<th>제목:</th>
 						<td><a>하드캐리</a></td>
@@ -81,9 +72,11 @@
 		</div>
 	</div>
 	<%@include file="../commons/comments/comments.jsp"%>
-	<br/><br/>
+	<br />
+	<br />
 	<%@include file="../commons/comments/reply.jsp"%>
-	<br/><br/>
-	<%@include file="../commons/footer/footer.jsp"%>	
+	<br />
+	<br />
+	<%@include file="../commons/footer/footer.jsp"%>
 </body>
 </html>

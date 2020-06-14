@@ -23,13 +23,14 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	crossorigin="anonymous"></script>
-</head>
 <style>
 .space-left{
 	margin-left: 1010px;
 }
 </style>
+<%@include file="../commons/view_style.jsp"%>
 <%@include file="../commons/header/metaHeader.jsp"%>
+</head>
 <body>
 	<%@include file="../commons/header/header.jsp"%>
 	<div class="align-center">
@@ -70,8 +71,14 @@
 				</form>
 			</tbody>
 		</table>
-		<div class="space-left">작성일 :<a> 06-07</a></div>
+		<div class="space-left2">작성일 :<a> 06-07</a></div>
 	</div>
+	<%@include file="../commons/comments/comments.jsp"%>
+	<br />
+	<br />
+	<%@include file="../commons/comments/reply.jsp"%>
+	<br />
+	<br />
 	<%@include file="../commons/footer/footer.jsp"%>
 </body>
 </html>
