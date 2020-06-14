@@ -59,8 +59,7 @@
 												class="dropdown-item" href="#">메인보드</a> <a
 												class="dropdown-item" href="#">SSD</a> <a
 												class="dropdown-item" href="#">HDD</a> <a
-												class="dropdown-item" href="#">그래픽카드</a> <a
-												class="dropdown-item" href="#">파워</a>
+												class="dropdown-item" href="#">그래픽카드</a>
 										</div>
 									</div></li>
 

@@ -13,7 +13,7 @@ public class UserController { // 사용자 컨트롤러
 	public String index(Model model) {
 		return "index";
 	}
-
+	
 	@RequestMapping("signUp.do")
 	public String signUp(Model model) {
 		return "signUp";
