@@ -43,17 +43,25 @@
 				"data" : function(e) {
 				}
 			},
-			serverSide: true,
-			searching: true,
-			columns : [
-                {data: "u_name"},
-                {data: "u_id"},
-                {data: "u_pw"},
-                {data: "u_phone"},
-                {data: "u_email"},
-                {data: "u_address"},
-                {data: "u_createDate"},
-            ]
+			serverSide : true,
+			searching : true,
+			columns : [ {
+				data : "u_seq"
+			}, {
+				data : "u_name"
+			}, {
+				data : "u_id"
+			}, {
+				data : "u_pw"
+			}, {
+				data : "u_phone"
+			}, {
+				data : "u_email"
+			}, {
+				data : "u_address"
+			}, {
+				data : "u_createDate"
+			}, ]
 		});
 	})
 </script>
@@ -70,31 +78,14 @@
 	<!-- DataTales Example -->
 	<div class="card shadow mb-4">
 		<div class="card-header py-3">
-			<h6 class="m-0 font-weight-bold text-secondary">상품 조회</h6>
+			<h6 class="m-0 font-weight-bold text-secondary">회원 조회</h6>
 		</div>
 		<br>
 
 		<div class="form-group form-inline">
 			<!-- form-inline  -->
 
-			<select style="width: 80px; font-size: 15px;" class="form-control"
-				id="exampleSelect1">
-				<option>선택</option>
-				<option>전체</option>
-				<option>상품 코드</option>
-			</select>
 
-			<form
-				class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-				<div class="input-group">
-					<input type="text" class="form-control bg-light border-0 small"
-						placeholder="입력" aria-label="Search"
-						aria-describedby="basic-addon2">
-					<div class="input-group-append">
-						<button type="button" class="btn btn-secondary">검색</button>
-					</div>
-				</div>
-			</form>
 		</div>
 		<div class="card-body">
 			<div class="data-tables datatable-dark">
@@ -116,12 +107,6 @@
 				</table>
 			</div>
 
-			<div align="right">
-				<a class="btn btn-lg1  btn btn-secondary" href="logadddesktop.do">상품
-					등록</a> <a class="btn btn-lg1  btn btn-secondary" href="#">상품 수정</a> <a
-					class="btn btn-lg1  btn btn-secondary"
-					href="javascript:deleteAll()">상품 삭제</a>
-			</div>
 		</div>
 	</div>
 

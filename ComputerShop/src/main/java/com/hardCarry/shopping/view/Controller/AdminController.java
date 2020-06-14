@@ -118,9 +118,24 @@ public class AdminController { // 관리자 컨트롤러
 		return "log/lognotice";
 	}
 
+	@RequestMapping("lognoticewrite.do") // logaddproduct에서 상품등록 버튼 클릭
+	public String lognoticewrite(Model model) {
+		return "log/lognoticewrite";
+	}
+
+	
 	@RequestMapping("logmemberlookup.do") // logaddproduct에서 상품등록 버튼 클릭
 	public String logmemberlookup(Model model) {
 		return "log/logmemberlookup";
 	}
 
+	@RequestMapping("logfreq.do") // logaddproduct에서 상품등록 버튼 클릭
+	public String logfreq(Model model) {
+		return "log/logfreq";
+	}
+	
+	@RequestMapping("logfreqwrite.do") // logaddproduct에서 상품등록 버튼 클릭
+	public String logfreqwrite(Model model) {
+		return "log/logfreqwrite";
+	}
 }

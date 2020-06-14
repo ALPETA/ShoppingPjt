@@ -49,4 +49,10 @@
 		<li class="nav-item"><a class="nav-link" href="lognotice.do">
 				<i class="fas fa-fw fa-table"></i> <span>공지사항 작성</span>
 		</a></li>
+		
+		<!-- Nav Item - Tables -->
+		<li class="nav-item"><a class="nav-link" href="logfreq.do">
+				<i class="fas fa-fw fa-table"></i> <span>Q&A 작성</span>
+		</a></li>
+		
 	</ul>
