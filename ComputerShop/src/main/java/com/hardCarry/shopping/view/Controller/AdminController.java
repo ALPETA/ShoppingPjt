@@ -155,4 +155,20 @@ public class AdminController { // 관리자 컨트롤러
 		return "log/logmain";
 	}
 	
+	@RequestMapping("Member.do") // 관리자 상품 상세 페이지 및 수정, 삭제
+	public String Member(Model model) {
+		return "log/Member";
+	}
+	
+	@RequestMapping("Order.do") // 관리자 상품 상세 페이지 및 수정, 삭제
+	public String Order(Model model) {
+		return "log/Order";
+	}
+	
+	@RequestMapping("AdminOrderCheckView.do") // 관리자 상품 상세 페이지 및 수정, 삭제
+	public String AdminOrderCheckView(Model model) {
+		return "log/AdminOrderCheckView";
+	}
+	
+	
 }
