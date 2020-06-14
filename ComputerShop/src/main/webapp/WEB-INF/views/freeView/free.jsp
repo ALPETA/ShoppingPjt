@@ -12,7 +12,6 @@
 }
 </style>
 </head>
-<%@include file="../commons/loader.jsp"%>
 <body class="main-layout">
 	<%@include file="../commons/header/header.jsp"%>
 	<div>

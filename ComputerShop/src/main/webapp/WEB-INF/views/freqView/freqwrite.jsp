@@ -31,7 +31,7 @@
 			<caption>F&Q 글쓰기</caption>
 			</thead>
 			<tbody>
-				<form action="freqwrite_ok.jsp" method="post"
+				<form method="post"
 					encType="multiplart/form-data">
 					<tr>
 						<th>제목:</th>

@@ -14,7 +14,6 @@
 </head>
 <bodyclass="main-layout">
 
-	<%@include file="../commons/loader.jsp"%>
 	<%@include file="../commons/header/header.jsp"%>
 	<div class="align-center" >
 		<section class="banner_main2">
