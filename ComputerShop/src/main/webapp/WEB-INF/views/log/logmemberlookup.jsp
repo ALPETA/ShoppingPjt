@@ -61,7 +61,7 @@
 				data : "u_address"
 			}, {
 				data : "u_createDate"
-			}, ]
+			}]
 		});
 	})
 </script>

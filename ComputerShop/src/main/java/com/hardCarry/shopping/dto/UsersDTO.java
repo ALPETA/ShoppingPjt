@@ -26,6 +26,7 @@ public class UsersDTO {
 	String u_email;
 	@NotNull(message = "주소를 입력해라")
 	String u_address;
+	String u_createDate;
 	@Override public String toString() { return "UserDTO [u_name=" + u_name + ", u_id=" + u_id + 
 			", u_pw=" + u_pw + ", u_phone=" + u_phone + ", u_email=" + u_email +
 			", u_address=" + u_address + "]"; }

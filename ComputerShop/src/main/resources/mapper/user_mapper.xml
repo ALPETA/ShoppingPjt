@@ -10,7 +10,8 @@
 		VALUES(#{name},#{id},#{pw},#{phone},#{email},#{address})
 	</insert>
 
-	<select id="logmemberlookup" parameterType="hashMap"
+	<!-- 회원 조회 -->
+	<select id="logmemberlookup" parameterType="hashMap" 
 		resultType="AdminUserViewEntity">
 		SELECT *
 		FROM user
@@ -19,7 +20,8 @@
 		LIMIT #{page},#{size}
 	</select>
 
-	<select id="countAll" resultType="long" parameterType="string">
+	<!-- 회원 조회 서치 -->
+	<select id="countAll" resultType="long" parameterType="string"> 
 		SELECT
 		count(*)
 		FROM user
