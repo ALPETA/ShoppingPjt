@@ -157,8 +157,6 @@
 			<artifactId>standard</artifactId>
 			<version>1.1.2</version>
 		</dependency>
-<<<<<<< HEAD
-=======
 
 		<!-- modelMapper -->
 		<dependency>
@@ -177,7 +175,6 @@
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.2.2</version>
 		</dependency>
->>>>>>> refs/remotes/origin/KEJ_작업
 	</dependencies>
 	<build>
 		<plugins>

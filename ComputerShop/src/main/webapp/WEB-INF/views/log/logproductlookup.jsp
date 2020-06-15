@@ -43,16 +43,29 @@
 				"data" : function(e) {
 				}
 			},
-			serverSide: true,
-			searching: true,
-			columns : [
-                {data: "p_seq"},
-                {data: "p_code"},
-                {data: "p_name"},
-                {data: "p_code"},
-                {data: "p_code"},
-                {data: "p_code"},
-            ]
+			serverSide : true,
+			searching : true,
+			columns : [ {
+				data : "p_seq"
+			}, {
+				data : "p_code"
+			}, {
+				data : "p_name"
+			}, {
+				data : "p_price"
+			}, {
+				data : "p_manufacture"
+			}, {
+				data : "p_etc"
+			}, {
+				data : "p_sumnailImgPath"
+			}, {
+				data : "p_stock"
+			}, {
+				data : "p_state"
+			}, {
+				data : "p_Date"
+			} ]
 		});
 	})
 </script>
@@ -76,36 +89,26 @@
 		<div class="form-group form-inline">
 			<!-- form-inline  -->
 
-			<select style="width: 80px; font-size: 15px;" class="form-control"
-				id="exampleSelect1">
-				<option>선택</option>
-				<option>전체</option>
-				<option>상품 코드</option>
-			</select>
 
-			<form
-				class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-				<div class="input-group">
-					<input type="text" class="form-control bg-light border-0 small"
-						placeholder="입력" aria-label="Search"
-						aria-describedby="basic-addon2">
-					<div class="input-group-append">
-						<button type="button" class="btn btn-secondary">검색</button>
-					</div>
-				</div>
-			</form>
+
+
 		</div>
 		<div class="card-body">
 			<div class="data-tables datatable-dark">
 				<table id="productTable" class="display">
 					<thead>
 						<tr>
-							<th></th>
+
+							<th>상품 번호</th>
 							<th>상품 코드</th>
 							<th>상품 명</th>
-							<th>주문 횟수</th>
-							<th>상품 재고</th>
+							<th>상품 가격</th>
 							<th>상품 제조사</th>
+							<th>상품 코멘트</th>
+							<th>상품 이미지</th>
+							<th>상품 수량</th>
+							<th>상품 판매 상태</th>
+							<th>상품 등록 날짜</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -114,9 +117,13 @@
 			</div>
 
 			<div align="right">
-				<a class="btn btn-lg1  btn btn-secondary" href="logadddesktop.do">상품 등록</a> 
-				<a class="btn btn-lg1  btn btn-secondary" href="#">상품 수정</a> 
-				<a class="btn btn-lg1  btn btn-secondary" href="javascript:deleteAll()">상품 삭제</a>
+
+
+
+				<a class="btn btn-lg1  btn btn-secondary" href="logadddesktop.do">상품
+					등록</a> <a class="btn btn-lg1  btn btn-secondary"
+					href="javascript:deleteAll()">상품 삭제</a>
+
 			</div>
 		</div>
 	</div>

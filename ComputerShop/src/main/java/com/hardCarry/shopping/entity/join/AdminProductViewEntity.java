@@ -29,4 +29,6 @@ public class AdminProductViewEntity {
 	String ps_graphic;
 	String ps_case;
 	long ps_pSeq;
+	
+	
 }

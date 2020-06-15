@@ -4,7 +4,9 @@
 	<typeAliases>
 		<typeAlias type="com.hardCarry.shopping.entity.UsersEntity" alias="User" />
 		<typeAlias type="com.hardCarry.shopping.entity.SpecEntity" alias="SpecEntity" />
+				<typeAlias type="com.hardCarry.shopping.entity.ProductEntity" alias="ProductEntity" />
+				
 		<typeAlias type="com.hardCarry.shopping.entity.join.AdminProductViewEntity" alias="AdminProductViewEntity" />
-		<typeAlias type="com.hardCarry.shopping.entity.ProductEntity" alias="ProductEntity" />
+		<typeAlias type="com.hardCarry.shopping.entity.join.AdminUserViewEntity" alias="AdminUserViewEntity" />
 	</typeAliases>
 </configuration>

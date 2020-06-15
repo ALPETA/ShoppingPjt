@@ -32,9 +32,14 @@
 		WHERE p_seq = #{p_seq}
 	</update>
 	
+
 	<!-- <select id="findProduct" parameterType="hashMap" resultType="AdminProductViewEntity">
 		SELECT *
 		FROM `product` p, `product_spec` s
 		WHERE p.p_seq = s.ps_pSeq
 	</select> -->
+
+	
+	
+
 </mapper>

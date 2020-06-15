@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>상품 상세 페이지</title>
+<title>회원 정보 및 주문 내역 페이지</title>
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,36 +44,30 @@
 	<%@include file="./logcategory.jsp"%>
 	<div class="container-fluid top-container">
 		<div class="jumbotron">
-			<h1>상품 상세 페이지</h1>
-			<p>상품 수정 및 삭제</p>
+			<h1>회원 정보 및 주문 내역</h1>
+			<p>회원 정보와 회원이 주문한 내역을 확인할 수 있습니다.</p>
 		</div>
 		<div class="row">
 			<ul class="nav nav-tabs col-lg-12">
 				<li class="nav-item"><a class="nav-link active"
-					data-toggle="tab" href="#home">데스크탑 / 노트북</a></li>
+					data-toggle="tab" href="#home">회원 정보</a></li>
 				<li class="nav-item"><a class="nav-link" data-toggle="tab"
-					href="#menu1">부품</a></li>
-				<li class="nav-item"><a class="nav-link" data-toggle="tab"
-					href="#menu2">주변 기기</a></li>
+					href="#menu1">주문 내역</a></li>
+				
 			</ul>
 			<div class="tab-content">
 				<div id="home" class="container tab-pane active">
 					<br>
-					<h3>데스크탑 / 노트북</h3>
-					<%@include file="./addProduct/desktop2.jsp" %>
+					<h3>회원 정보</h3>
+					<%@include file="./addProduct/Member.jsp" %>
 				</div>
 				<div id="menu1" class="container tab-pane fade">
 					<br>
-					<h3>부품</h3>
-					<%@include file="./addProduct/parts2.jsp" %>
+					<h3>주문 내역</h3>
+					<%@include file="./addProduct/Order.jsp" %>
 				
 				</div>
-				<div id="menu2" class="container tab-pane fade">
-					<br>
-					<h3>주변 기기</h3>
-					<%@include file="./addProduct/device2.jsp" %>
-					
-				</div>
+				
 			</div>
 		</div>
 	</div>

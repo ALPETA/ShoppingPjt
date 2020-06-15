@@ -8,6 +8,7 @@
 <!-- site metas -->
 <title>cla</title>
 <%@include file="./commons/header/metaHeader.jsp"%>
+
 <script>
 	/* function showProduct() {
 		$.ajax({
@@ -28,10 +29,16 @@
 		});
 	} */
 </script>
+
 </head>
 <!-- body -->
+
 <body class="main-layout inner_posituong" onload="showProduct()">
 	<%@include file="./commons/loader.jsp"%>
+
+<body class="main-layout inner_posituong">
+	
+
 	<%@include file="./commons/header/header.jsp"%>
 	<!-- products -->
 	<div class="products">
@@ -39,24 +46,51 @@
 			<div class="row col-md-12 titlepage">
 				<h2>Our Products</h2>
 			</div>
+
+
+			<!-- Portfolio Item Heading -->
+			<h1 class="my-4">
+				Page Heading <small>Secondary Text</small>
+			</h1>
+
 			<div class="row">
 				<div class="col-md-12">
 					<!-- our products -->
 					<div class="our_products">
+
 						<div class="row" style="border: 1px solid black; position: relative; top: -40px; margin-left: 20px; margin-right: 20px;">
 							<!-- 정렬 기준 -->	
 							<div class="col-2" style="background-color: #92FFFF;" align="center">
 								<div style="padding: 5px; position: relative; top: 3px;">정렬선택</div>
+
+
+						<div class="row"
+							style="border: 1px solid black; position: relative; top: -40px; margin-left: 20px; margin-right: 20px;">
+
+							<div class="col-2" style="background-color: #92FFFF;"
+								align="center">
+								<div style="padding: 5px; position: relative; top: 3px;">타이틀</div>
+
 							</div>
 
 							<div class="col-2"></div>
 
 							<div class="col-2" style="padding: 5px;">
+
 								<button type="button" class="btn btn-outline-info btn-sm btn-block">가격순</button>
+
+								<button type="button"
+									class="btn btn-outline-info btn-sm btn-block">가격높은순</button>
+
 							</div>
 
 							<div class="col-2" style="padding: 5px;">
+
 								<button type="button" class="btn btn-outline-info btn-sm btn-block">가격순</button>
+
+								<button type="button"
+									class="btn btn-outline-info btn-sm btn-block">가격낮은순</button>
+
 							</div>
 
 							<div class="col-2" style="padding: 5px;">
@@ -72,6 +106,23 @@
 						<div class="row">
 							<div class="col-lg-3 col-md-6 mb-4">
 								<div class="card h-100">
+									<a href="productView.do"><img class="card-img-top"
+										src="http://placehold.it/400x700" alt=""></a>
+									<div class="card-body">
+										<h4 class="card-title">
+											<a href="productView.do">COMPUTER</a>
+										</h4>
+										<h5>￦ 1,000,000원</h5>
+
+									</div>
+
+								</div>
+								
+								
+							</div>
+							
+							<div class="col-lg-3 col-md-6 mb-4">
+								<div class="card h-100">
 									<a href="#"><img class="card-img-top"
 										src="http://placehold.it/400x700" alt=""></a>
 									<div class="card-body">
@@ -83,9 +134,120 @@
 									</div>
 
 								</div>
+								
+								
 							</div>
+							
+							<div class="col-lg-3 col-md-6 mb-4">
+								<div class="card h-100">
+									<a href="#"><img class="card-img-top"
+										src="http://placehold.it/400x700" alt=""></a>
+									<div class="card-body">
+										<h4 class="card-title">
+											<a href="#">COMPUTER</a>
+										</h4>
+										<h5>￦ 1,000,000원</h5>
+
+									</div>
+
+								</div>
+								
+								
+							</div>
+							
+							<div class="col-lg-3 col-md-6 mb-4">
+								<div class="card h-100">
+									<a href="#"><img class="card-img-top"
+										src="http://placehold.it/400x700" alt=""></a>
+									<div class="card-body">
+										<h4 class="card-title">
+											<a href="#">COMPUTER</a>
+										</h4>
+										<h5>￦ 1,000,000원</h5>
+
+									</div>
+
+								</div>
+								
+								
+							</div>
+							
+							<div class="col-lg-3 col-md-6 mb-4">
+								<div class="card h-100">
+									<a href="#"><img class="card-img-top"
+										src="http://placehold.it/400x700" alt=""></a>
+									<div class="card-body">
+										<h4 class="card-title">
+											<a href="#">COMPUTER</a>
+										</h4>
+										<h5>￦ 1,000,000원</h5>
+
+									</div>
+
+								</div>
+								
+								
+							</div>
+							
+							<div class="col-lg-3 col-md-6 mb-4">
+								<div class="card h-100">
+									<a href="#"><img class="card-img-top"
+										src="http://placehold.it/400x700" alt=""></a>
+									<div class="card-body">
+										<h4 class="card-title">
+											<a href="#">COMPUTER</a>
+										</h4>
+										<h5>￦ 1,000,000원</h5>
+
+									</div>
+
+								</div>
+								
+								
+							</div>
+							
+							<div class="col-lg-3 col-md-6 mb-4">
+								<div class="card h-100">
+									<a href="#"><img class="card-img-top"
+										src="http://placehold.it/400x700" alt=""></a>
+									<div class="card-body">
+										<h4 class="card-title">
+											<a href="#">COMPUTER</a>
+										</h4>
+										<h5>￦ 1,000,000원</h5>
+
+									</div>
+
+								</div>
+								
+								
+							</div>
+							
+							<div class="col-lg-3 col-md-6 mb-4">
+								<div class="card h-100">
+									<a href="#"><img class="card-img-top"
+										src="http://placehold.it/400x700" alt=""></a>
+									<div class="card-body">
+										<h4 class="card-title">
+											<a href="#">COMPUTER</a>
+										</h4>
+										<h5>￦ 1,000,000원</h5>
+
+									</div>
+
+								</div>
+								
+								
+							</div>
+							
+							
+							
 						</div>
 						<!-- 상품 진열 끝 -->
+						
+						
+						
+<!-- 상품 진열 끝 -->
 					</div>
 					<!-- End of our products -->
 				</div>
