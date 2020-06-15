@@ -6,7 +6,7 @@
 <%@include file="../commons/header/metaHeader.jsp"%>
 <style>
 .margin-left {
-	margin-left: 1700px;
+	margin-left: 1920px;
 }
 </style>
 </head>

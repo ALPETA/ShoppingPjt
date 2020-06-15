@@ -63,7 +63,7 @@
 								class="form-control">123</textarea></td>
 					</tr>
 					<tr>
-						<th for="exampleInputFile">이미지 업로드:</th>
+						<th for="exampleInputFile">이미지 업로드:</th> 
 						<td><input type="file" class="form-control-file form-control"
 							id="exampleInputFile" aria-describedby="fileHelp" /></td>
 					</tr>
@@ -79,5 +79,9 @@
 		<div class="space-left2">작성일 :<a>06-07</a></div>
 	</div>
 	<%@include file="../commons/footer/footer.jsp"%>
+	<!-- Javascript files-->
+	<%@include file="../commons/js/javascript.jsp"%>
+	<!-- sidebar -->
+	<%@include file="../commons/js/sidebar.jsp"%>
 </body>
 </html>
