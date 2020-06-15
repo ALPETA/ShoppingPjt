@@ -61,7 +61,9 @@
 				data : "u_address"
 			}, {
 				data : "u_createDate"
-			}, ]
+			}, {
+				data : "u_createDate"
+			} ]
 		});
 	})
 </script>
@@ -92,7 +94,8 @@
 				<table id="userTable" class="display">
 					<thead>
 						<tr>
-							<th></th>
+							<th>번호</th>
+							<th>이름</th>
 							<th>ID</th>
 							<th>주문 번호</th>
 							<th>상품 코드</th>
