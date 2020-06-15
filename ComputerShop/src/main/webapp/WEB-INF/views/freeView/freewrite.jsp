@@ -61,5 +61,9 @@
 		</table>
 	</div>
 	<%@include file="../commons/footer/footer.jsp"%>
+	<!-- Javascript files-->
+	<%@include file="../commons/js/javascript.jsp"%>
+	<!-- sidebar -->
+	<%@include file="../commons/js/sidebar.jsp"%>
 </body>
 </html>

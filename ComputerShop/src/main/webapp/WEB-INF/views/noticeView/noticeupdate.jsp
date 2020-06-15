@@ -79,5 +79,9 @@
 		<div class="space-left2">작성일 :<a>06-07</a></div>
 	</div>
 	<%@include file="../commons/footer/footer.jsp"%>
+	<!-- Javascript files-->
+	<%@include file="../commons/js/javascript.jsp"%>
+	<!-- sidebar -->
+	<%@include file="../commons/js/sidebar.jsp"%>
 </body>
 </html>
