@@ -16,36 +16,31 @@ import com.hardCarry.shopping.entity.join.AdminUserViewEntity;
 @Service
 public class UserService {
 
-	@Autowired
-	UserDAO userDAO;
-	
+    @Autowired
+    UserDAO userDAO;
 
-	public UsersEntity save(UsersDTO usersDTO) {
-		UsersEntity saveUser = UsersEntity.builder().u_id(usersDTO.getU_id()).u_name(usersDTO.getU_name()).u_id(usersDTO.getU_id()).
-				u_pw(usersDTO.getU_pw()).u_phone(usersDTO.getU_phone()).u_email(usersDTO.getU_email()).u_address(usersDTO.getU_address()).build();
-		userDAO.save(saveUser);
-		return saveUser;
-	}
-	
+    public UsersEntity save(UsersDTO usersDTO) {
+        UsersEntity saveUser = UsersEntity.builder().id(usersDTO.getId()).name(usersDTO.getName()).id(usersDTO.getId()).
+                pw(usersDTO.getPw()).phone(usersDTO.getPhone()).email(usersDTO.getEmail()).address(usersDTO.getAddress()).build();
+        userDAO.save(saveUser);
+        return saveUser;
+    }
 
 
-	public boolean dupId(String id) {
-		return userDAO.dupId(id);
-	}
+    public boolean dupId(String id) {
+        return userDAO.dupId(id);
+    }
 
-	
-	public List<AdminUserViewEntity> logmemberlookup(int page, int length, String search) {
-		HashMap<String, Object> map = new HashMap<String, Object>();
-		map.put("page", page);
-		map.put("size", length);
-		map.put("search", search);
-		return userDAO.logmemberlookup(map);
-	}
+    public List<AdminUserViewEntity> logmemberlookup(int page, int length, String search) {
+        HashMap<String, Object> map = new HashMap<String, Object>();
+        map.put("page", page);
+        map.put("size", length);
+        map.put("search", search);
+        return userDAO.logmemberlookup(map);
+    }
 
-	public long countAll(String search) {
-		return userDAO.countAll(search);
-	}
-	
-	
+    public long countAll(String search) {
+        return userDAO.countAll(search);
+    }
 
 }
