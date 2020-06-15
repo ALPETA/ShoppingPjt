@@ -33,9 +33,9 @@
 						<div class="col-md-4 margin_bottom1">
 							<div class="product_box">
 								<figure>
-									<img src="images/product3.png" alt="#" />
+									<img src="images/product_ssd.png" alt="#" />
 								</figure>
-								<h3>Tablet</h3>
+								<h3>SSD</h3>
 							</div>
 						</div>
 						<div class="col-md-4 margin_bottom1">

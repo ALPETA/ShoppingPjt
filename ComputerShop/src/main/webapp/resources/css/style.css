@@ -383,7 +383,7 @@ ul.btn li:last-child {
 .banner_main {
      background: url(../images/banner.jpg);
      background-repeat: no-repeat;
-     min-height: 900px;
+     min-height: 800px;
      background-size: 100% 100%;
      display: flex;
      justify-content: center;
@@ -392,7 +392,7 @@ ul.btn li:last-child {
      position: relative;
 }
 
-.banner_main::before {
+/* .banner_main::before {
      position: absolute;
      content: "";
      width:50px; 
@@ -411,7 +411,7 @@ ul.btn li:last-child {
      background-repeat: no-repeat;
      bottom: -38px;
      left: 38px;
-}
+} */
 
 .banner_main2 {
      background: url(../images/banner.jpg);
@@ -876,7 +876,7 @@ ul.btn li:last-child {
      background: url(../images/footer.jpg);
      background-repeat: no-repeat;
      background-size: 100% 100%;
-     padding-top: 115px;
+     padding-top: 60px;
      text-align: center;
 }
 

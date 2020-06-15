@@ -22,20 +22,18 @@
 					<h3>고객센터</h3>
 					<ul class="conta">
 						<li>운영시간 : 평일 09:00 ~ 18:00<br> 전화번호 : 070 – 710 - 1234
-
 						
 					</ul>
 				</div>
-
 			</div>
 		</div>
-		<div class="copyright">
+		<div class="">
 			<div class="container">
 				<div class="row">
+					<hr align="center" style="border: solid 1px white; width: 100%" />
 					<div class="col-md-12">
-						<p>
-							Ⓒ Copyright Allright reserved :: hardcarry
-						</p>
+						<h4 style="color: white;align:center">Ⓒ Copyright Allright reserved ::
+							hardcarry</h4>
 					</div>
 				</div>
 			</div>
