@@ -63,7 +63,7 @@
 								class="form-control">123</textarea></td>
 					</tr>
 					<tr>
-						<th for="exampleInputFile">이미지 업로드:</th>
+						<th for="exampleInputFile">이미지 업로드:</th> 
 						<td><input type="file" class="form-control-file form-control"
 							id="exampleInputFile" aria-describedby="fileHelp" /></td>
 					</tr>
