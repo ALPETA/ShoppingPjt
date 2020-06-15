@@ -8,7 +8,7 @@
 <!-- body -->
 <body class="main-layout">
 	<!-- loader  -->
-	<%@include file="./commons/loader.jsp"%>
+	<%-- <%@include file="./commons/loader.jsp"%> --%>
 	<%@include file="./commons/header/header.jsp"%>
 	<!-- end header inner -->
 	<!-- end header -->
