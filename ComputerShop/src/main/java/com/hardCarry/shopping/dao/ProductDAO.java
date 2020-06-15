@@ -9,7 +9,7 @@ import com.hardCarry.shopping.entity.join.AdminProductViewEntity;
 public interface ProductDAO {
 	void save(ProductEntity productEntity);
 
-	void update(ProductEntity productEntity);
+	void update(ProductEntity productEntity); 
 
 	long finalSeq();
 
