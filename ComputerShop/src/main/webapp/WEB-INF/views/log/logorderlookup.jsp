@@ -172,7 +172,7 @@
 	<!-- DataTales Example -->
 	<div class="card shadow mb-5 col-10" style="margin-top: 50px;">
 		<div class="card-header py-3">
-			<h6 class="m-0 font-weight-bold text-secondary">상품 조회</h6>
+			<h6 class="m-0 font-weight-bold text-secondary">주문 조회</h6>
 		</div>
 		<br>
 		<div class="card-body">
