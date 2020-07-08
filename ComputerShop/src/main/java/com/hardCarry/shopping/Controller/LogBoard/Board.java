@@ -24,9 +24,31 @@ public class Board {
 	LogBoardService logBoardService;
 
 	@RequestMapping(value = "add", method = RequestMethod.POST) // 공지 사항 등록 + 사진 등록
-	public String addProduct(BoardDTO boardDTO, MultipartFile files) throws Exception {
-		logBoardService.save(boardDTO, files);
-		return "redirect:../lognotice.do";
+	public String addProduct(BoardDTO boardDTO, MultipartFile files, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		String title = request.getParameter("b_title");
+		String content = request.getParameter("b_content");
+		if(title.equals("")&&content.equals("")) {
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			out.println("<script>alert('제목과 내용을 입력해주세요.'); history.go(-1);</script>");
+			out.flush();
+			return null;
+		}else if(title.equals("")) {
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			out.println("<script>alert('제목을 입력해주세요.'); history.go(-1);</script>");
+			out.flush();
+			return null;
+		}else if(content.equals("")) {
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out = response.getWriter();
+			out.println("<script>alert('내용을 입력해주세요.'); history.go(-1);</script>");
+			out.flush();
+			return null;
+		}else {
+			logBoardService.save(boardDTO, files);
+			return "redirect:../lognotice.do";
+		}
 	}
 
 	@RequestMapping(value = "logfreedelete", method = RequestMethod.GET) // 자유 게시판 삭제
@@ -129,9 +151,31 @@ public class Board {
 			out.flush();
 			return null;
 		}
-		boardDTO.setB_uSeq(b_uSeq);
-		logBoardService.savefandq(boardDTO);
-		return "redirect:../logfreq.do";
+		String title = request.getParameter("b_title");
+		String content = request.getParameter("b_content");
+		if(title.equals("")&&content.equals("")) {
+			response.setContentType("text/html; charset=UTF-8");
+			out = response.getWriter();
+			out.println("<script>alert('제목과 내용을 입력해주세요.'); history.go(-1);</script>");
+			out.flush();
+			return null;
+		}else if(title.equals("")) {
+			response.setContentType("text/html; charset=UTF-8");
+			out = response.getWriter();
+			out.println("<script>alert('제목을 입력해주세요.'); history.go(-1);</script>");
+			out.flush();
+			return null;
+		}else if(content.equals("")) {
+			response.setContentType("text/html; charset=UTF-8");
+			out = response.getWriter();
+			out.println("<script>alert('내용을 입력해주세요.'); history.go(-1);</script>");
+			out.flush();
+			return null;
+		} else {
+			boardDTO.setB_uSeq(b_uSeq);
+			logBoardService.savefandq(boardDTO);
+			return "redirect:../logfreq.do";
+		}
 	}
 
 	@RequestMapping(value = "fandq", method = RequestMethod.GET) // F&Q 글 삭제
