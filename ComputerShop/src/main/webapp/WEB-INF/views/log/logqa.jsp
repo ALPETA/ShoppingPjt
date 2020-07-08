@@ -74,8 +74,8 @@
 										+ '</span></td>';
 								BoardSection += '<td><a href="logqaviewdetail.do?name='+data[i]['b_seq']+'">' + data[i]['b_title']
 										+ '</a></td>';
-								BoardSection += '<td>' + data[i]['u_id']
-										+ '</td>';
+								BoardSection += '<td><a href="selectionmember.do?name='+data[i]['u_seq']+'">' + data[i]['u_id']
+										+ '</a></td>';
 								BoardSection += '<td><span class="badge badge-warning">'
 										+ numberWithCommas(data[i]['b_hit'])
 										+ '</span></td>';
