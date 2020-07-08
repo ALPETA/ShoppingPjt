@@ -1,41 +1,30 @@
 package com.hardCarry.shopping;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import static org.junit.Assert.assertNotNull;
 
-@Controller
-public class HomeController { 
+import java.util.HashMap;
 
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.hardCarry.shopping.dao.UserDAO;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = "file:src/main/webapp/WEB-INF/spring/dataBase-context.xml")
+public class HomeController {
+
+	@Autowired
+	UserDAO userDAO;
 	
-
-	@RequestMapping("about.do")
-	public String about(Model model) {
-		return "about";
+	@Test
+	public void test11() throws Exception {
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("id", "asdf");
+		map.put("pw", "1234");
+		assertNotNull(userDAO.login(map));
 	}
 
-	@RequestMapping("computer.do")
-	public String computer(Model model) {
-		return "computer";
-	}
-
-	@RequestMapping("contact.do")
-	public String contact(Model model) {
-		return "contact";
-	}
-
-	
-
-	@RequestMapping("laptop.do")
-	public String laptop(Model model) {
-		return "laptop";
-	}
 }

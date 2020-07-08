@@ -5,57 +5,55 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Write something else you want</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-	crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
+<title>Q&A 글쓰기</title>
+<%@include file="../commons/header/metaHeader.jsp"%>
 <script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-	crossorigin="anonymous"></script>
+	type="text/javascript"
+	src="js/jquery-1.10.2.min.js"
+></script>
+<script
+	type="text/javascript"
+	src="js/bootstrap.min.js"
+></script>
 </head>
 <body>
+	<%@include file="../commons/header/header.jsp"%>
+	<div>
+		<section class="banner_main2"></section>
+	</div>
 	<div class="container">
+		<caption>Q&A 글쓰기</caption>
 		<table class="table table-bordered">
-			<thead>
-			<caption>Q&A 글쓰기</caption>
-			</thead>
 			<tbody>
-				<form method="post" encType="multiplart/form-data">
+				<form method="post" action="./addQaBoard"
+					encType="multiplart/form-data">
 					<tr>
 						<th>제목:</th>
-						<td><input type="text" placeholder="제목을 입력하세요. "
-							name="subject" class="form-control" /></td>
+						<td><input type="text" placeholder="제목을 입력하세요." id="title"
+							name="title" class="form-control" /></td>
 					</tr>
 					<tr>
 						<th>내용:</th>
 						<td><textarea cols="10" rows="20" placeholder="내용을 입력하세요. "
-								name="content" class="form-control"></textarea></td>
-					</tr>
-					<tr>
-						<th for="exampleInputFile">이미지 업로드:</th>
-						<td><input type="file" class="form-control-file form-control"
-							id="exampleInputFile" aria-describedby="fileHelp" /></td>
+								id="content" name="content" class="form-control"></textarea></td>
 					</tr>
 					<tr>
 						<td colspan="2">
-							<input type="button" value="취소" class="pull-right" onclick="javascript:location.href='qa.jsp'"/> 
-							<input type="button" value="등록" class="pull-right" onclick="javascript:location.href='qa.jsp'" />
+							<div align="right">
+								<button type="submit" class="btn btn-lg1 btn">등록</button>
+								<button type="button" class="btn btn-lg1 btn"
+									onclick="javascript:location.href='qa.do'">취소</button>
+							</div>
 						</td>
 					</tr>
 				</form>
 			</tbody>
 		</table>
 	</div>
+	<%@include file="../commons/footer/footer.jsp"%>
+	<!-- Javascript files-->
+	<%@include file="../commons/js/javascript.jsp"%>
+	<!-- sidebar -->
+	<%@include file="../commons/js/sidebar.jsp"%>
 </body>
 </html>

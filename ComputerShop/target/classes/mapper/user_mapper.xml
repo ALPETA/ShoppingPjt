@@ -4,42 +4,171 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.hardCarry.shopping.dao.UserDAO">
-	<insert id="save" parameterType="User">
+	<!-- 로그인 -->
+	<select id="login" parameterType="hashMap"
+		resultType="UserEntity">
+		SELECT *
+		FROM user u
+		WHERE u_id = #{id} AND u_pw = #{pw}
+	</select>
+
+	<!-- 회원가입 -->
+	<insert id="save" parameterType="UserEntity">
 		INSERT INTO USER(u_name, u_id,
 		u_pw, u_phone, u_email, u_address)
-		VALUES(#{name},#{id},#{pw},#{phone},#{email},#{address})
+		VALUES(#{u_name},#{u_id},#{u_pw},#{u_phone},#{u_email},#{u_address})
 	</insert>
 
-	
-	<select id="idCheck" resultType="int">
-		SELECT u_id FROM user
-		WHERE u_id = #{id}
-	</select>
-	
+	<!-- 회원가입 아이디 중복 확인 -->
 	<select id="dupId" parameterType="string" resultType="boolean">
-		SELECT IF(COUNT(u_id)>0,FALSE,TRUE)
+		SELECT
+		IF(COUNT(u_id)>0,FALSE,TRUE)
 		FROM `user`
 		WHERE u_id = #{id}
 	</select>
 
+	<!-- 마이페이지 비밀번호 확인 -->
+	<select id="pwChk" parameterType="hashMap" resultType="boolean">
+		SELECT
+		IF(COUNT(u_id)>0,FALSE,TRUE)
+		FROM `user`
+		WHERE u_id = #{id} AND u_pw =
+		#{pw}
+	</select>
 
-	<!-- 회원 조회 -->
-	<select id="logmemberlookup" parameterType="hashMap" 
+	<!-- 아이디 찾기 -->
+	<select id="findId" parameterType="hashMap"
+		resultType="UserEntity">
+		SELECT *
+		FROM user
+		WHERE u_name = #{u_name} AND u_email = #{u_email}
+	</select>
+	
+	<!-- 비밀번호 찾기(비밀번호 변경) -->
+	<update id="setNewPw" parameterType="hashMap">
+		UPDATE user
+		SET 
+		u_pw = #{pw}
+		WHERE u_id = #{u_id} and u_email=#{u_email}
+	</update>
+	
+	<!-- 비밀번호 찾기(비밀번호 보여주기) -->
+	<select id="findPw" parameterType="hashMap"
+		resultType="UserEntity">
+		SELECT *
+		FROM user
+		WHERE u_id = #{u_id} AND u_email = #{u_email}
+	</select>
+	
+	<!-- 회원 조회 (관리자는 보이지 않음)-->
+	<select id="logmemberlookup" parameterType="hashMap"
 		resultType="AdminUserViewEntity">
 		SELECT *
 		FROM user
-		where u_name like
-		CONCAT('%',#{search},'%')
+		where u_auth = "user" AND u_name like
+		CONCAT('%',#{search},'%') ORDER BY u_seq DESC
 		LIMIT #{page},#{size}
 	</select>
 
-	<!-- 회원 조회 서치 -->
-	<select id="countAll" resultType="long" parameterType="string"> 
+	<!-- 회원 조회 서치(관리자는 개수에 포함하지 않음) -->
+	<select id="countAll" resultType="long" parameterType="string">
 		SELECT
 		count(*)
 		FROM user
-		where u_name like CONCAT('%',#{search},'%')
+		where u_auth = "user" AND u_name like CONCAT('%',#{search},'%')
 	</select>
 
+	<update id="updateUser" parameterType="AdminUserViewEntity">
+		UPDATE user
+		SET 
+		u_name = #{u_name},
+		u_phone = #{u_phone},
+		u_email = #{u_email},
+		u_address = #{u_address}
+		WHERE u_id = #{u_id}
+	</update>
+	
+	<update id="updateUserPW" parameterType="AdminUserViewEntity">
+		UPDATE user
+		SET 
+		u_pw = #{u_pw}
+		WHERE u_id = #{u_id}
+	</update>
 
+	<!-- 결제 창 상품 뿌려주기 -->
+	<select id="checkout_product" resultType="ProductEntity"
+		parameterType="hashMap">
+		SELECT *
+		FROM product
+		where p_seq=#{p_seq}
+	</select>
+
+	<!-- 결제 (판매 정보 등록) -->
+	<insert id="saveOrders" parameterType="OrderEntity">
+		INSERT INTO orders
+		VALUES(NULL,'',#{o_sendname},#{o_sendphone},#{o_sendAddress},#{o_totalPrice},#{o_stock},#{o_message},#{o_responseType},#{o_date},#{o_payment},#{o_pSeq},#{o_uSeq})
+	</insert>
+
+	<select id="finalSeq" resultType="long">
+		SELECT max(o_seq)
+		FROM `orders`
+	</select>
+
+	<update id="update" parameterType="OrderEntity">
+		UPDATE `orders`
+		SET o_code =
+		#{o_code}
+		WHERE o_seq = #{o_seq}
+	</update>
+
+	<update id="sub_stock" parameterType="hashMap">
+		UPDATE product 
+		SET p_stock = p_stock-#{o_stock}
+		WHERE p_seq=#{p_seq}
+	</update>
+	
+	<!-- 내가 쓴 글 -->
+	<select id="lookUpMyBoard" parameterType="hashMap"
+		resultType="FreeBoardUserEntity">
+		SELECT * 
+		FROM board b,user u 
+		WHERE 
+			b.b_uSeq=u.u_seq and b.b_uSeq=#{seq} and
+			b.b_title like CONCAT('%',#{search},'%') ORDER BY b.b_seq DESC
+		LIMIT #{page},#{size}
+	</select>
+	
+	<select id="countMyBoardAll" resultType="long"
+		parameterType="hashMap">
+		SELECT
+		count(*)
+		FROM board 
+		WHERE b_uSeq=#{seq} and b_title like CONCAT('%',#{search},'%')
+	</select>
+	
+	
+		<!-- 해당 상품 구매한 회원 리스트 -->
+	<select id="logproduction" parameterType="hashMap"
+		resultType="AdminuopViewEntity">
+		SELECT *
+		FROM `product` p,
+		`product_spec` ps,
+		`user` u,
+		`orders` o
+		WHERE
+		p.p_seq = ps.ps_pSeq AND u.u_seq = o.o_uSeq AND
+		o.o_pSeq = p.p_seq AND
+		p.p_seq = #{p_seq} AND u.u_id LIKE
+		CONCAT('%',#{search},'%') ORDER BY
+		u.u_seq DESC LIMIT #{page},#{size}
+	</select>
+
+	<select id="logproductioncountAll" resultType="long"
+		parameterType="hashMap">
+		SELECT count(*) FROM `product` p, `product_spec` ps, `user` u, `orders` o
+		WHERE p.p_seq = ps.ps_pSeq AND u.u_seq = o.o_uSeq AND o.o_pSeq =
+		p.p_seq
+		AND p.p_seq = #{p_seq} AND u.u_id like CONCAT('%',#{search},'%') 
+	</select>
+	<!-- 끝 -->
 </mapper>

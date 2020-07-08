@@ -5,6 +5,11 @@
 
 <mapper namespace="com.hardCarry.shopping.dao.SpecDAO">
 	<insert id="save" parameterType="SpecEntity">
-		INSERT INTO `product_spec` VALUES (NULL,#{ps_pSeq},#{ps_cpu},#{ps_ram},#{ps_mainboard},#{ps_hdd},#{ps_ssd},#{ps_graphic},#{ps_case})
+		INSERT INTO `product_spec` VALUES (NULL,#{ps_pSeq},#{ps_cpu},#{ps_ram},#{ps_mainboard},#{ps_hdd},#{ps_ssd},#{ps_graphic},0,0,0,0,0,0)
 	</insert>
+	
+	<delete id="delete" parameterType="long">
+		DELETE FROM product_spec
+		WHERE ps_pSeq = #{seq}
+	</delete>
 </mapper>

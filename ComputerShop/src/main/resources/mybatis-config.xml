@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0/EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-	<typeAliases>
-		<typeAlias type="com.hardCarry.shopping.entity.UsersEntity" alias="User" />
-		<typeAlias type="com.hardCarry.shopping.entity.SpecEntity" alias="SpecEntity" />
-				<typeAlias type="com.hardCarry.shopping.entity.ProductEntity" alias="ProductEntity" />
-				
-		<typeAlias type="com.hardCarry.shopping.entity.join.AdminProductViewEntity" alias="AdminProductViewEntity" />
-		<typeAlias type="com.hardCarry.shopping.entity.join.AdminUserViewEntity" alias="AdminUserViewEntity" />
-	</typeAliases>
+    <typeAliases>
+        <typeAlias type="com.hardCarry.shopping.entity.UsersEntity" alias="UserEntity" />
+        <typeAlias type="com.hardCarry.shopping.entity.SpecEntity" alias="SpecEntity" />
+        <typeAlias type="com.hardCarry.shopping.entity.ProductEntity" alias="ProductEntity" />
+        <typeAlias type="com.hardCarry.shopping.entity.OrderEntity" alias="OrderEntity" />
+        <typeAlias type="com.hardCarry.shopping.entity.BoardEntity" alias="BoardEntity" />
+        <typeAlias type="com.hardCarry.shopping.entity.BoardImgEntity" alias="BoardImgEntity" />
+        <typeAlias type="com.hardCarry.shopping.entity.ReplyEntity" alias="ReplyEntity" />
+
+        <typeAlias type="com.hardCarry.shopping.entity.join.AdminProductViewEntity" alias="AdminProductViewEntity" />
+        <typeAlias type="com.hardCarry.shopping.entity.join.AdminUserViewEntity" alias="AdminUserViewEntity" />
+        <typeAlias type="com.hardCarry.shopping.entity.join.AdminOrderslookupViewEntity" alias="AdminOrderslookupViewEntity" />
+        <typeAlias type="com.hardCarry.shopping.entity.join.FreeBoardUserEntity" alias="FreeBoardUserEntity" />
+        <typeAlias type="com.hardCarry.shopping.entity.join.AdminBoardEntity" alias="AdminBoardEntity" />
+        <typeAlias type="com.hardCarry.shopping.entity.join.UsersOrderEntity" alias="UsersOrderEntity" />
+        <typeAlias type="com.hardCarry.shopping.entity.join.ReplyUsersEntity" alias="ReplyUsersEntity" />
+        <typeAlias type="com.hardCarry.shopping.entity.join.BoardReplyUsersEntity" alias="BoardReplyUsersEntity" />
+        <typeAlias type="com.hardCarry.shopping.entity.join.AdminuopViewEntity" alias="AdminuopViewEntity" />
+    </typeAliases>
 </configuration>

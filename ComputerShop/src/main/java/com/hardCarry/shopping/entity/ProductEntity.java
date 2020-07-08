@@ -19,18 +19,18 @@ import lombok.Setter;
 public class ProductEntity {
 	long p_seq;
 	String p_code;
+	String p_use;
+	String p_category;
 	String p_name;
 	long p_price;
 	String p_manufacture;
 	String p_etc;
 	String p_sumnailImgPath;
-	int p_stock;
+	String p_stock;
 	String p_state;
 	Date p_Date;
 
 	public void initProduct() {
-		this.p_stock = 0;
-		this.p_state = "YES";
 		p_Date = new Date();
 	}
 

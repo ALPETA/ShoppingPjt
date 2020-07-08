@@ -1,28 +1,25 @@
+<%@page
+	import="com.hardCarry.shopping.entity.join.BoardReplyUsersEntity"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@page import="java.util.Date"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@page import="com.hardCarry.shopping.entity.join.FreeBoardUserEntity"%>
 <!DOCTYPE>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Write something else you want</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-	crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
+<%@include file="../commons/header/metaHeader.jsp"%>
 <script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-	crossorigin="anonymous"></script>
+	type="text/javascript"
+	src="js/jquery-1.10.2.min.js"
+></script>
+<script
+	type="text/javascript"
+	src="js/bootstrap.min.js"
+></script>
 <style>
 .space-left {
 	margin-left: 1010px;
@@ -31,6 +28,9 @@
 <%@include file="../commons/header/metaHeader.jsp"%>
 </head>
 <body>
+	<%
+		BoardReplyUsersEntity FreeView = (BoardReplyUsersEntity) request.getAttribute("request");
+	%>
 	<%@include file="../commons/header/header.jsp"%>
 	<div class="align-center">
 		<section class="banner_main2"></section>
@@ -39,42 +39,42 @@
 		<table class="table table-bordered">
 			<thead>
 				<h4>Q&A 글 수정</h4>
-				<div>
-					<a>게시물 번호 : 1</a>
-				</div>
 			</thead>
+			<div>
+				<a name="seq">게시물 번호 : <%=FreeView.getB_seq()%></a>
+			</div>
 			<tbody>
-				<form method="post" encType="multiplart/form-data">
+				<form method="post"
+					action="./updateQaBoard?name=<%=FreeView.getB_seq()%>"
+					encType="multiplart/form-data">
 					<tr>
 						<th>제목:</th>
-						<td><input type="text" value="하드캐리" name="subject"
-							class="form-control" /></td>
+						<td><input class="form-control" id="title" name="title"
+							style="resize: none;" value="<%=FreeView.getB_title()%>"></input></td>
 					</tr>
 					<tr>
 						<th>작성자:</th>
-						<td><a>홍길동</a></td>
+						<td><a><%=FreeView.getU_id()%></a></td>
 					</tr>
 					<tr>
 						<th>내용:</th>
-						<td><textarea cols="10" rows="20" name="content"
-								class="form-control">123</textarea></td>
-					</tr>
-					<tr>
-						<th for="exampleInputFile">이미지 업로드:</th>
-						<td><input type="file" class="form-control-file form-control"
-							id="exampleInputFile" aria-describedby="fileHelp" /></td>
+						<td><textarea cols="10" rows="20" id="content" name="content"
+								class="form-control" style="resize: none;"><%=FreeView.getB_content()%></textarea></td>
 					</tr>
 					<tr>
 						<td colspan="2">
-							<input type="button" value="취소" onclick="sendData()" class="pull-right" onclick="javascript:location.href='qa.do'" /> 
-							<input type="button" value="등록" class="pull-right" onclick="javascript:location.href='qa.do'" />
+							<div align="right">
+								<button type="submit" class="btn btn-lg1 btn btn-light">등록</button>
+								<a class="btn btn-lg1 btn btn-light" href="qa.do"">취소</a>
+							</div>
 						</td>
 					</tr>
 				</form>
 			</tbody>
 		</table>
-		<div class="space-left">
-			작성일 :<a>06-07</a>
+		<div class="col-md-12" align="right">
+			<a>작성일 : <fmt:formatDate value="<%=FreeView.getB_date()%>"
+					pattern="yyyy-MM-dd" /></a>
 		</div>
 	</div>
 	<%@include file="../commons/footer/footer.jsp"%>

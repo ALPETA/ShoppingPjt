@@ -1,3 +1,8 @@
+<%@page
+	import="com.hardCarry.shopping.entity.join.BoardReplyUsersEntity"%>
+<%@page import="java.util.Date"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@page import="com.hardCarry.shopping.entity.join.FreeBoardUserEntity"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE>
@@ -6,34 +11,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Write something else you want</title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-	crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-	crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-	crossorigin="anonymous"></script>
 <%@include file="../commons/header/metaHeader.jsp"%>
+<script
+	type="text/javascript"
+	src="js/jquery-1.10.2.min.js"
+></script>
+<script
+	type="text/javascript"
+	src="js/bootstrap.min.js"
+></script>
 <style>
 .space-left {
 	margin-left: 960px;
 }
+
 .space-left2 {
 	margin-left: 1010px;
 }
 </style>
 </head>
 <body>
+	<%
+		BoardReplyUsersEntity FreeView = (BoardReplyUsersEntity) request.getAttribute("request");
+	%>
 	<%@include file="../commons/header/header.jsp"%>
 	<div>
 		<section class="banner_main2" />
@@ -41,49 +41,52 @@
 	<div class="container">
 		<table class="table table-bordered">
 			<thead>
-				<h4>자유게시판 글 수정</h4>
 				<div>
-					<a>게시물 번호 : 1</a><a class="space-left">조회수 : 1</a>
-				</div>
+					<h4>자유게시판 글 수정</h4>
+					<div class="row">
+						<div class="col-md-6">
+							<a name="seq">게시물 번호 : <%=FreeView.getB_seq()%></a>
+						</div>
+						<div class="col-md-6" align="right">
+							<a>조회수:<%=FreeView.getB_hit()%></a>
+						</div>
+					</div>
 			</thead>
 			<tbody>
-				<form action="free.jsp" method="post" encType="multiplart/form-data">
+				<form method="post"
+					action="./updateFreeBoard?name=<%=FreeView.getB_seq()%>"
+					encType="multiplart/form-data">
 					<tr>
 						<th>제목:</th>
-						<td><input type="text" value="하드캐리" name="subject"
-							class="form-control" /></td>
+						<td><input class="form-control" id="title" name="title"
+							style="resize: none;" value="<%=FreeView.getB_title()%>"></input></td>
 					</tr>
 					<tr>
 						<th>작성자:</th>
-						<td><a>홍길동</a></td>
+						<td><a><%=FreeView.getU_id()%></a></td>
 					</tr>
 					<tr>
 						<th>내용:</th>
-						<td><textarea cols="10" rows="20" name="content"
-								class="form-control">123</textarea></td>
-					</tr>
-					<tr>
-						<th for="exampleInputFile">이미지 업로드:</th>
-						<td><input type="file" class="form-control-file form-control"
-							id="exampleInputFile" aria-describedby="fileHelp" /></td>
+						<td><textarea cols="10" rows="20" id="content" name="content"
+								class="form-control" style="resize: none;"><%=FreeView.getB_content()%></textarea></td>
 					</tr>
 					<tr>
 						<td colspan="2">
-							<input type="button" value="취소" class="pull-right" onclick="javascript:location.href='free.do'" />
-							<input type="button" value="등록" class="pull-right" onclick="javascript:location.href='free.do'"/>
+							<div align="right">
+								<button type="submit" class="btn btn-lg1 btn btn-light">등록</button>
+								<a class="btn btn-lg1 btn btn-light" href="free.do"">취소</a>
+							</div>
 						</td>
 					</tr>
 				</form>
 			</tbody>
 		</table>
-		<div class="space-left2">
-			작성일 :<a>06-07</a>
+
+		<div class="col-md-12" align="right">
+			<a>작성일 : <fmt:formatDate value="<%=FreeView.getB_date()%>"
+					pattern="yyyy-MM-dd" /></a>
 		</div>
 	</div>
 	<%@include file="../commons/footer/footer.jsp"%>
-	<!-- Javascript files-->
-	<%@include file="../commons/js/javascript.jsp"%>
-	<!-- sidebar -->
-	<%@include file="../commons/js/sidebar.jsp"%>
 </body>
 </html>

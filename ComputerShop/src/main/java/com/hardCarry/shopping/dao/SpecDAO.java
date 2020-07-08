@@ -4,4 +4,6 @@ import com.hardCarry.shopping.entity.SpecEntity;
 
 public interface SpecDAO {
 	void save(SpecEntity spec);
+	
+	void delete(long seq);
 }

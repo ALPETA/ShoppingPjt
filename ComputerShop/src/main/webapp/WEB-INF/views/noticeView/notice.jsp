@@ -4,6 +4,8 @@
 <html lang="utf-8">
 <head>
 <%@include file="../commons/header/metaHeader.jsp"%>
+<!-- Javascript files-->
+<%@include file="../commons/js/javascript.jsp"%>
 <style>
 .margin-left {
 	margin-left: 1700px;
@@ -24,8 +26,6 @@
 						<!-- 메타데이터 -->
 						<%@include file="noticeMetaData.jsp"%>
 					</div>
-					<button type="button" class="btn btn-dark margin-left"
-						onclick="javascript:location.href='noticewrite.do'">글 작성</button>
 				</div>
 			</div>
 		</div>
@@ -34,8 +34,6 @@
 	<!-- /.container-fluid -->
 	<%@include file="../commons/footer/footer.jsp"%>
 	<!-- end footer -->
-	<!-- Javascript files-->
-	<%@include file="../commons/js/javascript.jsp"%>
 	<!-- sidebar -->
 	<%@include file="../commons/js/sidebar.jsp"%>
 </body>

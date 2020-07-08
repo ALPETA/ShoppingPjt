@@ -46,13 +46,13 @@
 		</a></li>
 
 		<!-- Nav Item - Tables -->
-		<li class="nav-item"><a class="nav-link" href="lognotice.do">
-				<i class="fas fa-fw fa-table"></i> <span>공지사항 작성</span>
+		<li class="nav-item"><a class="nav-link" href="logfree.do">
+				<i class="fas fa-fw fa-table"></i> <span>게시판</span>
 		</a></li>
-		
-		<!-- Nav Item - Tables -->
-		<li class="nav-item"><a class="nav-link" href="logfreq.do">
-				<i class="fas fa-fw fa-table"></i> <span>Q&A 작성</span>
-		</a></li>
-		
+		<!-- 광고 추가, 수정, 제거 -->
+		<!-- <li class="nav-item"><a class="nav-link" href="logbanneredit.do">
+				<i class="fas fa-fw fa-table"></i> <span>배너 관리</span>
+		</a></li> -->
 	</ul>
+	
+

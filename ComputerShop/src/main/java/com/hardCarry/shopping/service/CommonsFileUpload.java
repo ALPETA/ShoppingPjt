@@ -1,30 +1,38 @@
 package com.hardCarry.shopping.service;
 
-import java.io.FileOutputStream;
+import java.io.File;
+import java.io.IOException;
 
-import org.springframework.context.annotation.Scope;
+import javax.servlet.ServletContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service
-@Scope("prototype")
 public class CommonsFileUpload {
-	private FileOutputStream fos;
-	public void writeFile(MultipartFile file, String path, String fileName) {
-		try {
-			byte fileData[] = file.getBytes();
-			fos = new FileOutputStream(path + "\\" + fileName);
-			fos.write(fileData);
-		} catch (Exception e) {
-			e.printStackTrace();
 
-		} finally {
-			if (fos != null) {
-				try {
-					fos.close();
-				} catch (Exception e) {
-				}
-			}
-		} // try end;
-	}// wirteFile() end;
+	public final static String MAIN_IMG_PATH = "\\imgs\\mainImg\\";
+
+	@Autowired
+	ServletContext context;
+
+	public String getSavePath() {
+		return context.getRealPath("");
+	}
+
+	public String getMainImgPath() {
+		return getSavePath() + "\\imgs\\mainImg\\";
+	}
+
+	public String getRenameFile(MultipartFile file) {
+		return /* UUID.randomUUID() + */file.getOriginalFilename();
+	}
+
+	public void fileWrite(MultipartFile file, String filePath) {
+		try {
+			file.transferTo(new File(filePath));
+		} catch (IOException e) {
+		}
+	}
 }

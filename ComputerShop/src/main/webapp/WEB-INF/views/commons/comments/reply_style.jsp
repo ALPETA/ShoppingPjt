@@ -6,7 +6,6 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-body { padding-top:30px; }
 .widget .panel-body { padding:0px; }
 .widget .list-group { margin-bottom: 0; }
 .widget .panel-title { display:inline }

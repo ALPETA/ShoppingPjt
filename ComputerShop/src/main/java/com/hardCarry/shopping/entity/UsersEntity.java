@@ -14,13 +14,13 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UsersEntity {
-	long seq;
-	String name;
-	String id;
-	String pw;
-	String phone;
-	String email;
-	String address;
-	Date createDate;
-	String auth;
+	long u_seq;
+	String u_name;
+	String u_id;
+	String u_pw;
+	String u_phone;
+	String u_email;
+	String u_address;
+	Date u_createDate;
+	String u_auth;
 }

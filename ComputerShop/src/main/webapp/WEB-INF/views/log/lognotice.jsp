@@ -1,141 +1,213 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page
+	import="com.hardCarry.shopping.entity.join.AdminOrderslookupViewEntity"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="UTF-8">
-
+<html>
 <head>
 <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<%@include file="./logMetadata.jsp"%>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- Start datatable css -->
-<link rel="stylesheet" type="text/css"
-	href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-<link rel="stylesheet" type="text/css"
-	href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
-<link rel="stylesheet" type="text/css"
-	href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.jqueryui.min.css">
-<!-- style css -->
-<link rel="stylesheet" href="css/typography.css">
-<link rel="stylesheet" href="css/freeTable/styles.css">
-<!-- 파일 내용 변경하기 -->
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
 
 <!-- jquery latest version -->
 <script src="js/jquery-2.2.4.min.js"></script>
 <!-- bootstrap 4 js -->
-<script src="js/bootstrap.min.js"></script>
 <script src="js/metisMenu.min.js"></script>
-<script src="js/jquery.slimscroll.min.js"></script>
-<link rel="stylesheet" type="text/css"
-	href="https://cdn.datatables.net/v/bs4/dt-1.10.21/datatables.min.css" />
-<script type="text/javascript"
-	src="https://cdn.datatables.net/v/bs4/dt-1.10.21/datatables.min.js"></script>
+<script src="js/pageSection.js"></script>
+<script src="js/commonFunc.js"></script>
+
+
+
+
 <script>
-	var nowPage = 0;
-	var table;
-	$(document).ready(function() {
-		$('#userTable').dataTable({
-			"ajax" : {
-				"url" : "adminUser",
-				"type" : "GET",
-				"data" : function(e) {
-				}
-			},
-			serverSide : true,
-			searching : true,
-			columns : [ {
-				data : "u_seq"
-			}, {
-				data : "u_name"
-			}, {
-				data : "u_id"
-			}, {
-				data : "u_pw"
-			}, {
-				data : "u_phone"
-			}, {
-				data : "u_email"
-			}, {
-				data : "u_address"
-			}, {
-				data : "u_createDate"
-			}, ]
-		});
-	})
+	var search = "";
+	var length = 10;
+	var b_type = 3;
+	
+	function myFunction() {
+		   document.getElementById("myBtn").disabled = true;
+		}
+	
+	function dateFormat(value) {
+		var _date = new Date(value);
+		return _date.getFullYear() + '-' + addZero(_date.getMonth() + 1) + '-'
+				+ addZero(_date.getDate());
+	}
+	
+	function nowDateCheck(value){
+		var now = new Date();
+		value = new Date(value);
+		if(now.getFullYear() === value.getFullYear() && now.getDate() - 2 <= value.getDate() && now.getMonth() === value.getMonth()){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	function addZero(value) {
+		return value < 10 ? "0" + value : value;
+	}
+	function getData(page) {
+		$('html').scrollTop(0);
+		$
+				.ajax({
+					url : "./logNoticeBoard",
+					data : {
+						start : page,
+						length : length,
+						search : search,
+						b_type : b_type
+					},
+					method : "GET",
+					success : function(res) {
+						
+						var data = res['data'];
+						var BoardSection = '';
+						if(data.length > 0){
+							for (var i = 0; i < data.length; i++) {
+								if(data[i]['b_type'] == "3") {
+									data[i]['b_type'] = "공지 사항 게시판"
+								}
+								BoardSection += '<tr style="cursor:pointer">';
+								BoardSection += '<td><span class="badge badge-dark">' + data[i]['b_seq']
+										+ '</td>';
+								BoardSection += '<td><span class="badge badge-warning">' + data[i]['b_type']
+										+ '</span></td>';
+								BoardSection += '<td><a href="lognoticeviewdetail.do?name='+data[i]['b_seq']+'">' + data[i]['b_title']
+										+ '</a></td>';
+								BoardSection += '<td>' + data[i]['u_id']
+										+ '</td>';
+								BoardSection += '<td><span class="badge badge-warning">'
+										+ numberWithCommas(data[i]['b_hit'])
+										+ '</span></td>';
+								if(nowDateCheck(dateFormat(data[i]['b_date']))){
+									BoardSection += '<td><span class="badge badge-success">최신글</span> ' + dateFormat(data[i]['b_date']) +'</td>';
+								}else{
+									BoardSection += '<td>'
+											+ dateFormat(data[i]['b_date']) + '</td>';
+								} 
+								BoardSection += '</tr>';
+							}
+						}else{
+							BoardSection += '<tr>';
+							BoardSection += '<td colspan=11 style="text-align: center;"><span class="badge badge-danger">게시글이 존재하지 않습니다.</span></td>';
+							BoardSection += '</tr>';
+						}
+						
+						$("#total")
+								.html(res['recordsTotal'] + " 개의 게시글이 존재합니다.");
+						$("#FreeBoardTableSection").html(BoardSection);
+						$(".pagination").html(
+								getPageSection(page, length,
+										res['recordsTotal']));
+					}
+				})
+	}
+	function searchChange(e) {
+		search = $("#search").val();
+		getData(0);
+	}
+	function sizeChange(e) {
+		length = $("#size").val();
+		getData(0);
+	}
+	window.onload = getData(0);
 </script>
 </head>
-<body id="page-top">
 
-	<!-- Page Wrapper -->
+
+
+<body>
 	<%@include file="./logcategory.jsp"%>
-
-
-	<!-- 여기까지 왼쪽 카테고리 -->
-
-
-	<!-- DataTales Example -->
-	<div class="card shadow md-6 col-10">
-		<div class="card-header py-3">
-			<h6 class="m-0 font-weight-bold text-secondary">공지사항 관리</h6>
+	<div class="container-fluid top-container">
+		<div class="jumbotron">
+			<h1>공지 사항 게시판 </h1>
+			<p>공지 사항 게시판 리스트</p>
+			<%@include file="./boardButton/button1.jsp"%> <!-- 버튼 include -->
 		</div>
+		<div class="card shadow mb-5 col-12" style="margin-top: 50px;">
 		<br>
-
 		<div class="card-body">
-			<div class="data-tables datatable-dark">
-				<table id="dataTable3"
-					class="display data-tables datatable-dark text-center">
-					<thead class="text-capitalize">
-						<tr>
-							<th>번호</th>
-							<th>제목</th>
-							<th>작성자</th>
-							<th>날짜</th>
-							<th>조회수</th>
-						</tr>
-					</thead>
-					<tr onclick="javascript:location.href='lognoticeview.do'">
-						<td>0</td>
-						<td>text-center</td>
-						<td>Tokyo</td>
-						<td>2008/11/28</td>
-						<td>150</td>
-					</tr>
-					<tr onclick="javascript:location.href='lognoticeview.do'">
-						<td>0</td>
-						<td>text-center</td>
-						<td>Tokyo</td>
-						<td>2008/11/28</td>
-						<td>150</td>
-					</tr>
-					<tr onclick="javascript:location.href='lognoticeview.do'">
-						<td>0</td>
-						<td>text-center</td>
-						<td>Tokyo</td>
-						<td>2008/11/28</td>
-						<td>150</td>
-					</tr>
-				</table>
+			<div class="row">
+				<div class="input-group mb-3 col-md-4">
+					<div class="input-group-prepend" style="height: 38px;">
+						<span class="input-group-text">검색</span>
+					</div>
+					<input type="text" class="form-control" id="search"
+						onkeyup="searchChange()">
+				</div>
+				<div class="col-md-4"></div>
+				<div class="input-group mb-3 col-md-4" style="float: right;">
+					<select class="form-control" id="size" onchange="sizeChange()">
+						<option>10</option>
+						<option>20</option>
+						<option>30</option>
+					</select>
+				</div>
 			</div>
+			<span class="badge badge-info" id="total"></span><br /> <br />
+			<table class="table table-hover" id="FreeTable">
+				<thead style="background-color: black; color: white">
+					<tr>
+						<th style="width:15%">번호</th>
+						<th style="width:20%">게시판 종류</th>
+						<th style="width:20%">제목</th>
+						<th style="width:15%">작성자</th>
+						<th style="width:15%">조회수</th>
+						<th style="width:15%">날짜</th>
+					</tr>
+				</thead>
+				<tbody id="FreeBoardTableSection">
+				</tbody>
+			</table>
 			<div align="right">
 				<a class="btn btn-lg1  btn btn-secondary" href="lognoticewrite.do">게시물 작성</a>
-				<a class="btn btn-lg1  btn btn-secondary" href="#">게시물 삭제</a>
+
+			<div style="text-align: center;">
+				<ul class="pagination justify-content-center">
+				</ul>
 			</div>
 		</div>
 	</div>
+	<div class="modal fade" id="myModal">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content">
+				<div class="modal-body" id="modalSection"></div>
+			</div>
+		</div>
+	</div>
+	</div>
 
-	<!-- Start datatable js -->
-	<script
-		src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
-	<script
-		src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
-	<script
-		src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 	<!-- others plugins -->
 	<script src="js/scripts.js"></script>
-	<%@include file="../commons/js/javascript.jsp"%>
-	<!-- sidebar -->
-	<%@include file="../commons/js/sidebar.jsp"%>
+		
+<%-- 		<div class="row">
+			<ul class="nav nav-tabs col-lg-12">
+				<li class="nav-item"><a class="nav-link active"
+					data-toggle="tab" href="#home">자유 게시판</a></li>
+				<li class="nav-item"><a class="nav-link" data-toggle="tab"
+					href="#menu1">공지 사항 게시판</a></li>
+				<li class="nav-item"><a class="nav-link" data-toggle="tab"
+					href="#menu2">Q & A</a></li>
+
+			</ul>
+			<div class="tab-content col-lg-12">
+				<div id="home" class="container tab-pane active col-lg-12">
+					<br>
+					<h3>자유 게시판</h3>
+					<%@include file="./logfree.jsp"%>
+				</div>
+				<div id="menu1" class="container tab-pane fade col-lg-12">
+					<br>
+					<h3>공지 사항 게시판</h3>
+					<%@include file="./lognotice.jsp"%>
+				</div>
+				<div id="menu2" class="container tab-pane fade col-lg-12">
+					<br>
+					<h3>Q & A 게시판</h3>
+					<%@include file="./logfreq.jsp"%>
+				</div>
+
+			</div> --%>
+		</div>
 </body>
 </html>

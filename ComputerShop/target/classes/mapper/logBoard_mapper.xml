@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hardCarry.shopping.dao.LogBoardDAO">
+	<!-- 통합 게시판 리스트 개수 -->
+	<select id="logAll" parameterType="hashMap"
+		resultType="AdminBoardEntity">
+		SELECT *
+		FROM board b, user u
+		WHERE b.b_uSeq=u.u_seq AND
+		b.b_title
+		like CONCAT('%',#{search},'%') ORDER BY b.b_seq DESC
+		LIMIT
+		#{page},#{size}
+	</select>
+
+	<!-- 통합 게시판 리스트 개수 -->
+	<select id="logcountAll" resultType="long"
+		parameterType="string">
+		SELECT
+		count(*)
+		FROM board b, user u
+		WHERE b.b_uSeq=u.u_seq
+		AND b.b_title like CONCAT('%',#{search},'%')
+	</select>
+
+	<!-- 자유 게시판 리스트 -->
+	<select id="logFreeAll" parameterType="hashMap"
+		resultType="AdminBoardEntity">
+		SELECT *
+		FROM board b, user u
+		WHERE b.b_uSeq=u.u_seq AND
+		b.b_type=#{b_type} AND b.b_title
+		like CONCAT('%',#{search},'%') ORDER
+		BY b.b_seq DESC
+		LIMIT
+		#{page},#{size}
+	</select>
+
+	<!-- 자유 게시판 리스트 개수 -->
+	<select id="logcountFreeAll" resultType="long"
+		parameterType="string">
+		SELECT
+		count(*)
+		FROM board b, user u
+		WHERE b.b_uSeq=u.u_seq
+		AND b.b_type=1
+		AND b.b_title like CONCAT('%',#{search},'%')
+	</select>
+
+	<!-- 공지 사항 게시판 리스트 -->
+	<select id="logNoticeAll" parameterType="hashMap"
+		resultType="AdminBoardEntity">
+		SELECT *
+		FROM board b, user u
+		WHERE b.b_uSeq=u.u_seq AND
+		b.b_type=#{b_type} AND b.b_title
+		like CONCAT('%',#{search},'%') ORDER
+		BY b.b_seq DESC
+		LIMIT
+		#{page},#{size}
+	</select>
+
+	<!-- 공지 사항 게시판 리스트 개수 -->
+	<select id="logcountNoticeAll" resultType="long"
+		parameterType="string">
+		SELECT
+		count(*)
+		FROM board b, user u
+		WHERE b.b_uSeq=u.u_seq
+		AND b.b_type=3
+		AND b.b_title like CONCAT('%',#{search},'%')
+	</select>
+
+	<!-- 자유 게시판 상세 보기 -->
+	<select id="logfreeviewdetail" resultType="AdminBoardEntity">
+		SELECT *
+		FROM `user` u,
+		`board` b
+		where u.u_seq = b.b_uSeq
+		AND b.b_seq = #{b.b_seq}
+	</select>
+
+
+	<!-- Q&A 게시판 상세 보기 -->
+	<select id="logqaviewdetail" resultType="AdminBoardEntity">
+		SELECT *
+		FROM `user` u,
+		`board` b
+		where u.u_seq = b.b_uSeq
+		AND b.b_seq = #{b.b_seq}
+	</select>
+
+	<!-- 공지 사항 작성 -->
+	<insert id="save" parameterType="BoardEntity"> INSERT INTO `board`
+		VALUES
+		(NULL,#{b_title},#{b_content},#{b_date},0,#{b_imgPath},3,5)
+	</insert>
+
+	<!-- 자유 게시판 삭제 -->
+	<delete id="freedeleteAll" parameterType="long">
+		DELETE FROM board
+		WHERE
+		b_seq = #{b_seq}
+	</delete>
+
+	<!-- 공지 사항 게시판 상세 보기 -->
+	<select id="lognoticeviewdetail" resultType="AdminBoardEntity">
+		SELECT *
+		FROM `user`
+		u,
+		`board` b
+		where u.u_seq = b.b_uSeq
+		AND b.b_seq = #{b.b_seq}
+	</select>
+
+	<!-- 통합 사항 게시판 상세 보기 -->
+	<select id="logAllviewdetail" parameterType="string"
+		resultType="AdminBoardEntity">
+		SELECT *
+		FROM `user` u,
+		`board` b
+		where u.u_seq = b.b_uSeq
+		AND
+		b.b_seq = #{b.b_seq}
+	</select>
+
+
+	<!-- 공지 사항 게시판 삭제 -->
+	<delete id="noticedeleteAll" parameterType="long">
+		DELETE FROM board
+		WHERE b_seq = #{b_seq}
+	</delete>
+
+	<!-- 자유 게시판 댓글 삭제 -->
+	<delete id="freedeletecontents" parameterType="hashMap">
+		DELETE FROM reply
+		WHERE
+		r_uSeq=#{r_uSeq} AND r_bSeq=#{r_bSeq} and
+		r_seq=#{r_seq}
+	</delete>
+
+	<!-- 자유 게시판 댓글 -->
+	<select id="logfreecomment" resultType="AdminBoardEntity">
+		SELECT *
+		FROM reply r,
+		user u, board b
+		WHERE
+		r.r_uSeq = u.u_seq AND r.r_bSeq = b.b_seq and
+		r.r_bSeq = #{b_seq} order BY
+		r.r_seq
+
+	</select>
+
+	<!-- q&a 게시판 리스트 -->
+	<select id="logqandaAll" parameterType="hashMap"
+		resultType="AdminBoardEntity">
+		SELECT *
+		FROM board b, user u
+		WHERE b.b_uSeq=u.u_seq AND
+		b.b_type=#{b_type}
+		ORDER
+		BY b.b_seq DESC
+	</select>
+
+	<!-- 해당 유저 게시판 이용 리스트 -->
+	<select id="logcheck" parameterType="hashMap"
+		resultType="AdminBoardEntity">
+		SELECT *
+		FROM board b, user u
+		WHERE b.b_uSeq=u.u_seq AND
+		u.u_seq=#{u_seq} AND
+		b.b_title
+		like CONCAT('%',#{search},'%') ORDER BY
+		b.b_seq
+		DESC
+		LIMIT
+		#{page},#{size}
+	</select>
+
+	<!-- 해당 유저 댓글을 이용한 게시판 리스트 -->
+	<select id="logboardcontent" parameterType="hashMap"
+		resultType="AdminBoardEntity">
+		SELECT *
+		FROM board b, reply r, user u
+		WHERE b.b_uSeq = u.u_seq AND
+		r.r_bSeq=b.b_seq AND
+		r.r_uSeq = u.u_seq AND
+		r.r_uSeq=#{u_seq} AND b.b_title LIKE CONCAT('%',#{search},'%') order by b.b_seq desc
+		LIMIT
+		#{page},#{size}
+	</select>
+
+	<!-- 해당 유저 댓글을 이용한 게시판 리스트 개수 -->
+	<select id="logboardcontentcount" parameterType="hashMap"
+		resultType="long">
+		SELECT count(*)
+		FROM board b, reply r, user u
+		WHERE b.b_uSeq = u.u_seq AND
+		r.r_bSeq=b.b_seq AND
+		r.r_uSeq = u.u_seq AND
+		r.r_uSeq=#{u_seq} AND b.b_title LIKE CONCAT('%',#{search},'%') order by b.b_seq desc
+	</select>
+
+	<!-- 해당 회원 통합 게시판 리스트 개수 -->
+	<select id="logcountcheckAll" resultType="long"
+		parameterType="hashMap">
+		SELECT
+		count(*)
+		FROM board b, user u
+		WHERE b.b_uSeq=u.u_seq
+		AND u.u_seq = #{u_seq} AND b.b_title like CONCAT('%',#{search},'%')
+	</select>
+
+	<!-- F&Q 게시판 삭제 -->
+	<delete id="fandqdeleteAll" parameterType="long">
+		DELETE FROM board
+		WHERE
+		b_seq = #{b_seq}
+	</delete>
+
+	<!-- F&Q 게시판 작성 -->
+	<insert id="savefandq" parameterType="BoardEntity">
+		INSERT INTO `board`
+		VALUES
+		(NULL,#{b_title},#{b_content},#{b_date},0,NULL,4,#{b_uSeq})
+	</insert>
+
+	<!-- Q&A 게시판 리스트 -->
+	<select id="logqaAll" parameterType="hashMap"
+		resultType="AdminBoardEntity">
+		SELECT *
+		FROM board b, user u
+		WHERE b.b_uSeq=u.u_seq AND
+		b.b_type=#{b_type} AND b.b_title
+		like CONCAT('%',#{search},'%') ORDER
+		BY b.b_seq DESC
+		LIMIT
+		#{page},#{size}
+	</select>
+
+	<!-- Q&A 게시판 리스트 개수 -->
+	<select id="logcountqaAll" resultType="long"
+		parameterType="string">
+		SELECT
+		count(*)
+		FROM board b, user u
+		WHERE b.b_uSeq=u.u_seq
+		AND b.b_type=2
+		AND b.b_title like CONCAT('%',#{search},'%')
+	</select>
+
+	<!-- Q & A 관리자 작성 -->
+	<insert id="qandainsert" parameterType="AdminBoardEntity">
+		INSERT INTO
+		`reply`
+		VALUES
+		(NULL,#{r_content},#{r_createDate},#{r_uSeq},#{r_bSeq})
+	</insert>
+
+</mapper> 

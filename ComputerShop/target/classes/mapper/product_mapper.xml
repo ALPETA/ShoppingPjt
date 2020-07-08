@@ -4,42 +4,228 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.hardCarry.shopping.dao.ProductDAO">
+	<!-- <select id="findBySeq" resultType="ProductEntity" parameterType="long"> 
+		SELECT * FROM product p, product_spec s, productdetaillmg i WHERE p.p_seq 
+		= s.ps_pSeq AND p.p_seq = i.pd_pseq AND p.p_seq = #{seq} </select> -->
+
+
+
+	<select id="findBySeq" resultType="AdminProductViewEntity"
+		parameterType="long">
+		SELECT *
+		FROM product p, product_spec s
+		WHERE p.p_seq =
+		s.ps_pSeq AND
+		p.p_seq = #{p_seq}
+	</select>	
+
 	<select id="finalSeq" resultType="long">
 		SELECT max(p_seq)
 		FROM `product`
 	</select>
 
-	<select id="findAll" parameterType="hashMap" resultType="AdminProductViewEntity">
+	<!-- 관리자 상품 리스트 보기 -->
+	<select id="findAll" parameterType="hashMap"
+		resultType="AdminProductViewEntity">
 		SELECT *
 		FROM `product` p, `product_spec` s
-		WHERE p.p_seq = s.ps_pSeq AND p.p_name like CONCAT('%',#{search},'%')
-		LIMIT #{page},#{size}
+		WHERE p.p_seq =
+		s.ps_pSeq AND p.p_name like CONCAT('%',#{search},'%') ORDER BY p.p_seq
+		DESC
+		LIMIT
+		#{page},#{size}
 	</select>
 
-	<select id="countAll" resultType="long" parameterType="string">
-		SELECT count(*)
+	<select id="countproductAll" resultType="long"
+		parameterType="string">
+		SELECT
+		count(*)
 		FROM `product` p, `product_spec` s
-		WHERE p.p_seq = s.ps_pSeq AND p.p_name like CONCAT('%',#{search},'%')
+		WHERE
+		p.p_seq = s.ps_pSeq
+		AND p.p_name like CONCAT('%',#{search},'%')
+	</select>
+
+	<select id="countAll" resultType="long" parameterType="hashMap">
+		SELECT
+		count(*)
+		FROM `product` p, `product_spec` s
+		WHERE p.p_seq = s.ps_pSeq
+		AND p.p_use=#{p_use} AND p.p_category= #{p_category} and p_state="판매 중" AND p.p_name like CONCAT('%',#{search},'%')
+	</select>
+	
+	<select id="countAll1" resultType="long" parameterType="hashMap">
+		SELECT
+		count(*)
+		FROM `product` p
+		WHERE p.p_seq 
+		AND p.p_use=#{p_use} AND p.p_category= #{p_category} AND p.p_name like CONCAT('%',#{search},'%')
 	</select>
 
 	<insert id="save" parameterType="ProductEntity">
-		INSERT INTO `product` VALUES (NULL,'',#{p_name},#{p_price},#{p_manufacture},#{p_etc},#{p_sumnailImgPath},#{p_stock},#{p_state},#{p_Date})
+		INSERT INTO `product` VALUES
+		(NULL,'',#{p_use},#{p_category},#{p_name},#{p_price},#{p_manufacture},#{p_etc},#{p_sumnailImgPath},#{p_stock},#{p_state},#{p_Date})
 	</insert>
-	
+
 	<update id="update" parameterType="ProductEntity">
 		UPDATE `product`
-		SET p_code = #{p_code}
+		SET p_code =
+		#{p_code}
 		WHERE p_seq = #{p_seq}
 	</update>
-	
 
-	<!-- <select id="findProduct" parameterType="hashMap" resultType="AdminProductViewEntity">
+	<delete id="delete" parameterType="long">
+		DELETE FROM product
+		WHERE p_seq
+		= #{seq}
+	</delete>
+
+	<select id="productAll" resultType="AdminProductViewEntity">
+		SELECT *
+		FROM `product` p,
+		`product_spec` s
+		WHERE p.p_seq = s.ps_pSeq AND
+		p.p_seq = #{seq}
+	</select>
+
+	<select id="findAllProduct" parameterType="hashMap"
+		resultType="ProductEntity">
 		SELECT *
 		FROM `product` p, `product_spec` s
-		WHERE p.p_seq = s.ps_pSeq
-	</select> -->
+		WHERE p.p_seq =
+		s.ps_pSeq AND p.p_name like CONCAT('%',#{search},'%')
+		LIMIT
+		#{page},#{size}
+	</select>
 
-	
-	
+	<!-- 상품 상세 페이지 수정 -->
+	<update id="productlookupupdatedesktop"
+		parameterType="AdminProductViewEntity">
+		UPDATE `product` p INNER JOIN `product_spec` ps
+		ON
+		p.p_seq = ps.ps_pSeq
+		SET p.p_use=#{p_use}, p.p_name=#{p_name},
+		p.p_price=#{p_price}, p_manufacture=#{p_manufacture}, ps.ps_cpu =
+		#{ps_cpu}, ps.ps_ram = #{ps_ram}, ps.ps_mainboard =
+		#{ps_mainboard},ps.ps_graphic = #{ps_graphic}, ps.ps_hdd =
+		#{ps_hdd},ps.ps_ssd = #{ps_ssd},p.p_etc = #{p_etc},
+		p.p_sumnailImgPath
+		= #{p_sumnailImgPath}
+		WHERE p.p_seq =
+		#{p_seq}
+	</update>
+
+	<select id="countDesktop" resultType="long"
+		parameterType="string">
+		SELECT
+		count(*)
+		FROM `product` p, `product_spec` s
+		WHERE
+		p.p_seq = s.ps_pSeq
+		AND p.p_use = #{p_use} AND p.p_category =
+		#{p_category}
+	</select>
+
+	<select id="findDesktop" parameterType="hashMap"
+		resultType="AdminProductViewEntity">
+		SELECT *
+		FROM `product` p, `product_spec` s
+		WHERE p.p_seq = s.ps_pSeq AND p.p_name like CONCAT('%',#{search},'%') AND p.p_use= #{p_use} AND p.p_category= #{p_category} AND p_state="판매 중"
+		LIMIT
+		#{page},#{size}
+	</select>
+
+	<select id="findNotebook" parameterType="hashMap"
+		resultType="AdminProductViewEntity">
+		SELECT *
+		FROM `product` p, `product_spec` s
+		WHERE p.p_seq =
+		s.ps_pSeq AND p.p_use=#{p_use} AND p.p_category= #{p_category}
+		LIMIT
+		#{page},#{size}
+	</select>
+
+	<select id="countNotebook" resultType="long"
+		parameterType="string">
+		SELECT
+		count(*)
+		FROM `product` p, `product_spec` s
+		WHERE
+		p.p_seq = s.ps_pSeq
+		AND p.p_use = #{p_use} AND p.p_category =
+		#{p_category}
+	</select>
+
+	<select id="findPart" parameterType="hashMap"
+		resultType="AdminProductViewEntity">
+		SELECT *
+		FROM `product` p, `product_spec` s
+		WHERE p.p_seq =
+		s.ps_pSeq AND p.p_name like CONCAT('%',#{search},'%') AND p.p_use= #{p_use} AND p.p_category= #{p_category}
+		LIMIT
+		#{page},#{size}
+	</select>
+
+	<select id="countPart" resultType="long" parameterType="string">
+		SELECT
+		count(*)
+		FROM `product` p
+		WHERE p.p_use=#{p_use} AND p.p_category= #{p_category} AND p_state="판매 중"
+	</select>
+
+	<select id="findSpek" parameterType="hashMap"
+		resultType="AdminProductViewEntity">
+		SELECT *
+		FROM `product` p, `product_spec` s
+		WHERE p.p_seq AND
+		p.p_use=#{p_use} AND p.p_category= #{p_category}
+		LIMIT #{page},#{size}
+	</select>
+
+	<select id="countSpek" resultType="long" parameterType="string">
+		SELECT
+		count(*)
+		FROM `product` p, `product_spec` s
+		WHERE p.p_seq AND
+		p.p_use=#{p_use} AND p.p_category= #{p_category}
+	</select>
+
+	<!-- cpu 리스트 보기 -->
+	<select id="findCpu" resultType="ProductEntity">
+		SELECT * FROM product WHERE
+		p_use="부품" AND p_category="CPU"
+	</select>
+
+	<!-- ram 리스트 보기 -->
+	<select id="findRam" resultType="ProductEntity">
+		SELECT * FROM product WHERE
+		p_use="부품" AND p_category="Ram"
+	</select>
+
+	<!-- mainboard 리스트 보기 -->
+	<select id="findMain" resultType="ProductEntity">
+		SELECT * FROM product WHERE
+		p_use="부품" AND p_category="MainBoard"
+	</select>
+
+	<!-- graphic 리스트 보기 -->
+	<select id="findVga" resultType="ProductEntity">
+		SELECT * FROM product WHERE
+		p_use="부품" AND p_category="GraphicCard"
+	</select>
+
+	<!-- hdd 리스트 보기 -->
+	<select id="findHdd" resultType="ProductEntity">
+		SELECT * FROM product WHERE
+		p_use="부품" AND p_category="hdd"
+	</select>
+
+	<!-- ssd 리스트 보기 -->
+	<select id="findSsd" resultType="ProductEntity">
+		SELECT * FROM product WHERE
+		p_use="부품" AND p_category="ssd"
+	</select>
+
+
 
 </mapper>

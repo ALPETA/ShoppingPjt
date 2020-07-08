@@ -1,3 +1,5 @@
+<%@page
+	import="com.hardCarry.shopping.entity.join.AdminOrderslookupViewEntity"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -40,6 +42,11 @@
 }
 </style>
 </head>
+
+<%
+	AdminOrderslookupViewEntity check = (AdminOrderslookupViewEntity) request.getAttribute("request1");
+%>
+
 <body>
 	<%@include file="./logcategory.jsp"%>
 	<div class="container-fluid top-container">
@@ -47,29 +54,28 @@
 			<h1>회원 정보 및 주문 내역</h1>
 			<p>회원 정보와 회원이 주문한 내역을 확인할 수 있습니다.</p>
 		</div>
-		<div class="row">
+		<%-- <div class="row">
 			<ul class="nav nav-tabs col-lg-12">
 				<li class="nav-item"><a class="nav-link active"
 					data-toggle="tab" href="#home">회원 정보</a></li>
 				<li class="nav-item"><a class="nav-link" data-toggle="tab"
 					href="#menu1">주문 내역</a></li>
-				
+
 			</ul>
 			<div class="tab-content">
 				<div id="home" class="container tab-pane active">
 					<br>
-					<h3>회원 정보</h3>
-					<%@include file="./addProduct/Member.jsp" %>
+					<h3>[<%=check.getU_name()%>]님의 회원 정보</h3>
+					<%@include file="./addProduct/Member.jsp"%>
 				</div>
 				<div id="menu1" class="container tab-pane fade">
 					<br>
-					<h3>주문 내역</h3>
-					<%@include file="./addProduct/Order.jsp" %>
-				
+					<h3>[<%=check.getU_name()%>]님의  주문 내역</h3>
+					<%@include file="./addProduct/Order.jsp"%>
+
 				</div>
-				
-			</div>
-		</div>
+				</div>
+			</div> --%>
 	</div>
 </body>
 </html>

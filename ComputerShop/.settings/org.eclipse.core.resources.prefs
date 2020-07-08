@@ -1,6 +1,8 @@
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
->>>>>>>=refs/remotes/origin/KEJ_\u00EC\u009E\u0091\u00EC\u0097\u0085
+>>>>>>>=refs/remotes/origin/mergeck
 eclipse.preferences.version=1
 encoding//src/main/webapp/WEB-INF/views/commons/footer/footer.jsp=UTF-8
-encoding//src/main/webapp/WEB-INF/views/product.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/home.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/log/logsaleslookup.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/userBoardList.jsp=UTF-8

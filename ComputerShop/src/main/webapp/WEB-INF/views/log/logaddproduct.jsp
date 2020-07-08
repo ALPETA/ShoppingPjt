@@ -2,17 +2,10 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="UTF-8">
-
 <head>
-
   <%@include file="./logMetadata.jsp"%>
-
 </head>
-
-
-
 <body id="page-top">
-
 		<!-- 여기까지 왼쪽 카테고리 -->
 		<%@include file="./logcategory.jsp"%>
 		

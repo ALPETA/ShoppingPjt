@@ -12,8 +12,12 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class ProductDTO {
+	String p_use;
+	String p_category;
 	String p_name;
 	long p_price;
 	String p_manufacture;
 	String p_etc;
+	String p_stock;
+	String p_state;
 }

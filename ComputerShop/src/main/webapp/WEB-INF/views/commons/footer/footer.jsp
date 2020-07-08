@@ -5,7 +5,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-					<img class="logo1" src="images/logo1.png" alt="#" />
+					<img class="logo1" src="images/logo_transparent.png" alt="#" />
 
 				</div>
 				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">

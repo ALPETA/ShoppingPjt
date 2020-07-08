@@ -60,7 +60,7 @@
 				<div id="home" class="container tab-pane active">
 					<br>
 					<h3>데스크탑 / 노트북</h3>
-					<%@include file="./addProduct/desktop2.jsp" %>
+					<%@include file="./addProduct/desktop3.jsp" %>
 				</div>
 				<div id="menu1" class="container tab-pane fade">
 					<br>

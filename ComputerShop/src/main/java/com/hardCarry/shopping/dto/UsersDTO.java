@@ -18,41 +18,43 @@ import lombok.Setter;
 @Builder
 public class UsersDTO {
 
-    @NotEmpty(message = "이름을 입력해 주세요")
-    @NotNull(message = "이름을 입력해라")
-    String name;
+	@NotEmpty(message = "이름을 입력해 주세요")
+	@NotNull(message = "이름을 입력해라")
+	String name;
 
-    @NotNull(message = "아이디를 입력해라")
-    @NotEmpty(message = "아이디를 입력해 주세요")
-    String id;
+	@NotNull(message = "아이디를 입력해라")
+	@NotEmpty(message = "아이디를 입력해 주세요")
+	String id;
 
-    @NotNull(message = "패스워드를 입력해라")
-    @NotEmpty(message = "비밀번호를 입력해 주세요")
-    String pw;
+	@NotNull(message = "패스워드를 입력해라")
+	@NotEmpty(message = "비밀번호를 입력해 주세요")
+	String pw;
 
-    @NotNull(message = "패스워드를 입력해라")
-    @NotEmpty(message = "비밀번호 확인을 위해 한번 더 입력해 주세요")
-    String pwCh;
+	@NotNull(message = "패스워드를 입력해라")
+	@NotEmpty(message = "비밀번호 확인을 위해 한번 더 입력해 주세요")
+	String pwCh;
 
-    @NotNull(message = "폰 번호를 입력해라")
-    @NotEmpty(message = "전화번호를 입력해 주세요")
-    String phone;
+	@NotNull(message = "폰 번호를 입력해라")
+	@NotEmpty(message = "전화번호를 입력해 주세요")
+	String phone;
 
-    @NotNull(message = "이메일을 입력해라")
-    @NotEmpty(message = "이메일을 입력해 주세요")
-    @Email(message = "이메일 양식이 아닙니다.")
-    String email;
+	@NotNull(message = "이메일을 입력해라")
+	@NotEmpty(message = "이메일을 입력해 주세요")
+	@Email(message = "이메일 양식이 아닙니다.")
+	String email;
 
-    @NotNull(message = "주소를 입력해라")
-    @NotEmpty(message = "주소를 입력해 주세요")
-    String address;
+	@NotNull(message = "주소를 입력해라")
+	@NotEmpty(message = "주소를 입력해 주세요")
+	String address;
 
-    @NotNull(message = "상세주소를 입력해라")
-    @NotEmpty(message = "상세주소를 입력해 주세요")
-    String exaddress;
+	@NotNull(message = "상세주소를 입력해라")
+	@NotEmpty(message = "상세주소를 입력해 주세요")
+	String exaddress;
 
-    @Override public String toString() { return "UserDTO [u_name=" + name + ", u_id=" + id + 
-            ", u_pw=" + pw + ", u_phone=" + phone + ", u_email=" + email +
-            ", u_address=" + address+exaddress + "]"; }
+	@Override
+	public String toString() {
+		return "UserDTO [u_name=" + name + ", u_id=" + id + ", u_pw=" + pw + ", u_phone=" + phone + ", u_email=" + email
+				+ ", u_address=" + address + exaddress + "]";
+	}
 
 }

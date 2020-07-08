@@ -6,6 +6,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <%@include file="../commons/header/metaHeader.jsp"%>
+<%@include file="../commons/js/javascript.jsp"%>
 <style>
 .margin-left {
 	margin-left: 1700px;
@@ -25,13 +26,10 @@
 					<!-- 메타데이터 -->
 					<%@include file="freeMetaData.jsp"%>
 				</div>
-				<button type="button" class="btn btn-dark margin-left" onclick="javascript:location.href='freewrite.do'">글 작성</button>
 			</div>
 		</div>
 	</div>
 	<%@include file="../commons/footer/footer.jsp"%>
-	<!-- Javascript files-->
-	<%@include file="../commons/js/javascript.jsp"%>
 	<!-- sidebar -->
 	<%@include file="../commons/js/sidebar.jsp"%>
 </body>
